@@ -23,8 +23,11 @@ function App() {
   });
 
   useEffect(() => {
-    const interval = setInterval(() => setDateTime(new Date()), 1000);
-    return () => clearInterval(interval);
+    const interval = setInterval(() => {
+      setDateTime(new Date());
+    }, 1000); // actualiza cada segundo
+  
+    return () => clearInterval(interval); // limpia el intervalo al desmontar
   }, []);
 
   useEffect(() => {
@@ -183,15 +186,15 @@ function App() {
               link: 'https://decopas.netlify.app'
             },
             {
-              title: 'Sistema de Reservas',
-              description: 'Aplicación para gestionar turnos médicos, recordatorios automáticos y administración de horarios.',
-              image: '/projects/proyecto1.png',
+              title: 'Realizacion Portfolio',
+              description: 'Este portafolio fue desarrollado como una plataforma visual y funcional para presentar proyectos realizados.',
+              image: '/projects/proyecto3.png',
               link: '#'
             },
             {
               title: 'Panel de Administración',
               description: 'Sistema interno para empresas de logística con control de stock y usuarios.',
-              image: '/projects/proyecto1.png',
+              image: '/projects/proyecto4.png',
               link: '#'
             },
             {
@@ -292,7 +295,7 @@ function App() {
           <div className="start-menu">
             <p>Inicio</p>
             <ul>
-              {['Nosotros', 'Proyectos', 'Servicios', 'Contacto', 'Portafolio'].map(item => (
+              {['Nosotros', 'Servicios', 'Contacto', 'Portafolio'].map(item => (
                 <li key={item} onClick={() => openWindow(item)}>{item}</li>
               ))}
             </ul>
