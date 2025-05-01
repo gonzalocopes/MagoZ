@@ -204,7 +204,7 @@ function App() {
               link: 'https://bienesraicesbymagoz.netlify.app/'
             }
           ].map(({ title, description, image, link }) => (
-            <div key={title} style={{
+            <div key={title} className="portfolio-card" style={{
               background: '#2a2a2a',
               padding: '15px',
               borderRadius: '10px',

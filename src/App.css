@@ -19,7 +19,7 @@ body, html {
 }
 
 .icon {
-  width: 80px;
+  width: 74px;
   height: auto;
   text-align: center;
   color: #A3EB00; /* texto verde lima */
@@ -35,6 +35,7 @@ body, html {
   justify-content: flex-start;
   position: absolute;
   transition: transform 0.2s, background 0.3s, color 0.3s;
+  
 }
 
 .icon img {
@@ -278,3 +279,181 @@ body, html {
   transform: scale(1.05);
   box-shadow: 0 0 10px rgba(164, 255, 0, 0.6);
 }
+
+/* RESPONSIBE MOBILE*/ 
+
+/* Asegura que el contenedor principal use todo el ancho y alto */
+.desktop {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-color: #000; /* o tu fondo */
+}
+
+/* Hacer ventanas más amigables al tamaño de pantalla */
+.window {
+  max-width: 95vw;
+  max-height: 90vh;
+  overflow: auto;
+  resize: both;
+}
+
+@media (max-width: 768px) {
+  .icon {
+    width: 70px;
+    font-size: 0.8rem;
+  }
+
+  .icon img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .desktop {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: flex-start;
+    overflow-y: auto;
+    padding-bottom: 60px; /* espacio para la taskbar */
+  }
+
+  .taskbar {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  .clock {
+    font-size: 12px;
+  }
+
+  .task-button {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .start-menu {
+    width: 95vw;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 60px;
+    padding: 15px;
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    border: 1px solid #A4FF00;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+  }
+  .start-menu p {
+    color: #A4FF00;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .start-menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+  }
+
+  .start-menu li {
+    background-color: #333;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color 0.3s;
+  }
+
+  .window {
+    width: 90vw !important;
+    max-width: 90vw;
+    height: 80vh;
+    max-height: 80vh;
+    overflow: auto;
+    left: 5vw !important;
+    top: 10vh !important;
+  }
+  .start-menu li:hover {
+    background-color: #A4FF00;
+    color: #000;
+  }
+  .title-bar {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .content {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-card {
+    width: 100% !important;
+    margin: 0 auto;
+  }
+
+  .portfolio-card img {
+    height: 140px !important;
+  }
+
+  .portfolio-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .portfolio-card p {
+    font-size: 0.9rem;
+  }
+
+  .portfolio-card a {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+  .desktop {
+    background-image: url('/public/wallpaper_mobile.png');
+    background-size: cover;
+}
+
+  .terminal-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .terminal-text {
+    font-size: 1.4rem;
+    white-space: pre-line;
+  }
+  .window .title-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .desktop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .icon:nth-child(4) {
+    display: flex;
+    justify-content: center;
+    transform: translate(-341%, 113%);
+  }
+}
+
