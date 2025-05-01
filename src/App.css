@@ -1,0 +1,258 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.desktop {
+  width: 100vw;
+  height: 100vh;
+  background: url('/wallpaper.png') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  color: white;
+  overflow: hidden;
+}
+
+.icon {
+  width: 80px;
+  height: auto;
+  text-align: center;
+  color: #A3EB00; /* texto verde lima */
+  cursor: grab;
+  background: rgba(0, 0, 0, 0.6); /* fondo oscuro semi */
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid #A3EB00;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  transition: transform 0.2s, background 0.3s, color 0.3s;
+}
+
+.icon img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 4px;
+  filter: brightness(1.1) drop-shadow(0 0 2px #A3EB00);
+}
+
+.icon:hover {
+  background: #A3EB00;  /* fondo verde lima */
+  color: #1a1a1a;        /* texto negro */
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.6);
+}
+
+
+.window {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 500px;
+  background: #1a1a1a; /* fondo oscuro tipo Windows */
+  border: 1px solid #2ecc71; /* verde lima */
+  box-shadow: 0 0 12px rgba(0, 255, 128, 0.5);
+  color: #e0e0e0; /* texto gris claro */
+  z-index: 100;
+  animation: fadeIn 0.3s ease-out;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  resize: both;
+  overflow: auto;
+  border-radius: 6px;
+}
+
+
+.title-bar {
+  background: #0078d7;
+  color: white;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  align-items: center;
+  cursor: move;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+.content {
+  padding: 10px;
+}
+
+.taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: #1f1f1f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  color: white;
+  font-size: 14px;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.5);
+}
+
+.task-buttons {
+  display: flex;
+  gap: 5px;
+  flex: 1;
+  margin-left: 10px;
+}
+
+.task-button {
+  background: #2d2d2d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.task-button.minimized {
+  opacity: 0.5;
+}
+
+.clock {
+  margin-right: 18px;
+  text-align: right;
+  min-width: 80px;
+}
+
+.start-btn {
+  background: #0078d7;
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 20px;
+  width: 40px;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.start-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.start-menu {
+  position: fixed;
+  bottom: 40px;
+  left: 10px;
+  width: 200px;
+  background: #333;
+  color: white;
+  border: 1px solid #555;
+  padding: 10px;
+  z-index: 999;
+}
+
+.start-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+.start-menu li {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.start-menu li:hover {
+  background: #555;
+}
+.window {
+  animation: fadeIn 0.3s ease-out;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  resize: both;
+  overflow: auto;
+  }
+  .window::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    pointer-events: none;
+  }
+  
+
+
+.window.closing {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.window.minimizing {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.terminal-loader {
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  color: limegreen;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: monospace;
+  font-size: 1.5rem;
+}
+
+.terminal-text {
+  animation: blinkCursor 1s infinite step-end;
+}
+
+@keyframes blinkCursor {
+  50% { opacity: 0.5; }
+}
+
+.project-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(164, 255, 0, 0.6);
+}
