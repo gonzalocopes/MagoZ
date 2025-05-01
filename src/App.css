@@ -71,25 +71,28 @@ body, html {
 
 
 .title-bar {
-  background: #0078d7;
-  color: white;
-  padding: 5px;
+  background-color: #A4FF00; /* verde lima */
+  color: #000; /* texto negro para contraste */
   display: flex;
   justify-content: space-between;
-  font-weight: bold;
   align-items: center;
-  cursor: move;
+  padding: 8px 12px;
+  font-weight: bold;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  user-select: none;
 }
 
+
 .close-btn {
-  background: none;
+  background: transparent;
   border: none;
-  color: white;
-  font-size: 20px;
+  color: #000; /* negro para contraste */
+  font-size: 1rem;
   cursor: pointer;
-  font-weight: bold;
-  padding: 0 10px;
+  margin-left: 8px;
 }
+
 
 .content {
   padding: 10px;

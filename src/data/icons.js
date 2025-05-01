@@ -5,10 +5,6 @@ export default [
       icon: '/icons/nosotros.png',
     },
     {
-      title: 'Proyectos',
-      icon: '/icons/proyectos.png',
-    },
-    {
       title: 'Servicios',
       icon: '/icons/servicios.png',
     },

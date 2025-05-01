@@ -87,36 +87,77 @@ function App() {
     ),
     'Proyectos': (
       <div style={{ fontFamily: 'Segoe UI, sans-serif', color: '#dcdcdc', padding: '10px' }}>
-        <h2 style={{ color }}>Proyectos destacados</h2>
-        <ul>
-          <li><strong style={{ color }}>E-commerce personalizado:</strong> Plataforma de ventas para una tienda local.</li>
-          <li><strong style={{ color }}>Sistema de reservas:</strong> Gestión de turnos online para un consultorio médico.</li>
-          <li><strong style={{ color }}>Panel administrativo:</strong> Backend a medida para un negocio de logística.</li>
+        <h2 style={{ color }}>Soluciones que desarrollamos</h2>
+        <p>
+          En <strong style={{ color }}>MaGoz IT Solutions</strong> convertimos ideas en soluciones digitales funcionales, modernas y efectivas. 
+          Cada proyecto está diseñado para resolver problemas reales y generar resultados concretos.
+        </p>
+        <ul style={{ marginTop: '10px' }}>
+          <li><strong style={{ color }}>Sitios web profesionales:</strong> con diseño único, responsive y enfocados en tu marca.</li>
+          <li><strong style={{ color }}>Sistemas a medida:</strong> desde paneles administrativos hasta herramientas de gestión.</li>
+          <li><strong style={{ color }}>Experiencias digitales:</strong> que potencian la presencia online de tu negocio.</li>
         </ul>
-        <p style={{ fontStyle: 'italic', color: '#bbb' }}>Cada proyecto es una oportunidad para innovar y mejorar la experiencia digital del cliente.</p>
+        <p style={{ fontStyle: 'italic', color: '#bbb', marginTop: '10px' }}>
+          ¿Tenés una idea en mente? Nosotros la hacemos realidad.
+        </p>
       </div>
     ),
     'Servicios': (
       <div style={{ fontFamily: 'Segoe UI, sans-serif', color: '#dcdcdc', padding: '10px' }}>
-        <h2 style={{ color }}>Nuestros servicios</h2>
-        <ul>
-          <li><strong style={{ color }}>Diseño Web:</strong> Sitios visualmente atractivos, funcionales y responsive.</li>
-          <li><strong style={{ color }}>Desarrollo a medida:</strong> Software adaptable a las necesidades de tu negocio.</li>
-          <li><strong style={{ color }}>Marketing Digital:</strong> Posicionamiento SEO, campañas SEM y redes sociales.</li>
+        <h2 style={{ color }}>Soluciones que desarrollamos</h2>
+        <p>
+          En <strong style={{ color }}>MaGoz IT Solutions</strong> convertimos ideas en soluciones digitales funcionales, modernas y efectivas. 
+          Cada proyecto está diseñado para resolver problemas reales y generar resultados concretos.
+        </p>
+        <ul style={{ marginTop: '10px' }}>
+          <li><strong style={{ color }}>Sitios web profesionales:</strong> con diseño único, responsive y enfocados en tu marca.</li>
+          <li><strong style={{ color }}>Sistemas a medida:</strong> desde paneles administrativos hasta herramientas de gestión.</li>
+          <li><strong style={{ color }}>Experiencias digitales:</strong> que potencian la presencia online de tu negocio.</li>
         </ul>
-        <p style={{ fontStyle: 'italic', color: '#bbb' }}>Brindamos soluciones técnicas con visión creativa y estratégica.</p>
+        <p style={{ fontStyle: 'italic', color: '#bbb', marginTop: '10px' }}>
+          ¿Tenés una idea en mente? Nosotros la hacemos realidad.
+        </p>
       </div>
     ),
     'Contacto': (
-      <div style={{ fontFamily: 'Segoe UI, sans-serif', color: '#dcdcdc', padding: '10px' }}>
-        <h2 style={{ color }}>Contacto</h2>
-        <p>Podés comunicarte con nosotros a través de:</p>
-        <ul>
-          <li>Email: <span style={{ color }}>contacto@magozit.com</span></li>
-          <li>WhatsApp: <a href="https://wa.me/541112345678" target="_blank" style={{ color }}>+54 11 1234 5678</a></li>
-          <li>Instagram: <a href="https://instagram.com/magoz.it" target="_blank" style={{ color }}>@magoz.it</a></li>
+      <div style={{
+        fontFamily: 'Segoe UI, sans-serif',
+        color: '#dcdcdc',
+        padding: '10px',
+        background: '#1f1f1f',
+        borderRadius: '8px'
+      }}>
+        <h2 style={{ color, marginBottom: '15px' }}>📞 Contactanos</h2>
+
+        <p style={{ marginBottom: '10px' }}>
+          ¿Querés llevar tu negocio al siguiente nivel? ¡Hablemos!
+        </p>
+
+        <ul style={{ listStyle: 'none', padding: 0 }}>
+          <li style={{ marginBottom: '12px' }}>
+            <strong style={{ color }}>📧 Email:</strong>{' '}
+            <a href="mailto:contacto@magozit.com" style={{ color: '#A4FF00', textDecoration: 'none' }}>
+              contacto@magozit.com
+            </a>
+          </li>
+          <li style={{ marginBottom: '12px' }}>
+            <strong style={{ color }}>💬 WhatsApp:</strong>{' '}
+            <a href="https://wa.me/541112345678" target="_blank" style={{ color: '#A4FF00', textDecoration: 'none' }}>
+              +54 11 1234 5678
+            </a>
+          </li>
+          <li style={{ marginBottom: '12px' }}>
+            <strong style={{ color }}>📸 Instagram:</strong>{' '}
+            <a href="https://instagram.com/magoz.it" target="_blank" style={{ color: '#A4FF00', textDecoration: 'none' }}>
+              @magoz.it
+            </a>
+          </li>
         </ul>
-        <p style={{ fontStyle: 'italic', color: '#bbb' }}>Estamos disponibles para ayudarte en lo que necesites.</p>
+
+        <div style={{ marginTop: '20px', fontStyle: 'italic', color: '#bbb' }}>
+          Estamos disponibles para ayudarte en lo que necesites. <br />
+          <span style={{ color: color, fontWeight: 'bold' }}>¡Tu próximo proyecto comienza con un mensaje! 💡</span>
+        </div>
       </div>
     ),
     'Portafolio': (
@@ -144,13 +185,13 @@ function App() {
             {
               title: 'Sistema de Reservas',
               description: 'Aplicación para gestionar turnos médicos, recordatorios automáticos y administración de horarios.',
-              image: '/proyectos/reservas.png',
+              image: '/projects/proyecto1.png',
               link: '#'
             },
             {
               title: 'Panel de Administración',
               description: 'Sistema interno para empresas de logística con control de stock y usuarios.',
-              image: '/proyectos/admin.png',
+              image: '/projects/proyecto1.png',
               link: '#'
             },
             {
