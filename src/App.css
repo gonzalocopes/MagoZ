@@ -83,6 +83,9 @@ body, html {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   user-select: none;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 
@@ -129,6 +132,12 @@ body, html {
   border: none;
   padding: 5px 10px;
   cursor: pointer;
+}
+
+.task-button:hover {
+  background-color: #A4FF00;
+  color: #1a1a1a; /* texto oscuro para buen contraste */
+  font-weight: bold;
 }
 
 .task-button.minimized {

@@ -139,20 +139,26 @@ function App() {
         <ul style={{ listStyle: 'none', padding: 0 }}>
           <li style={{ marginBottom: '12px' }}>
             <strong style={{ color }}>📧 Email:</strong>{' '}
-            <a href="mailto:contacto@magozit.com" style={{ color: '#A4FF00', textDecoration: 'none' }}>
-              contacto@magozit.com
+            <a href="mailto:magoz.191030@gmail.com" style={{ color: '#A4FF00', textDecoration: 'none' }}>
+              magoz.191030@gmail.com
             </a>
           </li>
           <li style={{ marginBottom: '12px' }}>
             <strong style={{ color }}>💬 WhatsApp:</strong>{' '}
-            <a href="https://wa.me/541112345678" target="_blank" style={{ color: '#A4FF00', textDecoration: 'none' }}>
-              +54 11 1234 5678
+            <a href="https://wa.me/541122949729" target="_blank" style={{ color: '#A4FF00', textDecoration: 'none' }}>
+              +54 11 22 9497 29
             </a>
           </li>
           <li style={{ marginBottom: '12px' }}>
             <strong style={{ color }}>📸 Instagram:</strong>{' '}
-            <a href="https://instagram.com/magoz.it" target="_blank" style={{ color: '#A4FF00', textDecoration: 'none' }}>
-              @magoz.it
+            <a href="https://instagram.com/magozsolucionesit" target="_blank" style={{ color: '#A4FF00', textDecoration: 'none' }}>
+              @magozsolucionesit
+            </a>
+          </li>
+          <li style={{ marginBottom: '12px' }}>
+            <strong style={{ color }}>▶️ YouTube:</strong>{' '}
+            <a href="https://www.youtube.com/@MagozITSolutions" target="_blank" style={{ color: '#A4FF00', textDecoration: 'none' }}>
+              @MagozITSolutions
             </a>
           </li>
         </ul>
@@ -163,6 +169,7 @@ function App() {
         </div>
       </div>
     ),
+
     'Portafolio': (
       <div style={{
         fontFamily: 'Segoe UI, sans-serif',
@@ -183,13 +190,13 @@ function App() {
               title: 'De Copas Café & Bar',
               description: 'Plataforma de ventas online moderna con carrito de compras y pasarela de pago integrada.',
               image: '/projects/proyecto1.png',
-              link: 'https://decopas.netlify.app'
+              link: 'https://papayawhip-peafowl-543742.hostingersite.com/'
             },
             {
-              title: 'Realizacion Portfolio',
-              description: 'Este portafolio fue desarrollado como una plataforma visual y funcional para presentar proyectos realizados.',
+              title: 'Desarrollo de Portfolio',
+              description: 'Este portfolio fue diseñado como una plataforma visual interactiva, ideal para mostrar proyectos de manera clara, funcional y profesional.',
               image: '/projects/proyecto3.png',
-              link: '#'
+              link: 'https://portfolioactualizado.netlify.app/'
             },
             {
               title: 'Panel de Administración',
@@ -202,6 +209,12 @@ function App() {
               description: 'Este proyecto está diseñado para facilitar la compra, venta y alquiler de propiedades de manera eficiente y segura.',
               image: '/projects/proyecto2.png',
               link: 'https://bienesraicesbymagoz.netlify.app/'
+            },
+            {
+              title: 'Tienda de Ropa E-Commerce',
+              description: 'Solución de ventas online moderna con catálogo de productos, carrito de compras y pasarela de pago integrada.',
+              image: '/projects/proyecto5.png',
+              link: 'https://www.youtube.com/watch?v=rsA72lvRvnI'
             }
           ].map(({ title, description, image, link }) => (
             <div key={title} className="portfolio-card" style={{
