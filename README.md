@@ -1,12 +1,47 @@
-# React + Vite
+# 🖥️ MaGoz IT Solutions - Web tipo Escritorio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sitio web profesional desarrollado para **MaGoz IT Solutions**, una empresa de soluciones tecnológicas, con una interfaz inspirada en el estilo de escritorio de Windows. Esta plataforma ofrece una experiencia de navegación original, moderna y 100% responsive.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Demo en vivo
 
-## Expanding the ESLint configuration
+👉 [https://magozitsolutions.netlify.app](https://magozitsolutions.netlify.app)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tecnologías utilizadas
+
+- ⚛️ React
+- ⚡ Vite
+- 💅 CSS3
+- 📦 Netlify (Deploy)
+- 📁 GitHub (Repositorio y control de versiones)
+
+---
+
+## 🧩 Características principales
+
+- 💻 Interfaz tipo **Windows Desktop** con íconos y ventanas flotantes.
+- 🖱️ **Ventanas arrastrables, minimizables y con animaciones**.
+- 🕒 Barra de tareas con **fecha y hora en tiempo real**.
+- 🌍 100% **responsive** (funciona en PC, notebooks, tablets y celulares).
+- 🎨 Tema visual moderno con colores institucionales.
+- 📁 Secciones internas:
+  - **Nosotros**: descripción de la empresa
+  - **Servicios**: soluciones que ofrecemos
+  - **Portafolio**: proyectos realizados con botón de acceso
+  - **Contacto**: email, WhatsApp, Instagram y canal de YouTube
+
+
+## 🧪 Cómo correr el proyecto localmente
+
+1. Cloná el repositorio:
+
+```bash
+git clone https://github.com/tuusuario/magoz-it-solutions.git
+cd magoz-it-solutions
+
+npm install
+
+npm run dev
