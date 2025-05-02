@@ -202,7 +202,7 @@ function App() {
               title: 'Panel de Administración',
               description: 'Sistema interno para empresas de logística con control de stock y usuarios.',
               image: '/projects/proyecto4.png',
-              link: '#'
+              link: 'https://www.youtube.com/watch?v=Gc3ej98ksUM'
             },
             {
               title: 'Bienes Raices',
