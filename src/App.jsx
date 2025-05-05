@@ -215,7 +215,13 @@ function App() {
               description: 'Solución de ventas online moderna con catálogo de productos, carrito de compras y pasarela de pago integrada.',
               image: '/projects/proyecto5.png',
               link: 'https://www.youtube.com/watch?v=rsA72lvRvnI'
-            }
+            },
+            {
+              title: 'Tienda de Bicicletas E-Commerce',
+              description: 'Solución de ventas online moderna con catálogo de productos, carrito de compras y pasarela de pago integrada.',
+              image: '/projects/bici.png',
+              link: 'https://lightsalmon-gull-292593.hostingersite.com/'
+            },
           ].map(({ title, description, image, link }) => (
             <div key={title} className="portfolio-card" style={{
               background: '#2a2a2a',
