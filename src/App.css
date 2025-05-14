@@ -465,5 +465,8 @@ body, html {
     justify-content: center;
     transform: translate(-341%, 113%);
   }
+  body {
+    overflow-y: scroll;
+  }
 }
 
