@@ -1,81 +1,85 @@
 import { motion } from 'framer-motion';
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '../gopedidos/src/context/LanguageContext';
+import { useTheme } from '../gopedidos/src/context/ThemeContext';
 
 const PricingPlans = () => {
     const { t } = useLanguage();
+    const { theme } = useTheme();
 
     const plans = [
         {
             key: 'plan_initial',
-            title: t('plan_1_title'),
+            title: t.plan_1_title,
             price: '20.000',
-            products: t('plan_1_products'),
+            products: t.plan_1_products,
             features: [
-                t('feat_access'),
-                t('feat_design'),
-                t('feat_support'),
-                t('feat_payments'),
-                t('feat_brochure')
+                t.feat_access,
+                t.feat_design,
+                t.feat_support,
+                t.feat_payments,
+                t.feat_brochure
             ],
             notIncluded: [
-                t('feat_clients'),
-                t('feat_sellers'),
-                t('feat_custom_logo'),
-                t('feat_branches'),
-                t('feat_domain'),
-                t('feat_maps'),
-                t('feat_webapp')
+                t.feat_clients,
+                t.feat_sellers,
+                t.feat_custom_logo,
+                t.feat_branches,
+                t.feat_domain,
+                t.feat_maps,
+                t.feat_webapp
             ]
         },
         {
             key: 'plan_entrepreneur',
-            title: t('plan_2_title'),
+            title: t.plan_2_title,
             price: '30.000',
-            products: t('plan_2_products'),
+            products: t.plan_2_products,
             isPopular: true,
-            label: t('plan_2_label'),
+            label: t.plan_2_label,
             features: [
-                t('feat_access'),
-                t('feat_design'),
-                t('feat_support'),
-                t('feat_payments'),
-                t('feat_brochure'),
-                t('feat_clients'),
-                t('feat_sellers'),
-                t('feat_custom_logo')
+                t.feat_access,
+                t.feat_design,
+                t.feat_support,
+                t.feat_payments,
+                t.feat_brochure,
+                t.feat_clients,
+                t.feat_sellers,
+                t.feat_custom_logo
             ],
             notIncluded: [
-                t('feat_branches'),
-                t('feat_domain'),
-                t('feat_maps'),
-                t('feat_webapp')
+                t.feat_branches,
+                t.feat_domain,
+                t.feat_maps,
+                t.feat_webapp
             ]
         },
         {
             key: 'plan_business',
-            title: t('plan_3_title'),
+            title: t.plan_3_title,
             price: '40.000',
-            products: t('plan_3_products'),
+            products: t.plan_3_products,
             features: [
-                t('feat_access'),
-                t('feat_design'),
-                t('feat_support'),
-                t('feat_payments'),
-                t('feat_brochure'),
-                t('feat_clients'),
-                t('feat_sellers'),
-                t('feat_custom_logo'),
-                t('feat_branches'),
-                t('feat_domain'),
-                t('feat_maps'),
-                t('feat_webapp')
+                t.feat_access,
+                t.feat_design,
+                t.feat_support,
+                t.feat_payments,
+                t.feat_brochure,
+                t.feat_clients,
+                t.feat_sellers,
+                t.feat_custom_logo,
+                t.feat_branches,
+                t.feat_domain,
+                t.feat_maps,
+                t.feat_webapp
             ],
             notIncluded: []
         }
     ];
 
+    const isDark = theme === 'dark';
+
     return (
-        <section id="precios" className="section-padding" style={{ position: 'relative' }}>
+        <section id="precios" className="section-padding" style={{ position: 'relative', background: isDark ? '#111827' : '#f9fafb', paddingBottom: '100px' }}>
             {/* Background Glow */}
             <div style={{
                 position: 'absolute',
@@ -85,30 +89,30 @@ const PricingPlans = () => {
                 width: '100%',
                 height: '100%',
                 background: 'radial-gradient(circle at center, rgba(255, 102, 0, 0.05) 0%, transparent 70%)',
-                zIndex: -1,
+                zIndex: 0,
                 pointerEvents: 'none'
             }}></div>
 
-            <div className="container" style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
+            <div className="container" style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px', position: 'relative', zIndex: 1 }}>
                 <div style={{ textAlign: 'center', marginBottom: '60px' }}>
                     <h2 style={{
                         fontSize: '3.5rem',
                         fontWeight: '800',
-                        color: '#ffffff',
+                        color: isDark ? '#ffffff' : '#111827',
                         marginBottom: '20px',
                         letterSpacing: '-1px',
-                        textShadow: '0 0 30px rgba(255, 102, 0, 0.3)'
+                        textShadow: isDark ? '0 0 30px rgba(255, 102, 0, 0.3)' : 'none'
                     }}>
-                        {t('pricing_title')}
+                        {t.pricing_title}
                     </h2>
                     <p style={{
-                        color: '#9ca3af',
+                        color: isDark ? '#9ca3af' : '#4b5563',
                         fontSize: '1.2rem',
                         maxWidth: '600px',
                         margin: '0 auto',
                         lineHeight: '1.6'
                     }}>
-                        {t('pricing_subtitle')}
+                        {t.pricing_subtitle}
                     </p>
                 </div>
 
@@ -126,19 +130,21 @@ const PricingPlans = () => {
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1, duration: 0.5 }}
                             style={{
-                                background: plan.isPopular
-                                    ? 'rgba(20, 20, 20, 0.8)' // Dark background for contrast
-                                    : 'rgba(255, 255, 255, 0.03)',
+                                background: isDark
+                                    ? (plan.isPopular ? 'rgba(20, 20, 20, 0.8)' : 'rgba(255, 255, 255, 0.03)')
+                                    : (plan.isPopular ? '#ffffff' : '#ffffff'),
                                 border: plan.isPopular
-                                    ? '2px solid #FF6600' // Orange border to highlight
-                                    : '1px solid rgba(255, 255, 255, 0.1)',
+                                    ? '2px solid #FF6600'
+                                    : (isDark ? '1px solid rgba(255, 255, 255, 0.1)' : '1px solid #e5e7eb'),
                                 borderRadius: '24px',
                                 padding: '40px 30px',
                                 position: 'relative',
                                 transform: plan.isPopular ? 'scale(1.05)' : 'scale(1)',
                                 zIndex: plan.isPopular ? 2 : 1,
-                                boxShadow: plan.isPopular ? '0 0 40px rgba(255, 102, 0, 0.15)' : 'none',
-                                backdropFilter: 'blur(10px)'
+                                boxShadow: plan.isPopular
+                                    ? '0 0 40px rgba(255, 102, 0, 0.15)'
+                                    : (isDark ? 'none' : '0 4px 6px -1px rgba(0, 0, 0, 0.1)'),
+                                backdropFilter: isDark ? 'blur(10px)' : 'none'
                             }}
                         >
                             {plan.isPopular && (
@@ -161,12 +167,12 @@ const PricingPlans = () => {
                                 </div>
                             )}
 
-                            <h3 style={{ fontSize: '1.5rem', marginBottom: '10px', color: '#fff' }}>{plan.title}</h3>
+                            <h3 style={{ fontSize: '1.5rem', marginBottom: '10px', color: isDark ? '#fff' : '#111827' }}>{plan.title}</h3>
                             <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'center', marginBottom: '5px', gap: '5px' }}>
-                                <span style={{ fontSize: '1.2rem', color: '#FF6600' }}>{t('pricing_currency')}</span>
-                                <span style={{ fontSize: '3rem', fontWeight: 'bold', color: '#fff' }}>{plan.price}</span>
+                                <span style={{ fontSize: '1.2rem', color: '#FF6600' }}>{t.pricing_currency}</span>
+                                <span style={{ fontSize: '3rem', fontWeight: 'bold', color: isDark ? '#fff' : '#111827' }}>{plan.price}</span>
                             </div>
-                            <p style={{ color: '#888', marginBottom: '30px' }}>{t('pricing_month')}</p>
+                            <p style={{ color: isDark ? '#888' : '#6b7280', marginBottom: '30px' }}>{t.pricing_month}</p>
 
                             <div style={{
                                 background: 'rgba(255, 102, 0, 0.1)',
@@ -181,14 +187,14 @@ const PricingPlans = () => {
 
                             <ul style={{ textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '15px', marginBottom: '40px', padding: 0 }}>
                                 {plan.features.map((feat, i) => (
-                                    <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', color: '#ddd', fontSize: '0.95rem' }}>
+                                    <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', color: isDark ? '#ddd' : '#374151', fontSize: '0.95rem' }}>
                                         <span style={{ color: '#FF6600', flexShrink: 0, fontWeight: 'bold' }}>✓</span>
                                         {feat}
                                     </li>
                                 ))}
                                 {plan.notIncluded.map((feat, i) => (
-                                    <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', color: '#555', fontSize: '0.95rem' }}>
-                                        <span style={{ color: '#555', flexShrink: 0 }}>×</span>
+                                    <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', color: isDark ? '#555' : '#9ca3af', fontSize: '0.95rem' }}>
+                                        <span style={{ color: isDark ? '#555' : '#9ca3af', flexShrink: 0 }}>×</span>
                                         {feat}
                                     </li>
                                 ))}
@@ -200,8 +206,8 @@ const PricingPlans = () => {
                                 padding: '15px',
                                 borderRadius: '50px',
                                 background: plan.isPopular ? '#FF6600' : 'transparent',
-                                color: '#fff',
-                                border: plan.isPopular ? 'none' : '1px solid #555',
+                                color: plan.isPopular ? '#fff' : (isDark ? '#fff' : '#FF6600'),
+                                border: plan.isPopular ? 'none' : (isDark ? '1px solid #555' : '1px solid #FF6600'),
                                 fontWeight: 'bold',
                                 textDecoration: 'none',
                                 transition: 'all 0.3s ease',
@@ -210,8 +216,9 @@ const PricingPlans = () => {
                             }}
                                 onMouseEnter={(e) => {
                                     if (!plan.isPopular) {
+                                        e.currentTarget.style.background = '#FF6600';
+                                        e.currentTarget.style.color = '#fff';
                                         e.currentTarget.style.borderColor = '#FF6600';
-                                        e.currentTarget.style.color = '#FF6600';
                                     } else {
                                         e.currentTarget.style.background = '#e55a00';
                                         e.currentTarget.style.transform = 'translateY(-2px)';
@@ -220,8 +227,9 @@ const PricingPlans = () => {
                                 }}
                                 onMouseLeave={(e) => {
                                     if (!plan.isPopular) {
-                                        e.currentTarget.style.borderColor = '#555';
-                                        e.currentTarget.style.color = '#fff';
+                                        e.currentTarget.style.background = 'transparent';
+                                        e.currentTarget.style.color = plan.isPopular ? '#fff' : (isDark ? '#fff' : '#FF6600');
+                                        e.currentTarget.style.borderColor = isDark ? '#555' : '#FF6600';
                                     } else {
                                         e.currentTarget.style.background = '#FF6600';
                                         e.currentTarget.style.transform = 'none';
@@ -229,7 +237,7 @@ const PricingPlans = () => {
                                     }
                                 }}
                             >
-                                {t('pricing_btn')}
+                                {t.pricing_btn}
                             </a>
                         </motion.div>
                     ))}

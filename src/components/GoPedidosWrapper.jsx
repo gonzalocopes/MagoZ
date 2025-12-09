@@ -69,11 +69,9 @@ const GoPedidosWrapper = ({ onBack }) => {
                         <ThemeProvider>
                             <GoPedidosApp>
                                 {/* PricingPlans depends on MagoZ (Main) Context */}
-                                <MagozLanguageProvider>
-                                    <div style={{ background: '#111827', paddingBottom: '100px' }}>
-                                        <PricingPlans />
-                                    </div>
-                                </MagozLanguageProvider>
+                                <div>
+                                    <PricingPlans />
+                                </div>
                             </GoPedidosApp>
                         </ThemeProvider>
                     </GoPedidosLanguageProvider>

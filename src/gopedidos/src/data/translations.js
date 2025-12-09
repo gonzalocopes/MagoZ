@@ -77,7 +77,41 @@ export const translations = {
             company: "Empresa",
             follow: "Síguenos",
             rights: "© 2025 GoPedidos. Todos los derechos reservados por "
-        }
+        },
+        // Pricing
+        pricing_title: 'Planes y Precios',
+        pricing_subtitle: 'Elejí la solución ideal para potenciar tu negocio.',
+        pricing_month: '/mes',
+        pricing_currency: '$',
+
+        // Plan 1
+        plan_1_title: 'Inicial',
+        plan_1_products: 'Hasta 50 Productos',
+
+        // Plan 2
+        plan_2_title: 'Emprendedor',
+        plan_2_products: '50 a 100 Productos',
+        plan_2_label: 'MÁS ELEGIDO',
+
+        // Plan 3
+        plan_3_title: 'Empresarial',
+        plan_3_products: '100 a 150 Productos',
+
+        // Common Features labels
+        feat_access: 'Link & QR de acceso rápido',
+        feat_design: 'Diseño y config. inicial',
+        feat_support: 'Soporte técnico y comercial 24/7',
+        feat_payments: 'Integración formas de pago',
+        feat_brochure: 'Folletería comercial con Link y QR',
+        feat_clients: 'Módulo de Clientes',
+        feat_sellers: 'Módulo de Vendedores',
+        feat_custom_logo: 'Personalización Logo/Favicon',
+        feat_branches: 'Multi-Sucursales',
+        feat_domain: 'Dominio personalizado',
+        feat_maps: 'Integración Google Maps',
+        feat_webapp: 'Versión WebApp Instalable',
+
+        pricing_btn: 'Elegir Plan'
     },
     en: {
         seo: {
@@ -157,6 +191,40 @@ export const translations = {
             company: "Company",
             follow: "Follow Us",
             rights: "© 2025 GoPedidos. All rights reserved by "
-        }
+        },
+        // Pricing
+        pricing_title: 'Plans & Pricing',
+        pricing_subtitle: 'Choose the perfect plan for your business growth.',
+        pricing_month: '/month',
+        pricing_currency: '$',
+
+        // Plan 1
+        plan_1_title: 'Initial',
+        plan_1_products: 'Up to 50 Products',
+
+        // Plan 2
+        plan_2_title: 'Entrepreneur',
+        plan_2_products: '50 to 100 Products',
+        plan_2_label: 'MOST POPULAR',
+
+        // Plan 3
+        plan_3_title: 'Business',
+        plan_3_products: '100 to 150 Products',
+
+        // Common Features labels
+        feat_access: 'Quick Access Link & QR',
+        feat_design: 'Initial Design & Config',
+        feat_support: '24/7 Tech & Commercial Support',
+        feat_payments: 'Payment Integration',
+        feat_brochure: 'Commercial Flyer with Link & QR',
+        feat_clients: 'Client Module',
+        feat_sellers: 'Seller Module',
+        feat_custom_logo: 'Logo/Favicon Customization',
+        feat_branches: 'Multi-Branch',
+        feat_domain: 'Custom Domain',
+        feat_maps: 'Google Maps Integration',
+        feat_webapp: 'Installable WebApp',
+
+        pricing_btn: 'Choose Plan'
     }
 };

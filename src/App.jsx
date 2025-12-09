@@ -6,7 +6,6 @@ import GoPedidosShowcase from './components/GoPedidosShowcase';
 import AboutUs from './components/AboutUs';
 import ProjectGallery from './components/ProjectGallery';
 import Footer from './components/Footer';
-import { LanguageProvider } from './context/LanguageContext';
 import './App.css';
 
 const ProjectFrame = lazy(() => import('./components/ProjectFrame'));
@@ -60,31 +59,29 @@ function App() {
 
   // Render Main Portfolio
   return (
-    <LanguageProvider>
-      <div className="app-container">
-        <Navbar />
-        <main>
-          <Hero />
-          <Services />
-          <GoPedidosShowcase onOpen={() => handleProjectClick(goPedidosProject)} />
-          <ProjectGallery onProjectClick={handleProjectClick} />
-          <AboutUs />
-        </main>
-        <Footer />
+    <div className="app-container">
+      <Navbar />
+      <main>
+        <Hero />
+        <Services />
+        <GoPedidosShowcase onOpen={() => handleProjectClick(goPedidosProject)} />
+        <ProjectGallery onProjectClick={handleProjectClick} />
+        <AboutUs />
+      </main>
+      <Footer />
 
-        {/* Global Background Glow */}
-        <div style={{
-          position: 'fixed',
-          bottom: 0,
-          left: 0,
-          width: '100vw',
-          height: '100vh',
-          background: 'radial-gradient(circle at 50% 100%, rgba(20, 20, 20, 1) 0%, rgba(5,5,5,1) 50%)',
-          zIndex: -1,
-          pointerEvents: 'none'
-        }}></div>
-      </div>
-    </LanguageProvider>
+      {/* Global Background Glow */}
+      <div style={{
+        position: 'fixed',
+        bottom: 0,
+        left: 0,
+        width: '100vw',
+        height: '100vh',
+        background: 'radial-gradient(circle at 50% 100%, rgba(20, 20, 20, 1) 0%, rgba(5,5,5,1) 50%)',
+        zIndex: -1,
+        pointerEvents: 'none'
+      }}></div>
+    </div>
   );
 }
 
