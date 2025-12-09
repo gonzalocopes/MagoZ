@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
+import { useNavigate } from 'react-router-dom';
 // Import dependencies from the moved project
 import { ThemeProvider } from '../gopedidos/src/context/ThemeContext';
 import { LanguageProvider as GoPedidosLanguageProvider } from '../gopedidos/src/context/LanguageContext';
@@ -7,7 +8,6 @@ import GoPedidosApp from '../gopedidos/src/App';
 // Import the styles for GoPedidos
 import '../gopedidos/src/index.css';
 import PricingPlans from './PricingPlans';
-import { LanguageProvider as MagozLanguageProvider } from '../context/LanguageContext';
 
 class ErrorBoundary extends Component {
     constructor(props) {
@@ -36,12 +36,14 @@ class ErrorBoundary extends Component {
     }
 }
 
-const GoPedidosWrapper = ({ onBack }) => {
+const GoPedidosWrapper = () => {
+    const navigate = useNavigate();
+
     return (
         <div className="gopedidos-root" style={{ position: 'relative', minHeight: '100vh', background: '#fff' }}>
             {/* Back Button Overlay */}
             <button
-                onClick={onBack}
+                onClick={() => navigate('/')}
                 style={{
                     position: 'fixed',
                     bottom: '20px',

@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
+import { Link } from 'react-router-dom';
 
-const GoPedidosShowcase = ({ onOpen }) => {
+const GoPedidosShowcase = () => {
     const { t } = useLanguage();
 
     return (
@@ -55,36 +56,39 @@ const GoPedidosShowcase = ({ onOpen }) => {
                             ))}
                         </ul>
 
-                        <button
-                            onClick={onOpen}
-                            style={{
-                                background: 'transparent',
-                                border: '2px solid #A4FF00',
-                                color: '#A4FF00',
-                                padding: '16px 32px',
-                                fontSize: '1.1rem',
-                                fontWeight: 'bold',
-                                borderRadius: '50px',
-                                cursor: 'pointer',
-                                transition: 'all 0.3s ease',
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '10px'
-                            }}
-                            onMouseEnter={(e) => {
-                                e.currentTarget.style.background = '#A4FF00';
-                                e.currentTarget.style.color = '#000';
-                                e.currentTarget.style.boxShadow = '0 0 30px rgba(164, 255, 0, 0.3)';
-                            }}
-                            onMouseLeave={(e) => {
-                                e.currentTarget.style.background = 'transparent';
-                                e.currentTarget.style.color = '#A4FF00';
-                                e.currentTarget.style.boxShadow = 'none';
-                            }}
-                        >
-                            {t('showcase_btn')}
-                            <span>→</span>
-                        </button>
+                        <Link to="/gopedidos" style={{ textDecoration: 'none' }}>
+                            <motion.button
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                style={{
+                                    background: 'transparent',
+                                    border: '2px solid #A4FF00',
+                                    color: '#A4FF00',
+                                    padding: '16px 32px',
+                                    fontSize: '1.1rem',
+                                    fontWeight: 'bold',
+                                    borderRadius: '50px',
+                                    cursor: 'pointer',
+                                    transition: 'all 0.3s ease',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '10px'
+                                }}
+                                onMouseEnter={(e) => {
+                                    e.currentTarget.style.background = '#A4FF00';
+                                    e.currentTarget.style.color = '#000';
+                                    e.currentTarget.style.boxShadow = '0 0 30px rgba(164, 255, 0, 0.3)';
+                                }}
+                                onMouseLeave={(e) => {
+                                    e.currentTarget.style.background = 'transparent';
+                                    e.currentTarget.style.color = '#A4FF00';
+                                    e.currentTarget.style.boxShadow = 'none';
+                                }}
+                            >
+                                {t('showcase_btn')}
+                                <span>→</span>
+                            </motion.button>
+                        </Link>
                     </motion.div>
 
                     {/* Image/Visual Content */}
