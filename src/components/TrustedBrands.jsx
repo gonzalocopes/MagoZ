@@ -5,6 +5,7 @@ const TrustedBrands = () => {
     const { t } = useLanguage();
 
     const brands = [
+        { name: "Stockeate", logo: "/brands/stockeate.png", keepColor: true },
         { name: "Pizzería El Maestro", logo: "/brands/pizzeria.png" },
         { name: "Papelera Los Álamos", logo: "/brands/papelera.png" },
         { name: "Librería RC", logo: "/brands/libreria.png" },
@@ -76,7 +77,7 @@ const TrustedBrands = () => {
                                         width: '100%',
                                         height: '100%',
                                         objectFit: 'contain',
-                                        filter: 'grayscale(100%) brightness(2)', // Make them crisp white
+                                        filter: brand.keepColor ? 'none' : 'grayscale(100%) brightness(2)',
                                     }}
                                 />
                             </div>
