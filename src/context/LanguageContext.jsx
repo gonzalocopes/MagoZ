@@ -93,6 +93,9 @@ export const LanguageProvider = ({ children }) => {
                 'Soluciones Seguras y a la Medida'
             ],
 
+            // Trusted Brands
+            trusted_brands_title: 'Marcas que confían en nosotros',
+
             // Projects Gallery
             projects_title: 'Casos de Éxito',
             project_cat_app: 'App de Pedidos',
@@ -189,6 +192,9 @@ export const LanguageProvider = ({ children }) => {
                 'Technical Support & Maintenance',
                 'Secure & Custom Solutions'
             ],
+
+            // Trusted Brands
+            trusted_brands_title: 'Brands that trust us',
 
             // Projects Gallery
             projects_title: 'Success Stories',

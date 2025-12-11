@@ -1,55 +1,20 @@
-import { useState, lazy, Suspense } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Services from '../components/Services';
 import GoPedidosShowcase from '../components/GoPedidosShowcase';
 import AboutUs from '../components/AboutUs';
-import ProjectGallery from '../components/ProjectGallery';
+import TrustedBrands from '../components/TrustedBrands';
 import Footer from '../components/Footer';
 
-const ProjectFrame = lazy(() => import('../components/ProjectFrame'));
-
 const Home = () => {
-    const [activeProject, setActiveProject] = useState(null);
-
-    const goPedidosProject = {
-        title: 'GoPedidos',
-        category: 'App de Pedidos',
-        image: '/projects/gopedidos.png',
-        link: 'https://gopedidos-psi.vercel.app/',
-        internal: true
-    };
-
-    const handleProjectClick = (project) => {
-        setActiveProject(project);
-        window.scrollTo(0, 0);
-    };
-
-    if (activeProject) {
-        return (
-            <Suspense fallback={
-                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', background: '#000', color: '#A4FF00' }}>
-                    Cargando...
-                </div>
-            }>
-                <ProjectFrame
-                    title={activeProject.title}
-                    url={activeProject.link}
-                    onClose={() => setActiveProject(null)}
-                />
-            </Suspense>
-        );
-    }
-
     return (
         <div className="app-container">
             <Navbar />
             <main>
                 <Hero />
                 <Services />
-                {/* Pass null or no-op as onOpen since it will now be a Link */}
-                <GoPedidosShowcase onOpen={() => { }} />
-                <ProjectGallery onProjectClick={handleProjectClick} />
+                <GoPedidosShowcase />
+                <TrustedBrands />
                 <AboutUs />
             </main>
             <Footer />

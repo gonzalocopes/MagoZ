@@ -35,7 +35,6 @@ const Navbar = () => {
 
     const menuItems = [
         { key: 'nav_services', id: 'servicios' },
-        { key: 'nav_projects', id: 'proyectos' },
         { key: 'nav_about', id: 'nosotros' }
     ];
 
