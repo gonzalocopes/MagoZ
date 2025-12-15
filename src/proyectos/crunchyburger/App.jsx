@@ -1,5 +1,6 @@
 // src/App.jsx
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "./index.css";
@@ -172,8 +173,26 @@ function App() {
     setShowUpsell(true);
   };
 
+  // 🔔 FORZAR CAMBIO DE FAVICON (Solución "bruta" para ganarle al index.html)
+  useEffect(() => {
+    // 1. Buscamos el link existente
+    let link = document.querySelector("link[rel~='icon']");
+    if (!link) {
+      // Si no existe, lo creamos
+      link = document.createElement("link");
+      link.rel = "icon";
+      document.head.appendChild(link);
+    }
+    // 2. Lo forzamos al nuevo
+    link.href = "/images/crunchy-logo-yellow.png";
+  }, []);
+
   return (
     <div className="bg-body-tertiary min-vh-100">
+      <Helmet>
+        <title>Crunchy Burger | Las mejores hamburguesas</title>
+        <link rel="icon" type="image/png" href="/images/crunchy-logo-yellow.png" sizes="16x16" />
+      </Helmet>
       <Navbar cartCount={cartCount} />
 
       {clientConfig.horario?.enabled && isClosed && (
