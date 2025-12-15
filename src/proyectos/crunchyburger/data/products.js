@@ -204,7 +204,7 @@ export const papas = [
     category: "Papas",
     description: "Para compartir. Con salsa cheddar.",
     price: 7500,
-    img: "/images/papas/papacompleta.png",
+    img: "/images/papas/papas-cheddar.png",
   },
   {
     id: "papas-completas",
@@ -244,7 +244,7 @@ export const papas = [
     category: "Papas",
     description: "Para compartir. Incluye Dip Barbacoa.",
     price: 8000,
-    img: "/images/papas/rabas.png",
+    img: "/images/papas/nuggets-papas.png",
   },
 ];
 
