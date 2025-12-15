@@ -14,7 +14,7 @@ export const clientConfig = {
   },
 
   hero: {
-    fondo: "/images/fondoburga.jpg",   // Imagen de fondo (ponela en /public/images/)
+    fondo: "/images/fondoburga_custom.png",   // Imagen de fondo (ponela en /public/images/)
     slides: [
       {
         titulo: "CRUNCHY BURGER",
