@@ -165,7 +165,7 @@ export const pizzas = [
     name: "Pizza Colonial",
     category: "Pizzas",
     description: "Salsa de tomate, Cebolla caramelizada, Muzza, Panceta, Aceitunas Verdes.",
-    price: 111111,
+    price: 15000,
     img: "/images/pizzas/colonial.jpeg",
 
   },
