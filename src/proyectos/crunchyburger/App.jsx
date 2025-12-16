@@ -246,7 +246,7 @@ function App() {
           © {new Date().getFullYear()}{" "}
           Desarrollado por{" "}
           <a
-            href="https://magozitsolutions.netlify.app/"
+            href="https://magozitsolutions.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-decoration-none text-info"
