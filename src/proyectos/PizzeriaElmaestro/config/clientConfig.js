@@ -14,7 +14,7 @@ export const clientConfig = {
   },
 
   hero: {
-    fondo: "/images/fondopizza.png",   // Imagen de fondo (ponela en /public/images/)
+    fondo: "/images/pizzeria_hero_logo.png",   // Imagen de fondo (ponela en /public/images/)
   },
 
   // // 🔔 NUEVO: configuración de horario por día
