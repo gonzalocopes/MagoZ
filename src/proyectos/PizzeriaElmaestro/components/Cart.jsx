@@ -48,8 +48,8 @@ export default function Cart({ cart, total, onRemove, onChangeQty, onEdit }) {
 
                   <div className="d-flex align-items-center">
 
-                    {/* Botón EDITAR: Solo para Pizzas (extras) o Packs de Empanadas */}
-                    {(item.category === "Pizzas" || item.id.includes("emp-")) && (
+                    {/* Botón EDITAR: Solo para Pizzas, Promos o Packs */}
+                    {(item.category === "Pizzas" || item.id.startsWith("promo-") || item.id.includes("emp-")) && (
                       <button
                         className="btn btn-sm btn-outline-warning me-2"
                         onClick={() => onEdit && onEdit(item)}

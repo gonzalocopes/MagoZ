@@ -144,7 +144,7 @@ export default function Menu({ onAddToCart, isClosed }) {
   return (
     <section id="menu" className="py-4 bg-light">
       <div className="container-fluid px-3 px-lg-4">
-        <h2 className="mb-3 text-center">Menú</h2>
+        <h2 className="mb-3 text-center text-dark">Menú</h2>
 
         {/* === LISTA DE CATEGORÍAS (ESTILO APP) – SOLO MOBILE === */}
         <div className="d-md-none mb-3 menu-category-strip">
@@ -159,13 +159,13 @@ export default function Menu({ onAddToCart, isClosed }) {
                   }`}
               >
                 <span className="flex-grow-1 text-start">
-                  <span className="d-block fw-semibold">{cat.label}</span>
+                  <span className="d-block fw-semibold text-dark">{cat.label}</span>
                   <small className="text-muted">
                     {cat.products.length} producto
                     {cat.products.length !== 1 ? "s" : ""}
                   </small>
                 </span>
-                <span className="menu-cat-icon">
+                <span className="menu-cat-icon text-dark">
                   {isActive ? "−" : "+"}
                 </span>
               </button>
@@ -185,7 +185,7 @@ export default function Menu({ onAddToCart, isClosed }) {
             >
               {/* Título de categoría (solo desktop) */}
               <div className="d-none d-md-flex align-items-baseline mb-2">
-                <h4 className="me-2 mb-0">{cat.label}</h4>
+                <h4 className="me-2 mb-0 text-dark">{cat.label}</h4>
                 <small className="text-muted">
                   {cat.products.length} producto
                   {cat.products.length !== 1 ? "s" : ""}

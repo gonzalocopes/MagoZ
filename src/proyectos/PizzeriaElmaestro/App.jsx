@@ -177,6 +177,39 @@ function App() {
       return;
     }
 
+    // ✅ PROMOS CON PIZZAS (y la especial de empanadas)
+    // Detectamos si es promo por ID o si le agregamos categoría "Promos" en el futuro
+    const isPromo = product.id.startsWith("promo-");
+
+    if (isPromo) {
+      const lineId = uid();
+
+      // Configuración especial para "1 Muzza + 6 Empanadas"
+      const isMuzzaEmpanadas = product.id === "promo-1-emp";
+
+      const newProduct = {
+        ...product,
+        lineId,
+        qty: 1,
+        // Todos los promos de pizzas llevan "extras" (molde/piedra)
+        extras: [],
+        // Si es la de empanadas, inicializamos el pack también
+        pack: isMuzzaEmpanadas ? { size: 6, items: {} } : null,
+      };
+
+      setCart((prev) => [...prev, newProduct]);
+
+      setLastProduct(product);
+      setActiveLineId(lineId);
+
+      // Paso 1: Siempre elegir preparación (Molde/Piedra)
+      setUpsellMode("extras");
+      setUpsellItems(extrasPizza); // Usamos los extras estándar de pizza
+
+      setShowUpsell(true);
+      return;
+    }
+
     // ✅ otros productos: se acumulan por id (como venías)
     setCart((prev) => {
       const existing = prev.find((item) => item.id === product.id && !item.lineId);
@@ -189,6 +222,24 @@ function App() {
       }
       return [...prev, { ...product, qty: 1 }];
     });
+  };
+
+  // ✅ Gestor de cierre del modal (Maneja flujos de varios pasos)
+  const handleModalClose = () => {
+    // Verificamos si estamos editando "1 Muzza + 6 Empanadas" y estamos en el paso 1 ("extras")
+    const activeItem = cart.find(i => i.lineId === activeLineId);
+
+    if (activeItem && activeItem.id === "promo-1-emp" && upsellMode === "extras") {
+      // PASO 2: Ir a elegir empanadas
+      setUpsellMode("pack");
+      setRequiredPackCount(6);
+      // No cerramos el modal, solo cambiamos el modo
+      return;
+    }
+
+    // Cierre normal
+    setShowUpsell(false);
+    setActiveLineId(null);
   };
 
   // ✅ Toggle extra sobre la pizza seleccionada (activeLineId)
@@ -266,22 +317,25 @@ function App() {
 
   // ✅ Editar ítem (Reabrir modal con estado actual)
   const handleEdit = (item) => {
+    setLastProduct(item);
+    setActiveLineId(item.lineId);
+
     // 1. Identificar tipo de edición
-    if (item.id.includes("emp-")) {
-      // Es Pack de empanadas
+    if (item.id === "promo-1-emp") {
+      // Caso especial: Preguntar qué quiere editar? 
+      // Simplificación: Abrir directo en Empanadas (lo más común) o Extras?
+      // O abrir en Extras y dejar que el flujo siga?
+      // Mejor: Abrir en Extras (Paso 1). El usuario puede dar "Listo" y pasar a Empanadas.
+      setUpsellMode("extras");
+      setUpsellItems(extrasPizza);
+      setShowUpsell(true);
+    } else if (item.id.includes("emp-")) {
+      // Pack empanadas
       setUpsellMode("pack");
       setRequiredPackCount(item.pack.size);
-      // Rehidratar conteos en el modal? 
-      // UpsellModal usa estado interno `counts`. Pasárselo o dejar que empiece vacío?
-      // Lo ideal sería pasárselo, pero UpsellModal resetea counts en useEffect.
-      // Haremos un pequeño refactor en el modo "pack" para inicializar con lo que hay.
-      // Por ahora, seteamos el ActiveLineId y abrimos.
-      // NOTA: Para que el modal muestre la cuenta actual, se debería pasar `initialCounts`
-      // pero el componente UpsellModal actual limpia el estado al abrirse.
-      // Vamos a asumir que el usuario quiere "corregir" y reelegir, O 
-      // modificamos UpsellModal para recibir "initialCounts".
-    } else if (item.category === "Pizzas") {
-      // Es Pizza
+      setShowUpsell(true);
+    } else if (item.category === "Pizzas" || item.id.startsWith("promo-")) {
+      // Pizzas o Promos de Pizza simples
       if (item.id === "pizza-mitad") {
         setUpsellMode("mitad");
         setUpsellItems(extrasMitad);
@@ -289,13 +343,8 @@ function App() {
         setUpsellMode("extras");
         setUpsellItems(extrasPizza);
       }
-    } else {
-      return; // No editable
+      setShowUpsell(true);
     }
-
-    setLastProduct(item); // Para mostrar el nombre en el modal
-    setActiveLineId(item.lineId); // Para saber qué ítem estamos tocando
-    setShowUpsell(true);
   };
 
   // ✅ total incluye extras por línea
@@ -353,7 +402,7 @@ function App() {
           © {new Date().getFullYear()}{" "}
           Desarrollado por{" "}
           <a
-            href="https://gopedidos-psi.vercel.app/"
+            href="https://magozitsolutions.com/gopedidos/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-decoration-none text-info"
@@ -367,7 +416,7 @@ function App() {
 
       <UpsellModal
         show={showUpsell}
-        onClose={() => setShowUpsell(false)}
+        onClose={handleModalClose}
         mode={upsellMode}
         lastProduct={lastProduct}
         upsellItems={upsellItems}
