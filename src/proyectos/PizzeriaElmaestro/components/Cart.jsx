@@ -15,7 +15,7 @@ export default function Cart({ cart, total, onRemove, onChangeQty, onEdit }) {
             <ul className="list-group mb-3">
               {cart.map((item) => (
                 <li
-                  key={item.id} // En realidad debería ser item.lineId si existe, o un combo
+                  key={item.id} // En realidad debería ser item.lineId si existe
                   className="list-group-item d-flex justify-content-between align-items-start"
                 >
                   <div className="ms-2 me-auto">
