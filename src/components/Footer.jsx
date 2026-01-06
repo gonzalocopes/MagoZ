@@ -41,8 +41,8 @@ const Footer = () => {
                                 </a>
                             </li>
                             <li>
-                                <a href="https://wa.me/541122949729" target="_blank" rel="noreferrer" style={{ color: 'var(--color-text-muted)', display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
-                                    <span>💬</span> +54 11 22 9497 29
+                                <a href="https://wa.me/541136424020" target="_blank" rel="noreferrer" style={{ color: 'var(--color-text-muted)', display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
+                                    <span>💬</span> +54 11 36 4240 20
                                 </a>
                             </li>
                             <li>

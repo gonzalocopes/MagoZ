@@ -13,26 +13,19 @@ const PricingPlans = () => {
             price: '20.000',
             products: t.plan_1_products,
             features: [
-                t.feat_access,
                 t.feat_design,
                 t.feat_support,
-                t.feat_payments,
-                t.feat_brochure
+                t.feat_wpp,
+                t.feat_access
             ],
             notIncluded: [
-                t.feat_clients,
-                t.feat_sellers,
-                t.feat_custom_logo,
-                t.feat_branches,
-                t.feat_domain,
-                t.feat_maps,
-                t.feat_webapp
+                t.feat_images
             ]
         },
         {
             key: 'plan_entrepreneur',
             title: t.plan_2_title,
-            price: '30.000',
+            price: '45.000',
             products: t.plan_2_products,
             isPopular: true,
             label: t.plan_2_label,
@@ -40,11 +33,9 @@ const PricingPlans = () => {
                 t.feat_access,
                 t.feat_design,
                 t.feat_support,
-                t.feat_payments,
                 t.feat_brochure,
-                t.feat_clients,
-                t.feat_sellers,
-                t.feat_custom_logo
+                t.feat_custom_logo,
+                t.feat_images
             ],
             notIncluded: [
                 t.feat_branches,
@@ -56,17 +47,15 @@ const PricingPlans = () => {
         {
             key: 'plan_business',
             title: t.plan_3_title,
-            price: '40.000',
+            price: '70.000',
             products: t.plan_3_products,
             features: [
                 t.feat_access,
                 t.feat_design,
                 t.feat_support,
-                t.feat_payments,
                 t.feat_brochure,
-                t.feat_clients,
-                t.feat_sellers,
                 t.feat_custom_logo,
+                t.feat_images,
                 t.feat_branches,
                 t.feat_domain,
                 t.feat_maps,
