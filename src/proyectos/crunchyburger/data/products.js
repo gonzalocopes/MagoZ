@@ -131,7 +131,7 @@ export const hamburguesas = [
     category: "Hamburguesas",
     description: "Pan de papa, Doble medallón, Cheddar x4, Panceta. Incluye papas fritas.",
     price: 12000,
-    img: "/images/burgas/cheese-bacon.png",
+    img: "/images/burgas/cheese-bacon-doble-new.png",
   },
   {
     id: "cheese-bacon-triple",
@@ -285,7 +285,7 @@ export const bebidas = [
     category: "Bebidas",
     description: "Botella de 1 litro.",
     price: 7000,
-    img: "/images/bebidas/cerveza_golden_1l.png",
+    img: "/images/bebidas/cervezas_artesanales_new.png",
   },
   {
     id: "artesanal-honey",
@@ -293,7 +293,7 @@ export const bebidas = [
     category: "Bebidas",
     description: "Botella de 1 litro.",
     price: 7000,
-    img: "/images/bebidas/cerveza_honey_1l.png",
+    img: "/images/bebidas/cervezas_artesanales_new.png",
   },
   {
     id: "artesanal-scottish",
@@ -301,7 +301,7 @@ export const bebidas = [
     category: "Bebidas",
     description: "Botella de 1 litro.",
     price: 7000,
-    img: "/images/bebidas/cerveza_scottish_1l.png",
+    img: "/images/bebidas/cervezas_artesanales_new.png",
   },
   {
     id: "artesanal-ipa",
@@ -309,7 +309,7 @@ export const bebidas = [
     category: "Bebidas",
     description: "Botella de 1 litro.",
     price: 8000,
-    img: "/images/bebidas/cerveza_ipa_1l.png",
+    img: "/images/bebidas/cervezas_artesanales_new.png",
   },
   {
     id: "artesanal-session-ipa",
@@ -317,7 +317,7 @@ export const bebidas = [
     category: "Bebidas",
     description: "Botella de 1 litro.",
     price: 8000,
-    img: "/images/bebidas/cerveza_session_ipa_1l.png",
+    img: "/images/bebidas/cervezas_artesanales_new.png",
   },
   {
     id: "artesanal-porter",
@@ -325,7 +325,7 @@ export const bebidas = [
     category: "Bebidas",
     description: "Botella de 1 litro.",
     price: 7000,
-    img: "/images/bebidas/cerveza_porter_1l_v2.png",
+    img: "/images/bebidas/cervezas_artesanales_new.png",
   },
 
   // Tragos de Litro
