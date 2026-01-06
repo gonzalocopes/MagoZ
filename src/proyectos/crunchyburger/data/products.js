@@ -1,4 +1,5 @@
 export const promos = [
+  /*
   {
     id: "promo-gancia-2",
     name: "Promo 2x Gancia",
@@ -23,6 +24,7 @@ export const promos = [
     price: 7000,
     img: "/images/bebidas/cerveza_golden_1l.png",
   },
+  */
   // Combos del Día
   {
     id: "promo-miercoles",
@@ -218,7 +220,7 @@ export const papas = [
     id: "papas-crunchy-bacon",
     name: "Papas Crunchy Cheese Bacon",
     category: "Papas",
-    description: "Para compartir. Papas fritas + doble carne smaheada + cheddar + panceta + cebollita de verdeo.",
+    description: "Para compartir. Papas fritas con Carne, cheddar liquido, panceta y verdeo.",
     price: 14000,
     img: "/images/papas/papas-crunchy.png",
   },
@@ -234,7 +236,7 @@ export const papas = [
     id: "papas-bondiola",
     name: "Papas Bondiola BBQ",
     category: "Papas",
-    description: "Para compartir. Papas fritas + bondiola desmechada + barbacoa + cebollita crispy + cheddar.",
+    description: "Para compartir. Papas fritas + bondiola Desmenuzada, Salsa BBQ, Cebolla Crispy, Verdeo y MOZZARELLA.",
     price: 14000,
     img: "/images/papas/papas-bondiola-bbq.jpg",
   },
