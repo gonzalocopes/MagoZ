@@ -107,7 +107,7 @@ export const hamburguesas = [
     category: "Hamburguesas",
     description: "Pan de papa, Doble medallón, Cheddar x4. Incluye papas fritas.",
     price: 11000,
-    img: "/images/burgas/cheese-simple.png",
+    img: "/images/burgas/cheese-doble-dark.png",
   },
   {
     id: "cheese-triple",
@@ -115,7 +115,7 @@ export const hamburguesas = [
     category: "Hamburguesas",
     description: "Pan de papa, Triple medallón, Cheddar x6. Incluye papas fritas.",
     price: 15000,
-    img: "/images/burgas/cheese-simple.png",
+    img: "/images/burgas/cheese-triple-dark.png",
   },
   {
     id: "cheese-bacon-simple",
@@ -139,7 +139,7 @@ export const hamburguesas = [
     category: "Hamburguesas",
     description: "Pan de papa, Triple medallón, Cheddar x6, Panceta. Incluye papas fritas.",
     price: 16000,
-    img: "/images/burgas/cheese-bacon.png",
+    img: "/images/burgas/cheese-bacon-triple-new.png",
   },
   {
     id: "oklahoma-simple",
