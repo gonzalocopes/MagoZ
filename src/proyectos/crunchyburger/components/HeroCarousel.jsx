@@ -58,7 +58,7 @@ export default function HeroCarousel() {
               <div className="carousel-caption d-block">
                 <div className="hero-caption-glass">
                   <h2 className="hero-title">{slide1Title}</h2>
-                  <p className="hero-subtitle">{slide1Subtitle}</p>
+                  <p className="hero-subtitle" style={{ whiteSpace: 'pre-line' }}>{slide1Subtitle}</p>
                 </div>
               </div>
             </div>
