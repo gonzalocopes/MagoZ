@@ -422,10 +422,15 @@ button:focus-visible {
     /* Un poco más oscuro en mobile para legibilidad */
     border-radius: 12px;
     width: 95%;
-    /* Nueva animación para que aparezca más abajo */
+    /* Animación estándar para la mayoría */
+    animation-name: fadeUp;
+    transform: translateY(0);
+  }
+
+  /* Solo el slide de horarios usa la animación baja */
+  .hours-slide {
     animation-name: fadeUpMobile;
-    transform: translateY(30px);
-    /* Posición final más baja */
+    transform: translateY(50px);
   }
 
   .hero-title {
@@ -440,13 +445,13 @@ button:focus-visible {
 @keyframes fadeUpMobile {
   from {
     opacity: 0;
-    transform: translateY(60px);
+    transform: translateY(90px);
     /* Empieza bien abajo */
   }
 
   to {
     opacity: 1;
-    transform: translateY(30px);
+    transform: translateY(60px);
     /* Termina un poco más abajo que el original (0) */
   }
 }
