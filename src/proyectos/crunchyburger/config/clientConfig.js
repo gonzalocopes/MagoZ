@@ -3,7 +3,7 @@ export const clientConfig = {
   nombre: "Crunchy Burger",          // Nombre del local
   tipo: "hamburgueseria",                     // pizzeria | hamburgueseria | heladeria | etc.
 
-  whatsapp: "+5491136424020",           // Teléfono del negocio (formato internacional)
+  whatsapp: "+5491171206446",           // Teléfono del negocio (formato internacional)
 
   logo: "/images/crunchy-logo-yellow.png",    // Ruta dentro de /public (ej: public/images/logo-pizzeria.png)
 

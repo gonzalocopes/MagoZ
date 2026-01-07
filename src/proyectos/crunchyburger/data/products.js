@@ -335,7 +335,7 @@ export const bebidas = [
     category: "Bebidas",
     description: "Trago de litro.",
     price: 8000,
-    img: "/images/bebidas/trago_fernet_1l.png",
+    img: "/images/bebidas/trago_fernet_1l_new.png",
   },
   {
     id: "trago-gancia",
@@ -343,7 +343,7 @@ export const bebidas = [
     category: "Bebidas",
     description: "Trago de litro.",
     price: 6000,
-    img: "/images/bebidas/trago_gancia_1l.png",
+    img: "/images/bebidas/trago_gancia_1l_new.png",
   },
   {
     id: "trago-sky-speed",
