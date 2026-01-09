@@ -3,7 +3,7 @@ export const clientConfig = {
   nombre: "BRANCA BURGERS",          // Nombre del local
   tipo: "hamburgueseria",                     // pizzeria | hamburgueseria | heladeria | etc.
 
-  whatsapp: "+5491136424020",           // Teléfono del negocio (formato internacional)
+  whatsapp: "+5491138341694",           // Teléfono del negocio (formato internacional)
 
   logo: "/images/branca_logo.png",
   colores: {
