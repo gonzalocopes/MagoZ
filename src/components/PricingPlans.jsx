@@ -163,16 +163,7 @@ const PricingPlans = () => {
                             </div>
                             <p style={{ color: isDark ? '#888' : '#6b7280', marginBottom: '30px' }}>{t.pricing_month}</p>
 
-                            <div style={{
-                                background: 'rgba(255, 102, 0, 0.1)',
-                                color: '#FF6600',
-                                padding: '10px',
-                                borderRadius: '10px',
-                                marginBottom: '30px',
-                                fontWeight: '600'
-                            }}>
-                                {plan.products}
-                            </div>
+
 
                             <ul style={{ textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '15px', marginBottom: '40px', padding: 0 }}>
                                 {plan.features.map((feat, i) => (
