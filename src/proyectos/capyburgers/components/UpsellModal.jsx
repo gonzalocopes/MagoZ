@@ -17,7 +17,7 @@ export default function UpsellModal({
     if (show && lastProduct?.description) {
       // 1. Limpiamos la frase de las papas (si existe) y punto final
       let cleanDesc = lastProduct.description
-        .replace(/Incluye papas fritas\.?/i, "")
+        .replace(/\s*\(?(?:Viene con|Incluye) papas(?: fritas)?\)?\.?/gi, "")
         .replace(/\.$/, ""); // sacar punto final
 
       // 2. Separamos por comas
@@ -52,7 +52,7 @@ export default function UpsellModal({
       // Mapeamos a objetos con estado "checked" (inicialmente true)
       // Usamos el nombre original, pero chequeamos si ya estaba excluido en lastProduct.exclusions
       const currentExclusions = lastProduct.exclusions || [];
-      
+
       setIngredients(
         finalIngredients.map((ing) => ({
           name: ing,
@@ -135,9 +135,8 @@ export default function UpsellModal({
                         id={`ing-${idx}`}
                       />
                       <label
-                        className={`form-check-label ${
-                          !ing.checked ? "text-decoration-line-through text-danger" : ""
-                        }`}
+                        className={`form-check-label ${!ing.checked ? "text-decoration-line-through text-danger" : ""
+                          }`}
                         htmlFor={`ing-${idx}`}
                       >
                         {ing.name}

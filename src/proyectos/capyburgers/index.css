@@ -430,7 +430,7 @@ button:focus-visible {
   /* Solo el slide de horarios usa la animación baja */
   .hours-slide {
     animation-name: fadeUpMobile;
-    transform: translateY(7vh);
+    transform: translateY(0);
   }
 
   .hero-title {
@@ -445,14 +445,14 @@ button:focus-visible {
 @keyframes fadeUpMobile {
   from {
     opacity: 0;
-    transform: translateY(12vh);
-    /* Empieza bien abajo */
+    transform: translateY(20px);
+    /* Empieza un poco abajo */
   }
 
   to {
     opacity: 1;
-    transform: translateY(7vh);
-    /* Termina proporcional a la altura de la pantalla */
+    transform: translateY(0);
+    /* Termina en su lugar original */
   }
 }
 

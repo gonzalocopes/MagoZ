@@ -142,7 +142,7 @@ export const papas = [
     category: "Papas",
     description: "Bandeja de Papas con Cheddar y Bacon.",
     price: 9500,
-    img: "/images/papas/papas-crunchy.png",
+    img: "/images/papas/papas-cheddar-bacon-new.png",
   },
   {
     id: "papas-completa",
