@@ -22,7 +22,7 @@ export const clientConfig = {
       },
       {
         titulo: "Horarios",
-        subtitulo: "Viernes a Domingos: 19:30hs a 00:00hs",
+        subtitulo: "Viernes a Lunes: 19:30hs a 00:00hs",
       },
       {
         titulo: "Encontranos",

@@ -74,7 +74,7 @@ export const milanesas = [
     category: "Milanesas",
     description: "Jamon, queso, lechuga, tomate, huevos fritos. (Incluye papas)", // $22000
     price: 22000,
-    img: "/images/branca/branca_sandwich_mila_1767966753636.png",
+    img: "/images/branca/real_sandwich_mila.png",
   },
   {
     id: "mila-napo",
@@ -82,7 +82,15 @@ export const milanesas = [
     category: "Milanesas",
     description: "Con guarnición de papas fritas.", // $13900
     price: 13900,
-    img: "/images/branca/branca_mila_napo_1767966768411.png",
+    img: "/images/branca/real_mila_carne_napo.png",
+  },
+  {
+    id: "mila-napo-pollo",
+    name: "Milanesa napolitana de pollo al plato",
+    category: "Milanesas",
+    description: "Con guarnición de papas fritas.", // $11800
+    price: 11800,
+    img: "/images/branca/real_mila_pollo_napo.png",
   },
   {
     id: "mila-caballo",
