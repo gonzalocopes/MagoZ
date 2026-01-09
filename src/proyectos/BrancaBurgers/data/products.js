@@ -174,7 +174,7 @@ export const papas = [
   },
   {
     id: "papas-cheddar-bacon",
-    name: "Con cheddar y bacon",
+    name: "Papas fritas con cheddar y bacon",
     category: "Papas",
     description: "Papas fritas bañadas en cheddar con trocitos de bacon.",
     price: 9500,
@@ -182,7 +182,7 @@ export const papas = [
   },
   {
     id: "papas-completa",
-    name: "Con cheddar, bacon y verdeo",
+    name: "Papas fritas con cheddar, bacon y verdeo",
     category: "Papas",
     description: "Papas fritas con cheddar, bacon y cebolla de verdeo.",
     price: 9900,
