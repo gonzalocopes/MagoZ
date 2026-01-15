@@ -68,7 +68,7 @@ export const promos = [
   },
   {
     id: "promo-mega-balde",
-    name: "Promo Mega Balde (Mié/Jue)",
+    name: "Promo Mega Balde (Lun/Mié/Jue)",
     category: "Promos",
     description: "1kg papas + 4 cheeseburgers. Solo Miércoles y Jueves.",
     price: 21990,
@@ -99,6 +99,14 @@ export const hamburguesas = [
     category: "Hamburguesas",
     description: "Pan de papa, Medallón de 120grs, Cheddar x2. Incluye papas fritas.",
     price: 7500,
+    img: "/images/burgas/cheese-simple.png",
+  },
+  {
+    id: "cheese-simple-sin-papas",
+    name: "Hamburguesa simple cheese SIN PAPAS",
+    category: "Hamburguesas",
+    description: "Pan de papa, Medallón de 120grs, Cheddar x2.",
+    price: 4500,
     img: "/images/burgas/cheese-simple.png",
   },
   {
