@@ -449,7 +449,7 @@ export const promos = [
     id: "promo-3-esp",
     name: "3 Especiales",
     description: "3 Especiales (napo, calabresa, J&M).",
-    price: 41000,
+    price: 46000,
     img: "/images/promo.png",
   },
 ];
