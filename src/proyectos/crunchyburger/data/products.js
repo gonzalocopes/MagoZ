@@ -1,4 +1,5 @@
 export const promos = [
+  /*
   {
     id: "promo-gancia-2",
     name: "Promo 2x Gancia",
@@ -23,6 +24,7 @@ export const promos = [
     price: 7000,
     img: "/images/bebidas/cerveza_golden_1l.png",
   },
+  */
   // Combos del Día
   {
     id: "promo-miercoles",
@@ -66,7 +68,7 @@ export const promos = [
   },
   {
     id: "promo-mega-balde",
-    name: "Promo Mega Balde (Mié/Jue)",
+    name: "Promo Mega Balde (Lun/Mié/Jue)",
     category: "Promos",
     description: "1kg papas + 4 cheeseburgers. Solo Miércoles y Jueves.",
     price: 21990,
@@ -100,12 +102,20 @@ export const hamburguesas = [
     img: "/images/burgas/cheese-simple.png",
   },
   {
+    id: "cheese-simple-sin-papas",
+    name: "Hamburguesa simple cheese SIN PAPAS",
+    category: "Hamburguesas",
+    description: "Pan de papa, Medallón de 120grs, Cheddar x2.",
+    price: 4500,
+    img: "/images/burgas/cheese-simple.png",
+  },
+  {
     id: "cheese-doble",
     name: "Cheese Doble",
     category: "Hamburguesas",
     description: "Pan de papa, Doble medallón, Cheddar x4. Incluye papas fritas.",
     price: 11000,
-    img: "/images/burgas/cheese-simple.png",
+    img: "/images/burgas/cheese-doble-dark.png",
   },
   {
     id: "cheese-triple",
@@ -113,7 +123,7 @@ export const hamburguesas = [
     category: "Hamburguesas",
     description: "Pan de papa, Triple medallón, Cheddar x6. Incluye papas fritas.",
     price: 15000,
-    img: "/images/burgas/cheese-simple.png",
+    img: "/images/burgas/cheese-triple-dark.png",
   },
   {
     id: "cheese-bacon-simple",
@@ -129,7 +139,7 @@ export const hamburguesas = [
     category: "Hamburguesas",
     description: "Pan de papa, Doble medallón, Cheddar x4, Panceta. Incluye papas fritas.",
     price: 12000,
-    img: "/images/burgas/cheese-bacon.png",
+    img: "/images/burgas/cheese-bacon-doble-new.png",
   },
   {
     id: "cheese-bacon-triple",
@@ -137,7 +147,7 @@ export const hamburguesas = [
     category: "Hamburguesas",
     description: "Pan de papa, Triple medallón, Cheddar x6, Panceta. Incluye papas fritas.",
     price: 16000,
-    img: "/images/burgas/cheese-bacon.png",
+    img: "/images/burgas/cheese-bacon-triple-new.png",
   },
   {
     id: "oklahoma-simple",
@@ -218,7 +228,7 @@ export const papas = [
     id: "papas-crunchy-bacon",
     name: "Papas Crunchy Cheese Bacon",
     category: "Papas",
-    description: "Para compartir. Papas fritas + doble carne smaheada + cheddar + panceta + cebollita de verdeo.",
+    description: "Para compartir. Papas fritas con Carne, cheddar liquido, panceta y verdeo.",
     price: 14000,
     img: "/images/papas/papas-crunchy.png",
   },
@@ -234,7 +244,7 @@ export const papas = [
     id: "papas-bondiola",
     name: "Papas Bondiola BBQ",
     category: "Papas",
-    description: "Para compartir. Papas fritas + bondiola desmechada + barbacoa + cebollita crispy + cheddar.",
+    description: "Para compartir. Papas fritas + bondiola Desmenuzada, Salsa BBQ, Cebolla Crispy, Verdeo y MOZZARELLA.",
     price: 14000,
     img: "/images/papas/papas-bondiola-bbq.jpg",
   },
@@ -283,7 +293,7 @@ export const bebidas = [
     category: "Bebidas",
     description: "Botella de 1 litro.",
     price: 7000,
-    img: "/images/bebidas/cerveza_golden_1l.png",
+    img: "/images/bebidas/cervezas_artesanales_new.png",
   },
   {
     id: "artesanal-honey",
@@ -291,7 +301,7 @@ export const bebidas = [
     category: "Bebidas",
     description: "Botella de 1 litro.",
     price: 7000,
-    img: "/images/bebidas/cerveza_honey_1l.png",
+    img: "/images/bebidas/cervezas_artesanales_new.png",
   },
   {
     id: "artesanal-scottish",
@@ -299,7 +309,7 @@ export const bebidas = [
     category: "Bebidas",
     description: "Botella de 1 litro.",
     price: 7000,
-    img: "/images/bebidas/cerveza_scottish_1l.png",
+    img: "/images/bebidas/cervezas_artesanales_new.png",
   },
   {
     id: "artesanal-ipa",
@@ -307,7 +317,7 @@ export const bebidas = [
     category: "Bebidas",
     description: "Botella de 1 litro.",
     price: 8000,
-    img: "/images/bebidas/cerveza_ipa_1l.png",
+    img: "/images/bebidas/cervezas_artesanales_new.png",
   },
   {
     id: "artesanal-session-ipa",
@@ -315,7 +325,7 @@ export const bebidas = [
     category: "Bebidas",
     description: "Botella de 1 litro.",
     price: 8000,
-    img: "/images/bebidas/cerveza_session_ipa_1l.png",
+    img: "/images/bebidas/cervezas_artesanales_new.png",
   },
   {
     id: "artesanal-porter",
@@ -323,7 +333,7 @@ export const bebidas = [
     category: "Bebidas",
     description: "Botella de 1 litro.",
     price: 7000,
-    img: "/images/bebidas/cerveza_porter_1l_v2.png",
+    img: "/images/bebidas/cervezas_artesanales_new.png",
   },
 
   // Tragos de Litro
@@ -333,7 +343,7 @@ export const bebidas = [
     category: "Bebidas",
     description: "Trago de litro.",
     price: 8000,
-    img: "/images/bebidas/trago_fernet_1l.png",
+    img: "/images/bebidas/trago_fernet_1l_new.png",
   },
   {
     id: "trago-gancia",
@@ -341,7 +351,7 @@ export const bebidas = [
     category: "Bebidas",
     description: "Trago de litro.",
     price: 6000,
-    img: "/images/bebidas/trago_gancia_1l.png",
+    img: "/images/bebidas/trago_gancia_1l_new.png",
   },
   {
     id: "trago-sky-speed",

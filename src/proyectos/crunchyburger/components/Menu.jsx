@@ -6,7 +6,7 @@ export default function Menu({ onAddToCart, isClosed }) {
   const categories = [
     { id: "hamburguesas", label: "Hamburguesas 🍔", products: hamburguesas },
     { id: "papas", label: "Papas y Acompañamientos 🍟", products: papas },
-    { id: "combos", label: "Combos y Baldes 🥡", products: combos },
+    { id: "combos", label: "Combos y Baldes 🍔🥤", products: combos },
     { id: "promos", label: "Promos 🔥", products: promos },
     { id: "bebidas", label: "Bebidas 🥤", products: bebidas },
   ];

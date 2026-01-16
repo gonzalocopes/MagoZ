@@ -5,7 +5,9 @@ import './App.css';
 
 const GoPedidosWrapper = lazy(() => import('./components/GoPedidosWrapper'));
 const CrunchyBurgerApp = lazy(() => import('./proyectos/crunchyburger/App'));
+const CapyBurgersApp = lazy(() => import('./proyectos/capyburgers/App'));
 const PizzeriaElMaestroApp = lazy(() => import('./proyectos/PizzeriaElmaestro/App'));
+const BrancaBurgersApp = lazy(() => import('./proyectos/BrancaBurgers/App'));
 
 function App() {
   return (
@@ -25,10 +27,20 @@ function App() {
           <CrunchyBurgerApp />
         </Suspense>
       } />
+      <Route path="/gopedidos/capyburgers/*" element={
+        <Suspense fallback={<div>Cargando CapyBurgers...</div>}>
+          <CapyBurgersApp />
+        </Suspense>
+      } />
       {/* Route for Pizzeria Client App */}
       <Route path="/gopedidos/pizzeria-el-maestro/*" element={
         <Suspense fallback={<div>Cargando Pizzería El Maestro...</div>}>
           <PizzeriaElMaestroApp />
+        </Suspense>
+      } />
+      <Route path="/gopedidos/brancaburgers/*" element={
+        <Suspense fallback={<div>Cargando BrancaBurgers...</div>}>
+          <BrancaBurgersApp />
         </Suspense>
       } />
     </Routes>

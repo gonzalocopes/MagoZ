@@ -3,7 +3,7 @@ export const clientConfig = {
   nombre: "Crunchy Burger",          // Nombre del local
   tipo: "hamburgueseria",                     // pizzeria | hamburgueseria | heladeria | etc.
 
-  whatsapp: "+5491136424020",           // Teléfono del negocio (formato internacional)
+  whatsapp: "+5491171206446",           // Teléfono del negocio (formato internacional)
 
   logo: "/images/crunchy-logo-yellow.png",    // Ruta dentro de /public (ej: public/images/logo-pizzeria.png)
 
@@ -22,7 +22,7 @@ export const clientConfig = {
       },
       {
         titulo: "Horarios",
-        subtitulo: "Miércoles a Domingo desde las 19hs.",
+        subtitulo: `Miércoles a lunes (martes cerrado)\nLun / Mié / Jue: 18:00 – 01:00\nVie / Sáb / Dom: 18:00 – 02:00`,
       },
       {
         titulo: "Encontranos",

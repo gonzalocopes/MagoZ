@@ -110,6 +110,8 @@ export const translations = {
         feat_domain: 'Dominio personalizado',
         feat_maps: 'Integración Google Maps',
         feat_webapp: 'Versión WebApp Instalable',
+        feat_wpp: 'Integración WhatsApp',
+        feat_images: 'Imágenes en Productos',
 
         pricing_btn: 'Elegir Plan'
     },
