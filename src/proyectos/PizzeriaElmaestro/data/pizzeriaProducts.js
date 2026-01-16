@@ -37,7 +37,7 @@ export const pizzas = [
     name: "Jamon",
     category: "Pizzas",
     description: "Salsa de tomate, muzza, jamon.",
-    price: 17000,
+    price: 15500,
     img: "/images/pizzas/Pizza-Jamon.png",
   },
   {
