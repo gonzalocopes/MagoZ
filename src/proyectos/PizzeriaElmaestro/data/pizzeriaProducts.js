@@ -5,14 +5,14 @@ export const pizzas = [
     name: "Muzzarella",
     category: "Pizzas",
     description: "Salsa de tomate, muzza, aceitunas y orégano.",
-    price: 12000,
+    price: 14000,
     img: "/images/pizzas/pizza-muzarella.png",
   }, {
     id: "pizza-faina",
     name: "Faina Completa",
     category: "Pizzas",
     description: "Faina Completa.",
-    price: 9000,
+    price: 10000,
     img: "/images/pizzas/faina.jpg",
     noExtras: true,          // 👈 NO mostrar extras
   },
@@ -21,7 +21,7 @@ export const pizzas = [
     name: "Faina por Porciones",
     category: "Pizzas",
     description: "Faina por porciones.",
-    price: 1200,
+    price: 1400,
     img: "/images/pizzas/fainapor.jpg",
     noExtras: true,          // 👈 NO mostrar extras
   }, {
@@ -37,7 +37,7 @@ export const pizzas = [
     name: "Jamon",
     category: "Pizzas",
     description: "Salsa de tomate, muzza, jamon.",
-    price: 13500,
+    price: 17000,
     img: "/images/pizzas/Pizza-Jamon.png",
   },
   {
@@ -45,7 +45,7 @@ export const pizzas = [
     name: "Verdura",
     category: "Pizzas",
     description: "Salsa de tomate, muzza, verduras.",
-    price: 13000,
+    price: 15000,
     img: "/images/pizzas/verduras.avif",
   },
   {
@@ -53,7 +53,7 @@ export const pizzas = [
     name: "Napolitana",
     category: "Pizzas",
     description: "Tomate en rodajas, muzza, ajo y orégano.",
-    price: 15000,
+    price: 17000,
     img: "/images/pizzas/pizza-napo.png",
   },
   {
@@ -61,7 +61,7 @@ export const pizzas = [
     name: "Calabresa",
     category: "Pizzas",
     description: "Muzza, longaniza calabresa y aceitunas.",
-    price: 15000,
+    price: 17000,
     img: "/images/pizzas/calabresa.png",
   },
   {
@@ -69,7 +69,7 @@ export const pizzas = [
     name: "Jamon y Morron",
     category: "Pizzas",
     description: "Salsa de tomate, muzza, jamon y morron.",
-    price: 15000,
+    price: 17000,
     img: "/images/pizzas/morron-jamon.png",
   },
   {
@@ -85,7 +85,7 @@ export const pizzas = [
     name: "Roquefort",
     category: "Pizzas",
     description: "Salsa de tomate, muzza, roquefort.",
-    price: 17000,
+    price: 19000,
     img: "/images/pizzas/roquefort.jpg",
   },
   {
@@ -93,7 +93,7 @@ export const pizzas = [
     name: "Roquefort con Jamon",
     category: "Pizzas",
     description: "Salsa de tomate, muzza, roquefort y jamon.",
-    price: 18500,
+    price: 20500,
     img: "/images/pizzas/ryj.png",
   },
   {
@@ -101,7 +101,7 @@ export const pizzas = [
     name: "Primavera",
     category: "Pizzas",
     description: "Salsa de tomate, muzza ??????.",
-    price: 17500,
+    price: 19500,
     img: "/images/pizzas/primavera.png",
   },
   {
@@ -109,7 +109,7 @@ export const pizzas = [
     name: "Cheddar",
     category: "Pizzas",
     description: "Salsa de tomate, muzza, Cheddar.",
-    price: 16000,
+    price: 18000,
     img: "/images/pizzas/chedar.jpg",
   },
   {
@@ -117,7 +117,7 @@ export const pizzas = [
     name: "Muzzarella a Caballo",
     category: "Pizzas",
     description: "Salsa de tomate, muzza, a caballo.",
-    price: 18000,
+    price: 21000,
     img: "/images/pizzas/acaballo.jpg",
   },
   {
@@ -125,7 +125,7 @@ export const pizzas = [
     name: "Muzzarella con Fritas",
     category: "Pizzas",
     description: "Salsa de tomate, muzza, papas fritas.",
-    price: 17000,
+    price: 21000,
     img: "/images/pizzas/papaspng.png",
   },
   {
@@ -133,7 +133,7 @@ export const pizzas = [
     name: "Fugarella",
     category: "Pizzas",
     description: "Cebolla, Muzzarela, Orégano y Aceitunas negras.",
-    price: 13000,
+    price: 15000,
     img: "/images/pizzas/fuga.jpeg",
   },
   {
@@ -141,7 +141,7 @@ export const pizzas = [
     name: "Fugazzeta",
     category: "Pizzas",
     description: "Cebolla caramelizada, muzza y orégano.",
-    price: 16000,
+    price: 19000,
     img: "/images/pizzas/fugazeta.jpg",
   },
   {
@@ -149,7 +149,7 @@ export const pizzas = [
     name: "Fugazzeta con Jamon",
     category: "Pizzas",
     description: "Salsa de tomate, muzza, fugazzeta y jamon.",
-    price: 18000,
+    price: 20500,
     img: "/images/pizzas/fyj.jpg",
   },
   {
@@ -165,7 +165,7 @@ export const pizzas = [
     name: "Pizza Colonial",
     category: "Pizzas",
     description: "Salsa de tomate, Cebolla caramelizada, Muzza, Panceta, Aceitunas Verdes.",
-    price: 15000,
+    price: 18000,
     img: "/images/pizzas/colonial.jpeg",
 
   },
@@ -174,7 +174,7 @@ export const pizzas = [
     name: "Calzones Napolitano",
     category: "Pizzas",
     description: "Jamon, Muzza y Tomate.",
-    price: 15000,
+    price: 17000,
     img: "/images/pizzas/calzo.jpeg",
     noExtras: true,
   },
@@ -183,7 +183,7 @@ export const pizzas = [
     name: "Calzones Calabresa",
     category: "Pizzas",
     description: "Muzza, Longaniza y Tomate.",
-    price: 15000,
+    price: 17000,
     img: "/images/pizzas/calzo.jpeg",
     noExtras: true,
   },
@@ -192,7 +192,7 @@ export const pizzas = [
     name: "Calzones Roquefort",
     category: "Pizzas",
     description: "Jamon, Roquefort y Morrones.",
-    price: 15000,
+    price: 19000,
     img: "/images/pizzas/calzo.jpeg",
     noExtras: true,
   }
@@ -207,7 +207,7 @@ export const empanadas = [
     name: "Docena de empanadas",
     category: "Empanadas",
     description: "12 empanadas a elección.",
-    price: 22000,
+    price: 24000,
     img: "/images/empanadas/doce.jpg",
     upsell: true, // abre el modal
   },
@@ -216,7 +216,7 @@ export const empanadas = [
     name: "Media docena de empanadas",
     category: "Empanadas",
     description: "6 empanadas a elección.",
-    price: 12000,
+    price: 13500,
     img: "/images/empanadas/media.png",
     upsell: true, // abre el modal
   },
@@ -225,7 +225,7 @@ export const empanadas = [
     name: "Empanada de Carne",
     category: "Empanadas",
     description: "Carne picada condimentada.",
-    price: 1900,
+    price: 2200,
     img: "/images/empanadas/empanadacarne.png",
   },
   {
@@ -233,7 +233,7 @@ export const empanadas = [
     name: "Empanada de jamón y queso",
     category: "Empanadas",
     description: "Jamón y queso.",
-    price: 1900,
+    price: 2200,
     img: "/images/empanadas/empanada-jyq.png",
   },
   {
@@ -241,7 +241,7 @@ export const empanadas = [
     name: "Empanada de Pollo",
     category: "Empanadas",
     description: "Pollo trozado y condimentos.",
-    price: 1900,
+    price: 2200,
     img: "/images/empanadas/empanadapollo.jpg",
   },
   {
@@ -249,7 +249,7 @@ export const empanadas = [
     name: "Empanada de Cebolla y Queso",
     category: "Empanadas",
     description: "Cebolla y Queso.",
-    price: 1900,
+    price: 2200,
     img: "/images/empanadas/cyq.jpg",
   },
   {
@@ -257,7 +257,7 @@ export const empanadas = [
     name: "Empanada de Cebolla, Queso y Panceta",
     category: "Empanadas",
     description: "Atun condimentos.",
-    price: 1900,
+    price: 2200,
     img: "/images/empanadas/cqyp.jpg",
   },
   {
@@ -265,7 +265,7 @@ export const empanadas = [
     name: "Empanada de Verduras",
     category: "Empanadas",
     description: "Verduras.",
-    price: 1900,
+    price: 2200,
     img: "/images/empanadas/verdura.jpg",
   },
   {
@@ -273,7 +273,7 @@ export const empanadas = [
     name: "Empanada de Calabresa",
     category: "Empanadas",
     description: "Calabresa.",
-    price: 1900,
+    price: 2200,
     img: "/images/empanadas/calabre.jpg",
   },
   {
@@ -281,7 +281,7 @@ export const empanadas = [
     name: "Empanada de Roquefort",
     category: "Empanadas",
     description: "Roquefort",
-    price: 1900,
+    price: 2200,
     img: "/images/empanadas/roqu.jpg",
   },
   {
@@ -289,7 +289,7 @@ export const empanadas = [
     name: "Empanada Tomate, Muzza y Huevo",
     category: "Empanadas",
     description: "Tomate, Muzza y Huevo",
-    price: 1900,
+    price: 2200,
     img: "/images/empanadas/tomate.png",
   },
 ];
