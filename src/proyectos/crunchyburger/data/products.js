@@ -205,7 +205,7 @@ export const papas = [
     name: "Papas Simples",
     category: "Papas",
     description: "Para compartir.",
-    price: 6000,
+    price: 7000,
     img: "/images/papas/papasfritas.png",
   },
   {
@@ -213,7 +213,7 @@ export const papas = [
     name: "Papas c/ Cheddar",
     category: "Papas",
     description: "Para compartir. Con salsa cheddar.",
-    price: 7500,
+    price: 8500,
     img: "/images/papas/papas-cheddar.png",
   },
   {
@@ -221,7 +221,7 @@ export const papas = [
     name: "Papas Completas",
     category: "Papas",
     description: "Para compartir. Cheddar, Verdeo y Bacon.",
-    price: 8500,
+    price: 9900,
     img: "/images/papas/papacompleta.png",
   },
   {
@@ -253,7 +253,7 @@ export const papas = [
     name: "8 Nuggets + Papas",
     category: "Papas",
     description: "Para compartir. Incluye Dip Barbacoa.",
-    price: 8000,
+    price: 9000,
     img: "/images/papas/nuggets-papas.png",
   },
 ];
@@ -376,7 +376,7 @@ export const bebidas = [
     name: "Amstel 473ml",
     category: "Bebidas",
     description: "Lata.",
-    price: 2500,
+    price: 3000,
     img: "/images/bebidas/amstel_473.png",
   },
   {
@@ -384,7 +384,7 @@ export const bebidas = [
     name: "Heineken Latón 710ml",
     category: "Bebidas",
     description: "Latón.",
-    price: 6000,
+    price: 7500,
     img: "/images/bebidas/heineken_710.png",
   },
 
@@ -394,7 +394,7 @@ export const bebidas = [
     name: "Agua 500ml",
     category: "Bebidas",
     description: "Botella personal.",
-    price: 1100,
+    price: 1500,
     img: "/images/bebidas/agua_500.png",
   },
   {
@@ -402,7 +402,7 @@ export const bebidas = [
     name: "Agua Saborizada 500ml",
     category: "Bebidas",
     description: "Botella personal.",
-    price: 2000,
+    price: 2500,
     img: "/images/bebidas/aquarius_500.png",
   },
   {
@@ -410,7 +410,7 @@ export const bebidas = [
     name: "Coca Cola 500ml",
     category: "Bebidas",
     description: "Botella personal.",
-    price: 2200,
+    price: 2700,
     img: "/images/bebidas/coca_500.png",
   },
   {
@@ -418,7 +418,7 @@ export const bebidas = [
     name: "Sprite 500ml",
     category: "Bebidas",
     description: "Botella personal.",
-    price: 2200,
+    price: 2700,
     img: "/images/bebidas/sprite_500.png",
   },
 ];
