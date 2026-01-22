@@ -13,6 +13,7 @@ const PricingPlans = () => {
             price: '20.000',
             products: t.plan_1_products,
             features: [
+                t.plan_1_products,
                 t.feat_design,
                 t.feat_support,
                 t.feat_wpp,
@@ -30,6 +31,7 @@ const PricingPlans = () => {
             isPopular: true,
             label: t.plan_2_label,
             features: [
+                t.plan_2_products,
                 t.feat_access,
                 t.feat_design,
                 t.feat_support,
@@ -50,6 +52,7 @@ const PricingPlans = () => {
             price: '70.000',
             products: t.plan_3_products,
             features: [
+                t.plan_3_products,
                 t.feat_access,
                 t.feat_design,
                 t.feat_support,
