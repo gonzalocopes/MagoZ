@@ -54,16 +54,16 @@ export const LanguageProvider = ({ children }) => {
 
             // Plan 1
             plan_1_title: 'Inicial',
-            plan_1_products: 'Hasta 20 Productos',
+            plan_1_products: 'Hasta 20 Productos.',
 
             // Plan 2
             plan_2_title: 'Emprendedor',
-            plan_2_products: 'De 20 a 55 Productos',
+            plan_2_products: 'De 20 a 55 Productos.',
             plan_2_label: 'MÁS ELEGIDO',
 
             // Plan 3
             plan_3_title: 'Empresarial',
-            plan_3_products: 'De 55 productos en adelante',
+            plan_3_products: 'De 55 productos en adelante.',
 
             // Common Features labels
             feat_access: 'Link & QR de acceso rápido',
