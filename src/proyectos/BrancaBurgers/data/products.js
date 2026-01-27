@@ -5,64 +5,64 @@ export const hamburguesas = [
     id: "branca-simple",
     name: "Simple",
     category: "Hamburguesas",
-    description: "Carne, doble cheddar.", // $9800
-    price: 9800,
+    description: "Carne, doble cheddar.", // $10500
+    price: 10500,
     img: "/images/branca/real_simple.png",
   },
   {
     id: "branca-doble",
     name: "Doble",
     category: "Hamburguesas",
-    description: "Doble carne, triple cheddar.", // $10300
-    price: 10300,
+    description: "Doble carne, triple cheddar.", // $11300
+    price: 11300,
     img: "/images/branca/real_doble.png",
   },
   {
     id: "branca-triple",
     name: "Triple",
     category: "Hamburguesas",
-    description: "Triple carne, Cuádruple cheddar, Bacon.", // $11600
-    price: 11600,
+    description: "Triple carne, Cuádruple cheddar, Bacon.", // $12500
+    price: 12500,
     img: "/images/branca/real_triple.png",
   },
   {
     id: "branca-scooby",
     name: "Scooby",
     category: "Hamburguesas",
-    description: "Doble carne, triple cheddar, Bacon, huevo, Cebolla caramelizada.", // $11300
-    price: 11300,
+    description: "Doble carne, triple cheddar, Bacon, huevo, Cebolla caramelizada.", // $12300
+    price: 12300,
     img: "/images/branca/real_scooby.png",
   },
   {
     id: "branca-crispy",
     name: "Branca crispy",
     category: "Hamburguesas",
-    description: "Doble carne, triple cheddar, cebolla crispy, bacon, salsa barbacoa.", // $11300
-    price: 11300,
+    description: "Doble carne, triple cheddar, cebolla crispy, bacon, salsa barbacoa.", // $12200
+    price: 12200,
     img: "/images/branca/real_crispy.png",
   },
   {
     id: "branca-napolitana",
     name: "Napolitana",
     category: "Hamburguesas",
-    description: "Doble carne, doble queso, tómate, jamón.", // $11300
-    price: 11300,
+    description: "Doble carne, doble queso, tómate, jamón.", // $12300
+    price: 12300,
     img: "/images/branca/real_napolitana.png",
   },
   {
     id: "branca-clasica",
     name: "Clásica",
     category: "Hamburguesas",
-    description: "Doble carne, lechuga, tómate, cheddar.", // $11300
-    price: 11300,
+    description: "Doble carne, lechuga, tómate, cheddar.", // $12300
+    price: 12300,
     img: "/images/branca/real_clasica.png",
   },
   {
     id: "branca-chicken",
     name: "Chicken Burger",
     category: "Hamburguesas",
-    description: "Medallón de pollo, cheddar, tomate, lechuga.", // $11300
-    price: 11300,
+    description: "Medallón de pollo, cheddar, tomate, lechuga.", // $12200
+    price: 12200,
     img: "/images/branca/real_chicken.png",
   },
 ];
@@ -148,16 +148,16 @@ export const infantil = [
     id: "kids-nuggets",
     name: "Porción de 6 Nuggets",
     category: "Menú Infantil",
-    description: "", // $9200
-    price: 9200,
+    description: "", // $10100
+    price: 10100,
     img: "/images/branca/branca_nuggets_1767966726190.png",
   },
   {
     id: "kids-burger",
     name: "Hamburguesa simple solo carne",
     category: "Menú Infantil",
-    description: "Solo carne y pan.", // $9200
-    price: 9200,
+    description: "Solo carne y pan.", // $10100
+    price: 10100,
     img: "/images/branca/real_kids_burger.png",
     upsell: true,
   },
