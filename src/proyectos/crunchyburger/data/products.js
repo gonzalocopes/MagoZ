@@ -33,6 +33,7 @@ export const promos = [
     description: "Solo Miércoles. Precio regular $15.500.",
     price: 12990,
     img: "/images/burgas/bbq-crunchy.png", // ID: bbq-crunchy
+    allowedDays: [3], // Miércoles
   },
   {
     id: "promo-jueves",
@@ -41,6 +42,7 @@ export const promos = [
     description: "Solo Jueves. Precio regular $9.990.",
     price: 7999,
     img: "/images/burgas/chicken-crunchy.png", // ID: chicken-crunchy
+    allowedDays: [4], // Jueves
   },
   {
     id: "promo-viernes",
@@ -49,6 +51,7 @@ export const promos = [
     description: "Solo Viernes. Precio regular $15.500.",
     price: 12990,
     img: "/images/burgas/mega-provo.png", // ID: mega-provo
+    allowedDays: [5], // Viernes
   },
   {
     id: "promo-sabado",
@@ -57,6 +60,7 @@ export const promos = [
     description: "Solo Sábado. Precio regular $15.500.",
     price: 12990,
     img: "/images/burgas/clasica-argenta.png", // ID: clasica-argenta
+    allowedDays: [6], // Sábado
   },
   {
     id: "promo-domingo",
@@ -65,14 +69,16 @@ export const promos = [
     description: "Solo Domingo. Precio regular $8.900.",
     price: 6990,
     img: "/images/burgas/bacon.jpg", // ID: cheese-bacon-simple
+    allowedDays: [0], // Domingo
   },
   {
     id: "promo-mega-balde",
     name: "Promo Mega Balde (Lun/Mié/Jue)",
     category: "Promos",
-    description: "1kg papas + 4 cheeseburgers. Solo Miércoles y Jueves.",
+    description: "1kg papas + 4 cheeseburgers. Solo Lunes, Miércoles y Jueves.",
     price: 21990,
     img: "/images/burgas/mega-balde-clasico.png", // ID: mega-balde-clasico
+    allowedDays: [1, 3, 4], // Lunes, Miércoles, Jueves
   },
 ];
 

@@ -81,7 +81,7 @@ export const milanesas = [
     name: "Milanesa napolitana de carne al plato",
     category: "Milanesas",
     description: "Con guarnición de papas fritas.", // $13900
-    price: 13900,
+    price: 14300,
     img: "/images/branca/real_mila_carne_napo.png",
   },
   {
@@ -89,7 +89,7 @@ export const milanesas = [
     name: "Milanesa napolitana de pollo al plato",
     category: "Milanesas",
     description: "Con guarnición de papas fritas.", // $11800
-    price: 11800,
+    price: 12100,
     img: "/images/branca/real_mila_pollo_napo.png",
   },
   {

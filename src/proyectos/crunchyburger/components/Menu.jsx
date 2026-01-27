@@ -3,6 +3,24 @@ import { useState, useRef } from "react";
 import { promos, hamburguesas, papas, combos, bebidas, postres } from "../data/products";
 
 export default function Menu({ onAddToCart, isClosed }) {
+  // Filtrar promos según el día actual
+  const currentDay = new Date().getDay(); // 0 = Domingo, 1 = Lunes, ..., 6 = Sábado
+
+  // Helper para mostrar días
+  const dayNames = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+  const shortDayNames = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
+
+  const getAvailabilityInfo = (item) => {
+    if (!item.allowedDays) return { isAvailable: true };
+
+    const isAvailable = item.allowedDays.includes(currentDay);
+    if (isAvailable) return { isAvailable: true };
+
+    // Construir texto: "Solo Miércoles" o "Solo Lun/Mié"
+    const daysStr = item.allowedDays.map(d => item.allowedDays.length > 1 ? shortDayNames[d] : dayNames[d]).join("/");
+    return { isAvailable: false, message: `Solo ${daysStr}` };
+  };
+
   const categories = [
     { id: "hamburguesas", label: "Hamburguesas 🍔", products: hamburguesas },
     { id: "papas", label: "Papas y Acompañamientos 🍟", products: papas },
@@ -103,53 +121,59 @@ export default function Menu({ onAddToCart, isClosed }) {
     }, 600);
   };
 
-  const renderProductCard = (item) => (
-    <div key={item.id} className="card mb-3 menu-product-card shadow-sm">
-      <div className="row g-0 align-items-center">
-        {/* FOTO */}
-        <div className="col-3">
-          <img
-            src={item.img}
-            alt={item.name}
-            className="img-fluid rounded-start"
-            style={{
-              objectFit: "contain",
-              width: "100%",
-              height: "80px",
-            }}
-          />
-        </div>
+  const renderProductCard = (item) => {
+    const { isAvailable, message } = getAvailabilityInfo(item);
 
-        {/* CONTENIDO */}
-        <div className="col-9">
-          <div className="card-body py-2 d-flex justify-content-between align-items-start gap-2">
-            <div>
-              <h6 className="card-title mb-1 fw-semibold">{item.name}</h6>
-              {item.description && (
-                <p className="card-text mb-1 small text-muted">
-                  {item.description}
-                </p>
-              )}
-              <div className="fw-bold">${item.price}</div>
-            </div>
+    return (
+      <div key={item.id} className="card mb-3 menu-product-card shadow-sm">
+        <div className="row g-0 align-items-center">
+          {/* FOTO */}
+          <div className="col-3">
+            <img
+              src={item.img}
+              alt={item.name}
+              className="img-fluid rounded-start"
+              style={{
+                objectFit: "contain",
+                width: "100%",
+                height: "80px",
+                width: "100%",
+                height: "80px",
+              }}
+            />
+          </div>
 
-            <div className="text-end">
-              <button
-                className="btn btn-success btn-sm"
-                disabled={isClosed}
-                onClick={(e) => {
-                  triggerFlyAnimation(e, item.img);
-                  onAddToCart(item);
-                }}
-              >
-                {isClosed ? "Cerrado" : "Agregar"}
-              </button>
+          {/* CONTENIDO */}
+          <div className="col-9">
+            <div className="card-body py-2 d-flex justify-content-between align-items-start gap-2">
+              <div>
+                <h6 className="card-title mb-1 fw-semibold">{item.name}</h6>
+                {item.description && (
+                  <p className="card-text mb-1 small text-muted">
+                    {item.description}
+                  </p>
+                )}
+                <div className="fw-bold">${item.price}</div>
+              </div>
+
+              <div className="text-end">
+                <button
+                  className={`btn btn-sm ${!isAvailable ? "btn-danger" : "btn-success"}`}
+                  disabled={isClosed || !isAvailable}
+                  onClick={(e) => {
+                    triggerFlyAnimation(e, item.img);
+                    onAddToCart(item);
+                  }}
+                >
+                  {isClosed ? "Cerrado" : (!isAvailable ? message : "Agregar")}
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   return (
     <section id="menu" className="py-4 bg-light">
