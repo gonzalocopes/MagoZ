@@ -43,16 +43,15 @@ export default function Cart({ cart, total, onRemove, onChangeQty, onEdit }) {
                   </div>
 
                   <div className="d-flex align-items-center">
-                    {/* Botón EDITAR (Solo hamburguesas) */}
-                    {item.category === "Hamburguesas" && (
-                      <button
-                        className="btn btn-sm btn-outline-warning me-2"
-                        onClick={() => onEdit && onEdit(item)}
-                        title="Editar ingredientes"
-                      >
-                        ✏️
-                      </button>
-                    )}
+
+                    {/* Botón EDITAR (Para todos los items) */}
+                    <button
+                      className="btn btn-sm btn-outline-warning me-2"
+                      onClick={() => onEdit && onEdit(item)}
+                      title="Editar ingredientes"
+                    >
+                      ✏️
+                    </button>
 
                     {/* Cantidad siempre visible, pero sin botones +/- para simplificar la personalización única */}
                     {item.qty > 1 && <span className="badge bg-secondary rounded-pill me-2">{item.qty}</span>}
