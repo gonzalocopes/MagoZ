@@ -13,7 +13,7 @@ export const clientConfig = {
   },
 
   hero: {
-    fondo: "/images/neon_banner.png", // Neon Party Banner
+    fondo: "/images/combos_banner.png", // New Combos Banner
     slides: [
       {
         titulo: "BEBIDAS GLEW",

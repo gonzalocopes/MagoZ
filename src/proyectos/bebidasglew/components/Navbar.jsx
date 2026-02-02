@@ -16,7 +16,7 @@ export default function Navbar({ cartCount }) {
 
   return (
     <nav
-      className="navbar navbar-expand-lg navbar-light shadow-sm fixed-top"
+      className="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top"
       style={{ backgroundColor: clientConfig.colores.primario }}
     >
       <div className="container">
@@ -71,7 +71,7 @@ export default function Navbar({ cartCount }) {
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <a
-                className="nav-link text-dark fw-bold"
+                className="nav-link text-white fw-bold"
                 href="#menu"
                 onClick={handleNavClick}
               >
@@ -80,7 +80,7 @@ export default function Navbar({ cartCount }) {
             </li>
             <li className="nav-item">
               <a
-                className="nav-link text-dark fw-bold d-flex align-items-center"
+                className="nav-link text-white fw-bold d-flex align-items-center"
                 href="#cart"
                 onClick={handleNavClick}
               >

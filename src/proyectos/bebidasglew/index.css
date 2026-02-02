@@ -82,13 +82,14 @@ button:focus-visible {
   bottom: 0;
   z-index: 1040;
   padding: 0.75rem 1rem;
-  background-color: #FF8C00;
-  color: #000;
+  /* Gradient Neon Purple/Pink */
+  background: linear-gradient(135deg, #da00ff, #9d00ff);
+  color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-weight: 600;
-  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 -2px 15px rgba(218, 0, 255, 0.5);
 }
 
 .floating-wpp-label {
@@ -97,7 +98,8 @@ button:focus-visible {
 
 .floating-wpp-chip {
   background-color: #fff;
-  color: #333;
+  color: #aa00ff;
+  /* Texto chip color neon oscuro */
   border-radius: 999px;
   padding: 4px 10px;
   font-size: 0.82rem;
@@ -282,17 +284,17 @@ button:focus-visible {
   box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
 }
 
-/* Activa con gradiente */
+/* Activa con gradiente Neon */
 .menu-category-pill-active {
-  background: linear-gradient(135deg, #FF8C00, #E67E00) !important;
-  box-shadow: 0 12px 32px rgba(255, 140, 0, 0.4) !important;
+  background: linear-gradient(135deg, #da00ff, #9d00ff) !important;
+  box-shadow: 0 12px 32px rgba(218, 0, 255, 0.4) !important;
   border-color: transparent !important;
 }
 
 /* Texto blanco cuando está activa */
 .menu-category-pill-active .fw-semibold,
 .menu-category-pill-active small {
-  color: #000 !important;
+  color: #fff !important;
 }
 
 /* Icono premium */
@@ -306,8 +308,8 @@ button:focus-visible {
 
 .menu-category-pill-active .menu-cat-icon {
   background-color: rgba(255, 255, 255, 0.4) !important;
-  border-color: rgba(0, 0, 0, 0.1) !important;
-  color: #000 !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  color: #da00ff !important;
 }
 
 
@@ -459,8 +461,59 @@ button:focus-visible {
 /* === Marca en Navbar === */
 .brand-text {
   font-family: 'Anton', sans-serif;
+  /* Fallback */
   font-size: 1.5rem;
   letter-spacing: 1px;
   text-transform: uppercase;
   line-height: 1;
+}
+
+/* Neon Text Effect - MOVED HERE because App.css is not imported */
+.neon-text {
+  color: #fff;
+  font-family: 'Tilt Neon', sans-serif !important;
+  /* Force neon font */
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  /* Slightly larger */
+  letter-spacing: 2px;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #ff00de,
+    0 0 40px #ff00de,
+    0 0 80px #ff00de,
+    0 0 90px #ff00de,
+    0 0 100px #ff00de,
+    0 0 150px #ff00de;
+  animation: neon-flicker 1.5s infinite alternate;
+}
+
+@keyframes neon-flicker {
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    text-shadow:
+      0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 20px #ff00de,
+      0 0 40px #ff00de,
+      0 0 80px #ff00de,
+      0 0 90px #ff00de,
+      0 0 100px #ff00de,
+      0 0 150px #ff00de;
+  }
+
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
 }
