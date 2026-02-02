@@ -82,7 +82,7 @@ export const productos = [
   { id: "prod-coca-175", name: "Coca Cola 1.75L", price: 4800, category: "Productos", img: "/images/coca_bottle.png", description: "Botella plástica 1.75L." },
   { id: "prod-sprite-225", name: "Sprite 2.25L", price: 5500, category: "Productos", img: "/images/sprite_bottle.png", description: "Botella plástica 2.25L." },
   { id: "prod-speed", name: "Speed 473ml", price: 5000, category: "Productos", img: "/images/speed_can.png", description: "Lata 473ml." },
-  { id: "prod-cepita", name: "Cepita Naranja 1L", price: 3900, category: "Productos", img: "/images/cepita_bottle.png", description: "Botella de vidrio 1L." },
+  { id: "prod-cepita", name: "Cepita Naranja 1L", price: 3900, category: "Productos", img: "/images/cepita_bottle.png", description: "Botella plástica 1L." },
   { id: "prod-monster", name: "Monster 473ml", price: 5000, category: "Productos", img: "/images/monster_can.png", description: "Lata 473ml." },
   { id: "prod-vaso", name: "Vaso 1lt (con hielo)", price: 1000, category: "Productos", img: "/images/cup_ice.png", description: "Vaso de plástico con hielo." },
   { id: "prod-hielo", name: "Bolsa de Hielo", price: 0, category: "Productos", img: "/images/ice_bag.png", description: "Bolsa de hielo." },
