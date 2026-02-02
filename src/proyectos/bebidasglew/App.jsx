@@ -107,7 +107,8 @@ function App() {
     // Generamos un ID único para CADA ítem que se agrega, 
     // así podemos asignarle extras específicos a esa instancia.
     const uniqueId = crypto.randomUUID();
-    const newItem = { ...product, uuid: uniqueId, qty: 1, extras: [] };
+    const defaultVariant = null; // No default flavor, user must choose
+    const newItem = { ...product, uuid: uniqueId, qty: 1, extras: [], variant: defaultVariant };
 
     setCart((prev) => {
       // Si es una bebida o algo simple que NO lleva extras, podríamos agruparlo.
@@ -178,10 +179,16 @@ function App() {
 
 
   // Permite actualizar propiedades de un ítem (ej: exclusiones)
+  // Permite actualizar propiedades de un ítem (ej: exclusiones)
   const updateCartItem = (uuid, changes) => {
     setCart((prev) =>
       prev.map((item) => (item.uuid === uuid ? { ...item, ...changes } : item))
     );
+
+    // 🔥 ACTUALIZAR TAMBIÉN lastProduct para que el Modal refleje los cambios en tiempo real
+    if (lastProduct && lastProduct.uuid === uuid) {
+      setLastProduct((prev) => ({ ...prev, ...changes }));
+    }
   };
 
   const handleAddFromUpsell = (product) => {

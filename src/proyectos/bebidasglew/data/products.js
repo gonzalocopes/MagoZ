@@ -20,17 +20,19 @@ export const combos = [
     id: "combo-sky-sprite",
     name: "Combo Skyy + Sprite",
     category: "Combos",
-    description: "Skyy Vodka + Sprite 2.25L. Incluye vaso 1lt con hielo gratis.",
+    description: "Skyy Vodka (Sabor a elección) + Sprite 2.25L. Incluye vaso 1lt con hielo.",
     price: 19000,
-    img: "/images/combo_skyy_sprite.png",
+    img: "/images/combo_skyy_pro.png",
+    flavors: ["Skyy Cosmic", "Skyy Raspberry"], // Opciones de sabor
   },
   {
     id: "combo-sky-speed",
     name: "Combo Skyy + 2 Speed XL",
     category: "Combos",
-    description: "Skyy Vodka + 2 Speed XL. Incluye vaso 1lt con hielo gratis.",
+    description: "Skyy Vodka (Sabor a elección) + 2 Speed XL. Incluye vaso 1lt con hielo.",
     price: 20000,
-    img: "/images/combo_skyy_speed.png",
+    img: "/images/combo_skyy_speed_pro.png",
+    flavors: ["Skyy Cosmic", "Skyy Raspberry"], // Opciones de sabor
   },
   {
     id: "combo-fernet-coca-25",
@@ -60,9 +62,10 @@ export const combos = [
     id: "combo-sky-cepita",
     name: "Combo Skyy + Cepita",
     category: "Combos",
-    description: "Skyy Vodka + Cepita Naranja 1L. Incluye vaso 1lt con hielo gratis.",
+    description: "Skyy Vodka (Sabor a elección) + Cepita Naranja 1L. Incluye vaso 1lt con hielo.",
     price: 18000,
     img: "/images/combo_skyy_cepita.png",
+    flavors: ["Skyy Cosmic", "Skyy Raspberry"],
   },
 ];
 

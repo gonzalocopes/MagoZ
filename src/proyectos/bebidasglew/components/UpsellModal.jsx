@@ -94,6 +94,36 @@ export default function UpsellModal({
               Estás armando <strong>{productName}</strong>.
             </p>
 
+            {/* SECCIÓN DE DATOS O VARIANTES DEL PRODUCTO */}
+            {lastProduct?.flavors?.length > 0 && (
+              <div className="mb-4 p-3 rounded" style={{ backgroundColor: "#f8f9fa" }}>
+                <h6 className="fw-bold mb-2">👇 Elegí el sabor:</h6>
+                <div className="d-flex gap-2 flex-wrap">
+                  {lastProduct.flavors.map((flavor) => {
+                    const isSelected = lastProduct.variant === flavor;
+                    return (
+                      <button
+                        key={flavor}
+                        className={`btn btn-sm ${isSelected ? "text-white fw-bold" : "btn-outline-dark"}`}
+                        onClick={() => onUpdateItem(lastProduct.uuid, { variant: flavor })}
+                        style={
+                          isSelected
+                            ? {
+                              background: "linear-gradient(135deg, #da00ff, #9d00ff)",
+                              border: "none",
+                              boxShadow: "0 4px 10px rgba(218, 0, 255, 0.4)",
+                            }
+                            : {}
+                        }
+                      >
+                        {flavor}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
             {/* SECCIÓN DE INGREDIENTES ELIMINADA */}
 
             <h6 className="fw-bold mb-2">¿Querés agregar algo más? Bebidas</h6>

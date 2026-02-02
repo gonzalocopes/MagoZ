@@ -14,6 +14,9 @@ export default function WhatsAppButton({ cart, total, subtotal, shippingCost, cu
       // Si qty > 1, lo mostramos (aunque con IDs únicos será mayormente 1)
       const qtyStr = item.qty > 1 ? `${item.qty}x ` : "";
       lines.push(`*• ${qtyStr}${item.name}* ($${item.price})`);
+      if (item.variant) {
+        lines.push(`   > Sabor: ${item.variant}`);
+      }
 
       // Extras del producto
       if (item.extras && item.extras.length > 0) {
@@ -35,7 +38,7 @@ export default function WhatsAppButton({ cart, total, subtotal, shippingCost, cu
     if (shippingCost > 0) {
       lines.push(`Envío (${customer.deliveryZone}): $${shippingCost}`);
     } else if (customer.deliveryMethod === "Delivery") {
-       lines.push(`Envío (${customer.deliveryZone}): GRATIS`);
+      lines.push(`Envío (${customer.deliveryZone}): GRATIS`);
     }
     lines.push(`💰 Total: $${total}`);
     lines.push("");

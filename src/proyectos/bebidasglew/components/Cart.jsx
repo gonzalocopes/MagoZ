@@ -20,6 +20,11 @@ export default function Cart({ cart, total, onRemove, onChangeQty, onEdit }) {
                     <small className="text-muted d-block">
                       ${item.price}
                     </small>
+                    {item.variant && (
+                      <small className="d-block fw-bold" style={{ color: "#da00ff" }}>
+                        Sabor: {item.variant}
+                      </small>
+                    )}
 
                     {/* Exclusiones (Ingredientes quitados) */}
                     {item.exclusions && item.exclusions.length > 0 && (
@@ -74,6 +79,6 @@ export default function Cart({ cart, total, onRemove, onChangeQty, onEdit }) {
           </>
         )}
       </div>
-    </div>
+    </div >
   );
 }
