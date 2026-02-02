@@ -5,9 +5,9 @@ export default function UpsellModal({
   show,
   onClose,
   upsellItems,
-  onAdd, 
+  onAdd,
   lastProduct,
-  onUpdateItem, 
+  onUpdateItem,
   onSyncExtras,
 }) {
   const [addedIds, setAddedIds] = useState([]);
@@ -31,7 +31,7 @@ export default function UpsellModal({
     setExtraCounts(prev => {
       const currentQty = prev[extraItem.id] || 0;
       const newQty = Math.max(0, currentQty + change);
-      
+
       const nextCounts = { ...prev, [extraItem.id]: newQty };
 
       // Sync with parent immediately
@@ -42,9 +42,9 @@ export default function UpsellModal({
           // Find the original item object
           const itemObj = upsellItems.find(u => u.id === id);
           if (itemObj) {
-             for (let i = 0; i < qty; i++) {
-               newExtrasList.push(itemObj);
-             }
+            for (let i = 0; i < qty; i++) {
+              newExtrasList.push(itemObj);
+            }
           }
         });
         onSyncExtras(lastProduct.uuid, newExtrasList);
@@ -56,7 +56,7 @@ export default function UpsellModal({
   if (!show) return null;
 
   const productName = lastProduct?.name || "tu pedido";
-  
+
   // Icono modificado a bebidas
   const icon = "🥤";
   const title = `¿Le sumamos algo a tu pedido? ${icon}`;
@@ -72,11 +72,17 @@ export default function UpsellModal({
       <div className="modal-dialog modal-dialog-centered">
         <div className="modal-content">
           {/* HEADER */}
-          <div className="modal-header bg-warning">
-            <h5 className="modal-title text-dark fw-bold">{title}</h5>
+          <div
+            className="modal-header"
+            style={{
+              background: "linear-gradient(135deg, #da00ff, #9d00ff)",
+              borderBottom: "none",
+            }}
+          >
+            <h5 className="modal-title text-white fw-bold">{title}</h5>
             <button
               type="button"
-              className="btn-close"
+              className="btn-close btn-close-white"
               onClick={onClose}
               aria-label="Cerrar"
             ></button>
@@ -109,28 +115,28 @@ export default function UpsellModal({
                           +${item.price.toLocaleString("es-AR")}
                         </small>
                       </div>
-                      
+
                       {/* Control de Cantidad (+ / -) */}
                       <div className="d-flex align-items-center gap-2">
-                         {qty > 0 && (
-                           <>
-                             <button 
-                               className="btn btn-sm btn-outline-danger"
-                               onClick={() => handleUpdateExtraQty(item, -1)}
-                               style={{ width: "30px", padding: "0" }}
-                             >
-                               -
-                             </button>
-                             <span className="fw-bold">{qty}</span>
-                           </>
-                         )}
-                         <button 
-                           className="btn btn-sm btn-success"
-                           onClick={() => handleUpdateExtraQty(item, 1)}
-                           style={{ width: "30px", padding: "0" }}
-                         >
-                           +
-                         </button>
+                        {qty > 0 && (
+                          <>
+                            <button
+                              className="btn btn-sm btn-outline-danger"
+                              onClick={() => handleUpdateExtraQty(item, -1)}
+                              style={{ width: "30px", padding: "0" }}
+                            >
+                              -
+                            </button>
+                            <span className="fw-bold">{qty}</span>
+                          </>
+                        )}
+                        <button
+                          className="btn btn-sm btn-success"
+                          onClick={() => handleUpdateExtraQty(item, 1)}
+                          style={{ width: "30px", padding: "0" }}
+                        >
+                          +
+                        </button>
                       </div>
                     </li>
                   );
@@ -143,8 +149,13 @@ export default function UpsellModal({
           <div className="modal-footer">
             <button
               type="button"
-              className="btn btn-warning w-100 fw-bold"
+              className="btn w-100 fw-bold text-white"
               onClick={onClose}
+              style={{
+                background: "linear-gradient(135deg, #da00ff, #9d00ff)",
+                border: "none",
+                boxShadow: "0 4px 15px rgba(218, 0, 255, 0.4)",
+              }}
             >
               Confirmar y Cerrar
             </button>

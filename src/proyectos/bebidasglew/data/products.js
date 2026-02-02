@@ -6,7 +6,7 @@ export const combos = [
     category: "Combos",
     description: "Por unidad.",
     price: 3500,
-    img: "/images/logo.png",
+    img: "/images/stella_bottle.png",
   },
   {
     id: "stella-pack-6",
@@ -14,7 +14,7 @@ export const combos = [
     category: "Combos",
     description: "Pack de 6 unidades.",
     price: 18000,
-    img: "/images/logo.png",
+    img: "/images/pack_stella.png",
   },
   {
     id: "combo-sky-sprite",
@@ -22,7 +22,7 @@ export const combos = [
     category: "Combos",
     description: "Skyy Vodka + Sprite 2.25L. Incluye vaso 1lt con hielo gratis.",
     price: 19000,
-    img: "/images/logo.png",
+    img: "/images/combo_skyy_sprite.png",
   },
   {
     id: "combo-sky-speed",
@@ -30,7 +30,7 @@ export const combos = [
     category: "Combos",
     description: "Skyy Vodka + 2 Speed XL. Incluye vaso 1lt con hielo gratis.",
     price: 20000,
-    img: "/images/logo.png",
+    img: "/images/combo_skyy_speed.png",
   },
   {
     id: "combo-fernet-coca-25",
@@ -38,7 +38,7 @@ export const combos = [
     category: "Combos",
     description: "Fernet Branca + Coca-Cola 2.5L. Incluye vaso 1lt con hielo gratis.",
     price: 25000,
-    img: "/images/logo.png",
+    img: "/images/combo_fernet_coca.png",
   },
   {
     id: "combo-fernet-coca-175",
@@ -46,7 +46,7 @@ export const combos = [
     category: "Combos",
     description: "Fernet Branca + 2 Coca-Cola 1.75L. Incluye vaso 1lt con hielo gratis.",
     price: 26000,
-    img: "/images/logo.png",
+    img: "/images/combo_fernet_coca.png",
   },
   {
     id: "combo-trumpeter-sprite",
@@ -54,7 +54,7 @@ export const combos = [
     category: "Combos",
     description: "Trumpeter + Sprite 2.25L. Incluye vaso 1lt con hielo gratis.",
     price: 18500,
-    img: "/images/logo.png",
+    img: "/images/combo_trumpeter_sprite.png",
   },
   {
     id: "combo-sky-cepita",
@@ -62,7 +62,7 @@ export const combos = [
     category: "Combos",
     description: "Skyy Vodka + Cepita Naranja 1L. Incluye vaso 1lt con hielo gratis.",
     price: 18000,
-    img: "/images/logo.png",
+    img: "/images/combo_skyy_cepita.png",
   },
 ];
 
