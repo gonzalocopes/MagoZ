@@ -9,6 +9,7 @@ const CapyBurgersApp = lazy(() => import('./proyectos/capyburgers/App'));
 const PizzeriaElMaestroApp = lazy(() => import('./proyectos/PizzeriaElmaestro/App'));
 const BrancaBurgersApp = lazy(() => import('./proyectos/BrancaBurgers/App'));
 const BuenasBurgasApp = lazy(() => import('./proyectos/BuenasBurgas/App'));
+const BebidasGlewApp = lazy(() => import('./proyectos/bebidasglew/App'));
 
 function App() {
   return (
@@ -47,6 +48,11 @@ function App() {
       <Route path="/gopedidos/buenasburgas/*" element={
         <Suspense fallback={<div>Cargando Buenas Burgas...</div>}>
           <BuenasBurgasApp />
+        </Suspense>
+      } />
+      <Route path="/gopedidos/bebidasglew/*" element={
+        <Suspense fallback={<div>Cargando Bebidas Glew...</div>}>
+          <BebidasGlewApp />
         </Suspense>
       } />
     </Routes>
