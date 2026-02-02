@@ -111,15 +111,23 @@ function App() {
     const newItem = { ...product, uuid: uniqueId, qty: 1, extras: [], variant: defaultVariant };
 
     setCart((prev) => {
-      // Si es una bebida o algo simple que NO lleva extras, podríamos agruparlo.
-      // Pero para simplificar y unificar la lógica de "pedido detallado", 
-      // vamos a tratar todo como ítem único o dejar que se agrupe solo si es idéntico 
-      // (pero el uuid lo hace único).
-      // 
-      // Excepción: Si querés que las bebidas se agrupen (ej: 2x Coca), 
-      // tendríamos que chequear si es "Customizable". 
-      // Por ahora, el requerimiento es separar para detalle claro. 
-      // Si el usuario pide 2 hamburguesas iguales, aparecerán como 2 ítems.
+      // 1. Si es de la categoría "Productos", intentamos agrupar por ID
+      if (product.category === "Productos") {
+        const existingIndex = prev.findIndex((item) => item.id === product.id);
+        if (existingIndex >= 0) {
+          // Ya existe, aumentamos cantidad
+          const newCart = [...prev];
+          newCart[existingIndex] = {
+            ...newCart[existingIndex],
+            qty: newCart[existingIndex].qty + 1
+          };
+          return newCart;
+        }
+        // Si no existe, lo agregamos normal
+        return [...prev, newItem];
+      }
+
+      // 2. Si es Combo u otra cosa, comportamiento habitual (items separados)
       return [...prev, newItem];
     });
 
@@ -178,7 +186,6 @@ function App() {
 
 
 
-  // Permite actualizar propiedades de un ítem (ej: exclusiones)
   // Permite actualizar propiedades de un ítem (ej: exclusiones)
   const updateCartItem = (uuid, changes) => {
     setCart((prev) =>
@@ -245,7 +252,13 @@ function App() {
           <div className="row">
             {/* Menú */}
             <div className="col-12 col-lg-7 mb-4 mb-lg-0">
-              <Menu onAddToCart={addToCart} isClosed={isClosed} />
+              <Menu
+                onAddToCart={addToCart}
+                isClosed={isClosed}
+                cart={cart}
+                onChangeQty={changeQty}
+                onRemove={removeFromCart}
+              />
             </div>
 
             {/* Carrito + datos + botón verde WhatsApp */}

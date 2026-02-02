@@ -49,17 +49,45 @@ export default function Cart({ cart, total, onRemove, onChangeQty, onEdit }) {
 
                   <div className="d-flex align-items-center">
 
-                    {/* Botón EDITAR (Para todos los items) */}
-                    <button
-                      className="btn btn-sm btn-outline-warning me-2"
-                      onClick={() => onEdit && onEdit(item)}
-                      title="Editar ingredientes"
-                    >
-                      ✏️
-                    </button>
+                    {/* Botón EDITAR (Oculto si es "Productos" simples) */}
+                    {item.category !== "Productos" && (
+                      <button
+                        className="btn btn-sm btn-outline-warning me-2"
+                        onClick={() => onEdit && onEdit(item)}
+                        title="Editar ingredientes"
+                      >
+                        ✏️
+                      </button>
+                    )}
 
-                    {/* Cantidad siempre visible, pero sin botones +/- para simplificar la personalización única */}
-                    {item.qty > 1 && <span className="badge bg-secondary rounded-pill me-2">{item.qty}</span>}
+                    {/* CONTROL DE CANTIDAD (Para "Productos") O BADGE (Para otros) */}
+                    {item.category === "Productos" ? (
+                      <div className="d-flex align-items-center border rounded me-2">
+                        <button
+                          className="btn btn-sm btn-light px-2 py-0 text-danger fw-bold"
+                          onClick={() => {
+                            if (item.qty > 1) onChangeQty(item.uuid, item.qty - 1);
+                            // Si es 1, dejamos que el botón eliminar haga el trabajo, o podríamos bajar a 0?
+                            // User pidio "sumar o restar", generalmente si bajas a 0 se borra.
+                            // Pero acá ya tenemos botón eliminar al lado. 
+                            // Hagamos que baje hasta 1. Para borrar usa la X.
+                          }}
+                          disabled={item.qty <= 1}
+                        >
+                          -
+                        </button>
+                        <span className="mx-2 small fw-bold">{item.qty}</span>
+                        <button
+                          className="btn btn-sm btn-light px-2 py-0 text-success fw-bold"
+                          onClick={() => onChangeQty(item.uuid, item.qty + 1)}
+                        >
+                          +
+                        </button>
+                      </div>
+                    ) : (
+                      /* Para combos/hamburguesas con extras, solo mostramos cantidad si es > 1 */
+                      item.qty > 1 && <span className="badge bg-secondary rounded-pill me-2">{item.qty}</span>
+                    )}
 
                     <button
                       className="btn btn-sm btn-outline-danger"

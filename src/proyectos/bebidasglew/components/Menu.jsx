@@ -1,10 +1,11 @@
 // src/components/Menu.jsx
 import { useState, useRef } from "react";
-import { combos } from "../data/products";
+import { combos, productos } from "../data/products";
 
-export default function Menu({ onAddToCart, isClosed }) {
+export default function Menu({ onAddToCart, isClosed, cart, onChangeQty, onRemove }) {
   const categories = [
     { id: "combos", label: "Combos 🥤", products: combos },
+    { id: "productos", label: "Productos 🍾", products: productos },
   ];
 
   // categoría abierta en MOBILE
@@ -99,53 +100,97 @@ export default function Menu({ onAddToCart, isClosed }) {
     }, 600);
   };
 
-  const renderProductCard = (item) => (
-    <div key={item.id} className="card mb-3 menu-product-card shadow-sm">
-      <div className="row g-0 align-items-center">
-        {/* FOTO */}
-        <div className="col-3">
-          <img
-            src={item.img}
-            alt={item.name}
-            className="img-fluid rounded-start"
-            style={{
-              objectFit: "contain",
-              width: "100%",
-              height: "80px",
-            }}
-          />
-        </div>
+  const renderProductCard = (item) => {
+    // Verificamos si es un producto "simple" (que permite cantidad) y si ya está en el carrito
+    const isSimpleProduct = item.category === "Productos";
+    const cartItem = isSimpleProduct && cart ? cart.find((c) => c.id === item.id) : null;
+    const qty = cartItem ? cartItem.qty : 0;
 
-        {/* CONTENIDO */}
-        <div className="col-9">
-          <div className="card-body py-2 d-flex justify-content-between align-items-start gap-2">
-            <div>
-              <h6 className="card-title mb-1 fw-semibold">{item.name}</h6>
-              {item.description && (
-                <p className="card-text mb-1 small text-muted">
-                  {item.description}
-                </p>
-              )}
-              <div className="fw-bold">${item.price}</div>
-            </div>
+    return (
+      <div key={item.id} className="card mb-3 menu-product-card shadow-sm">
+        <div className="row g-0 align-items-center">
+          {/* FOTO */}
+          <div className="col-3">
+            <img
+              src={item.img}
+              alt={item.name}
+              className="img-fluid rounded-start"
+              style={{
+                objectFit: "contain",
+                width: "100%",
+                height: "80px",
+              }}
+            />
+          </div>
 
-            <div className="text-end">
-              <button
-                className="btn btn-success btn-sm"
-                disabled={isClosed}
-                onClick={(e) => {
-                  triggerFlyAnimation(e, item.img);
-                  onAddToCart(item);
-                }}
-              >
-                {isClosed ? "Cerrado" : "Agregar"}
-              </button>
+          {/* CONTENIDO */}
+          <div className="col-9">
+            <div className="card-body py-2 d-flex justify-content-between align-items-start gap-2">
+              <div>
+                <h6 className="card-title mb-1 fw-semibold">{item.name}</h6>
+                {item.description && (
+                  <p className="card-text mb-1 small text-muted">
+                    {item.description}
+                  </p>
+                )}
+                <div className="fw-bold">${item.price}</div>
+              </div>
+
+              <div className="text-end">
+                {/* SI ES UN PRODUCTO SIMPLE Y YA TIENE CANTIDAD, MOSTRAMOS EL CONTROLADRO */}
+                {isSimpleProduct && qty > 0 ? (
+                  <div
+                    className="d-flex align-items-center justify-content-end bg-light rounded-pill border"
+                    style={{ width: "fit-content" }}
+                  >
+                    <button
+                      className="btn btn-sm btn-link text-decoration-none text-danger fw-bold px-2"
+                      disabled={isClosed}
+                      onClick={(e) => {
+                        // Si tiene 1 y bajamos, lo eliminamos (o onChangeQty lo maneja si mandamos 0)
+                        // Nuestra fn changeQty de App.jsx dice: if (newQty <= 0) return;
+                        // Así que si es 1, llamamos a onRemove.
+                        if (qty === 1) {
+                          onRemove(cartItem.uuid);
+                        } else {
+                          onChangeQty(cartItem.uuid, qty - 1);
+                        }
+                      }}
+                    >
+                      −
+                    </button>
+                    <span className="fw-bold mx-1 text-dark" style={{ minWidth: "20px", textAlign: "center" }}>{qty}</span>
+                    <button
+                      className="btn btn-sm btn-link text-decoration-none text-success fw-bold px-2"
+                      disabled={isClosed}
+                      onClick={(e) => {
+                        triggerFlyAnimation(e, item.img);
+                        onChangeQty(cartItem.uuid, qty + 1);
+                      }}
+                    >
+                      +
+                    </button>
+                  </div>
+                ) : (
+                  /* SI NO TIENE CANTIDAD O NO ES SIMPLE, MOSTRAMOS "AGREGAR" */
+                  <button
+                    className="btn btn-success btn-sm"
+                    disabled={isClosed}
+                    onClick={(e) => {
+                      triggerFlyAnimation(e, item.img);
+                      onAddToCart(item);
+                    }}
+                  >
+                    {isClosed ? "Cerrado" : "Agregar"}
+                  </button>
+                )}
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   return (
     <section id="menu" className="py-4 bg-light">
