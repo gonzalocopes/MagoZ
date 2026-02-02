@@ -24,8 +24,7 @@ function App() {
     address2: "",
     phone: "",
     deliveryMethod: "Delivery",
-    paymentMethod: "Efectivo",
-    payWith: "", // Para indicar con cuánto paga si es efectivo
+    paymentMethod: "Transferencia",
     comments: "",
     deliveryZone: "Glew", // Default
   });
@@ -210,14 +209,14 @@ function App() {
       document.head.appendChild(link);
     }
     // 2. Lo forzamos al nuevo
-    link.href = "/images/logo.png";
+    link.href = "/images/bebidas_logo.png";
   }, []);
 
   return (
     <div className="bg-body-tertiary min-vh-100">
       <Helmet>
         <title>Bebidas Glew | Pedidos Online</title>
-        <link rel="icon" type="image/png" href="/images/logo.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="/images/bebidas_logo.png" sizes="16x16" />
       </Helmet>
       <Navbar cartCount={cartCount} />
 

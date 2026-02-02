@@ -4,16 +4,16 @@ export const clientConfig = {
 
   whatsapp: "+5491136424020",
 
-  logo: "/images/logo.png", // Generic
+  logo: "/images/bebidas_logo.png", // Generic
 
   colores: {
-    primario: "#ffc107", 
+    primario: "#000000",
     secundario: "#212529",
     textoClaro: "#ffffff",
   },
 
   hero: {
-    fondo: "/images/capy-banner.png", // Placeholder
+    fondo: "/images/neon_banner.png", // Neon Party Banner
     slides: [
       {
         titulo: "BEBIDAS GLEW",
@@ -33,7 +33,7 @@ export const clientConfig = {
       },
     ],
   },
-  
+
   /*
   horario: {
     enabled: false, // Local siempre abierto

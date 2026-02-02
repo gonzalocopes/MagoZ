@@ -29,24 +29,24 @@ export default function CheckoutForm({ customer, onChange, shippingCost }) {
 
         {/* 1.1 Zona de envío (Solo para Delivery) */}
         {customer.deliveryMethod === "Delivery" && (
-           <div className="mb-3">
-             <label className="form-label fw-bold">Zona de envío</label>
-             <select
-               className="form-select"
-               name="deliveryZone"
-               value={customer.deliveryZone}
-               onChange={handleChange}
-             >
-               <option value="Glew">Glew ($2000)</option>
-               <option value="Guernica">Guernica ($2500)</option>
-               <option value="Longchamps">Longchamps ($2500)</option>
-             </select>
-             <div className="form-text text-success">
-               {shippingCost === 0 
-                 ? "¡Envío GRATIS por superar los $40.000!" 
-                 : `Costo de envío: $${shippingCost}`}
-             </div>
-           </div>
+          <div className="mb-3">
+            <label className="form-label fw-bold">Zona de envío</label>
+            <select
+              className="form-select"
+              name="deliveryZone"
+              value={customer.deliveryZone}
+              onChange={handleChange}
+            >
+              <option value="Glew">Glew ($2000)</option>
+              <option value="Guernica">Guernica ($2500)</option>
+              <option value="Longchamps">Longchamps ($2500)</option>
+            </select>
+            <div className="form-text text-success">
+              {shippingCost === 0
+                ? "¡Envío GRATIS por superar los $40.000!"
+                : `Costo de envío: $${shippingCost}`}
+            </div>
+          </div>
         )}
 
         {/* 2. Nombre (Siempre obligatorio) */}
@@ -114,26 +114,11 @@ export default function CheckoutForm({ customer, onChange, shippingCost }) {
                 value={customer.paymentMethod}
                 onChange={handleChange}
               >
-                <option value="Efectivo">Efectivo</option>
                 <option value="Transferencia">Transferencia</option>
                 <option value="Mercado Pago">Mercado Pago</option>
               </select>
-            </div>
 
-            {/* 5.1 ¿Con cuánto paga? (Solo si es Efectivo) */}
-            {customer.paymentMethod === "Efectivo" && (
-              <div className="mb-3">
-                <label className="form-label">¿Con cuánto abonás?</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  name="payWith"
-                  value={customer.payWith || ""}
-                  onChange={handleChange}
-                  placeholder="Ej: $20.000 / Pago justo"
-                />
-              </div>
-            )}
+            </div>
           </>
         )}
 

@@ -39,7 +39,7 @@ export default function Navbar({ cartCount }) {
             />
           )}
           <span
-            className="brand-text"
+            className="brand-text neon-text"
             style={{
               color: clientConfig.colores.textoClaro,
             }}

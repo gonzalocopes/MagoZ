@@ -40,3 +40,19 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Neon Text Effect */
+.neon-text {
+  color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #ff00de,
+    0 0 82px #ff00de,
+    0 0 92px #ff00de,
+    0 0 102px #ff00de,
+    0 0 151px #ff00de;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+}
