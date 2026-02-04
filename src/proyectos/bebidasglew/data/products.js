@@ -1,19 +1,12 @@
 
 export const combos = [
 
-  {
-    id: "stella-pack-6",
-    name: "Pack x6 Stella Artois",
-    category: "Combos",
-    description: "Pack de 6 unidades 330ml.",
-    price: 18000,
-    img: "/images/pack_stella.png",
-  },
+
   {
     id: "combo-sky-sprite",
     name: "COMBO Skyy + Sprite",
     category: "Combos",
-    description: "Skyy Vodka (Sabor a elección) + Sprite 2.25L. Incluye vaso 1lt con hielo.",
+    description: "Skyy Vodka (Sabor a elección) + Sprite 2.25L. Incluye vaso 1L con hielo.",
     price: 19000,
     img: "/images/combo_skyy_pro.png",
     flavors: ["Skyy Cosmic", "Skyy Raspberry"], // Opciones de sabor
@@ -22,7 +15,7 @@ export const combos = [
     id: "combo-sky-speed",
     name: "COMBO Skyy + 2 Speed XL",
     category: "Combos",
-    description: "Skyy Vodka (Sabor a elección) + 2 Speed XL. Incluye vaso 1lt con hielo.",
+    description: "Skyy Vodka (Sabor a elección) + 2 Speed XL. Incluye vaso 1L con hielo.",
     price: 20000,
     img: "/images/combo_skyy_speed_pro.png",
     flavors: ["Skyy Cosmic", "Skyy Raspberry"], // Opciones de sabor
@@ -31,7 +24,7 @@ export const combos = [
     id: "combo-sky-cepita",
     name: "COMBO Skyy + Cepita",
     category: "Combos",
-    description: "Skyy Vodka (Sabor a elección) + Cepita Naranja 1L. Incluye vaso 1lt con hielo.",
+    description: "Skyy Vodka (Sabor a elección) + Cepita Naranja 1L. Incluye vaso 1L con hielo.",
     price: 18000,
     img: "/images/combo_skyy_cepita.png",
     flavors: ["Skyy Cosmic", "Skyy Raspberry"],
@@ -40,16 +33,16 @@ export const combos = [
     id: "combo-sky-monster",
     name: "COMBO Skyy + 2 Monster",
     category: "Combos",
-    description: "Skyy Vodka (Sabor a elección) + 2 Monster 473ml. Incluye vaso 1lt con hielo.",
+    description: "Skyy Vodka (Sabor a elección) + 2 Monster 473ml. Incluye vaso 1L con hielo.",
     price: 21000,
     img: "/images/combo_skyy_monster.png",
     flavors: ["Skyy Cosmic", "Skyy Raspberry"],
   },
   {
     id: "combo-fernet-coca-25",
-    name: "COMBO Fernet + Coca 2.5L",
+    name: "COMBO Fernet + Coca 2.25L",
     category: "Combos",
-    description: "Fernet Branca 750ml + Coca-Cola 2.5L. Incluye vaso 1lt con hielo gratis.",
+    description: "Fernet Branca 750ml + Coca-Cola 2.25L. Incluye vaso 1L con hielo gratis.",
     price: 25000,
     img: "/images/combo_fernet_pro.png",
   },
@@ -57,7 +50,7 @@ export const combos = [
     id: "combo-fernet-coca-175",
     name: "COMBO Fernet + 2 Cocas 1.75L",
     category: "Combos",
-    description: "Fernet Branca 750ml + 2 Coca-Cola 1.75L. Incluye vaso 1lt con hielo gratis.",
+    description: "Fernet Branca 750ml + 2 Coca-Cola 1.75L. Incluye vaso 1L con hielo gratis.",
     price: 26000,
     img: "/images/combo_fernet_pro.png",
   },
@@ -65,9 +58,17 @@ export const combos = [
     id: "combo-trumpeter-sprite",
     name: "COMBO Messi",
     category: "Combos",
-    description: "Trumpeter + Sprite. Para que pegue más rápido 🐐. Incluye vaso 1lt con hielo gratis.",
+    description: "Trumpeter Malbec + Sprite 2.25L. Para que pegue más rápido 🐐. Incluye vaso 1L con hielo gratis.",
     price: 18500,
     img: "/images/combo_messi.png",
+  },
+  {
+    id: "stella-pack-6",
+    name: "Pack x6 Stella Artois",
+    category: "Combos",
+    description: "Pack de 6 unidades 330ml.",
+    price: 18000,
+    img: "/images/pack_stella.png",
   },
 ];
 
@@ -78,7 +79,7 @@ export const extras = [
   { id: "extra-speed", name: "Speed 473ml", price: 4500, category: "Extras" },
   { id: "extra-cepita", name: "Cepita Naranja 1L", price: 3900, category: "Extras" },
   { id: "extra-monster", name: "Monster 473ml", price: 5000, category: "Extras" },
-  { id: "extra-vaso", name: "Vaso 1lt (con hielo)", price: 1000, category: "Extras" },
+  { id: "extra-vaso", name: "Vaso 1L (con hielo)", price: 1000, category: "Extras" },
 
 ];
 
@@ -93,7 +94,7 @@ export const productos = [
   { id: "prod-speed", name: "Speed 473ml", price: 4500, category: "Productos", img: "/images/speed_can.png", description: "Lata 473ml." },
   { id: "prod-cepita", name: "Cepita Naranja 1L", price: 3900, category: "Productos", img: "/images/cepita_bottle.png", description: "Botella plástica 1L." },
   { id: "prod-monster", name: "Monster 473ml", price: 5000, category: "Productos", img: "/images/monster_can.png", description: "Lata 473ml." },
-  { id: "prod-vaso", name: "Vaso 1lt (con hielo)", price: 1000, category: "Productos", img: "/images/cup_ice.png", description: "Vaso de plástico con hielo." },
+  { id: "prod-vaso", name: "Vaso 1L (con hielo)", price: 1000, category: "Productos", img: "/images/cup_ice.png", description: "Vaso de plástico con hielo." },
 
 ];
 export const postres = [];
