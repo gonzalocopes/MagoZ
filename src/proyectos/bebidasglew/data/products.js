@@ -79,7 +79,7 @@ export const extras = [
   { id: "extra-cepita", name: "Cepita Naranja 1L", price: 3900, category: "Extras" },
   { id: "extra-monster", name: "Monster 473ml", price: 5000, category: "Extras" },
   { id: "extra-vaso", name: "Vaso 1lt (con hielo)", price: 1000, category: "Extras" },
-  { id: "extra-hielo", name: "Bolsa de Hielo", price: 6000, category: "Extras" },
+
 ];
 
 export const promos = [];
@@ -94,6 +94,6 @@ export const productos = [
   { id: "prod-cepita", name: "Cepita Naranja 1L", price: 3900, category: "Productos", img: "/images/cepita_bottle.png", description: "Botella plástica 1L." },
   { id: "prod-monster", name: "Monster 473ml", price: 5000, category: "Productos", img: "/images/monster_can.png", description: "Lata 473ml." },
   { id: "prod-vaso", name: "Vaso 1lt (con hielo)", price: 1000, category: "Productos", img: "/images/cup_ice.png", description: "Vaso de plástico con hielo." },
-  { id: "prod-hielo", name: "Bolsa de Hielo", price: 6000, category: "Productos", img: "/images/ice_bag.png", description: "Bolsa de hielo." },
+
 ];
 export const postres = [];
