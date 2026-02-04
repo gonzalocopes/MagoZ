@@ -63,6 +63,15 @@ export const combos = [
     img: "/images/combo_messi.png",
   },
   {
+    id: "combo-full-previa",
+    name: "COMBO FULL PREVIA",
+    category: "Combos",
+    description: "Fernet Branca 750ml + Skyy Vodka 750ml (sabor a elección) + Coca-Cola 2.25L + 1 Speed XL + 1 Monster + Jugo Cepita 1L. Incluye 2 vasos de 1L con hielo.",
+    price: 44900,
+    img: "/images/combo_full_previa.png",
+    flavors: ["Skyy Cosmic", "Skyy Raspberry"],
+  },
+  {
     id: "stella-pack-6",
     name: "Pack x6 Stella Artois",
     category: "Combos",
