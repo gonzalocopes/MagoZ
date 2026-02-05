@@ -1,0 +1,148 @@
+/* Botón Flotante */
+.btn-slot-floating {
+    position: fixed;
+    bottom: 80px; /* Arriba del botón de WhatsApp */
+    left: 20px;
+    z-index: 9999;
+    background: linear-gradient(45deg, #ffc107, #ff9800);
+    color: #212529;
+    font-weight: bold;
+    border: 3px solid #fff;
+    border-radius: 50px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    cursor: pointer;
+    font-size: 1rem;
+    animation: bounce 2s infinite;
+    transition: transform 0.2s;
+}
+
+.btn-slot-floating:hover {
+    transform: scale(1.05);
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-10px);}
+    60% {transform: translateY(-5px);}
+}
+
+/* Overlay / Modal */
+.slot-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.slot-container {
+    background: #2b0c36; /* Color oscuro/violeta */
+    width: 90%;
+    max-width: 500px;
+    border-radius: 20px;
+    padding: 2rem;
+    border: 4px solid #ffd700;
+    box-shadow: 0 0 30px #ff00de;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.slot-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.slot-title {
+    font-family: 'Verdana', sans-serif;
+    color: #ffd700;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.slot-subtitle {
+    font-size: 0.9rem;
+    color: #ddd;
+    margin-bottom: 1.5rem;
+}
+
+/* Máquina */
+.slot-machine {
+    display: flex;
+    justify-content: space-around;
+    background: #000;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #555;
+    margin-bottom: 20px;
+    position: relative;
+    height: 120px;
+    overflow: hidden;
+}
+
+.slot-reel {
+    width: 30%;
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+}
+
+.slot-reel img {
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Animación de Giro (Blur) */
+.slot-machine.spinning .slot-reel img {
+    animation: slotSpin 0.2s linear infinite;
+    filter: blur(2px);
+}
+
+@keyframes slotSpin {
+    0% { transform: translateY(-100%); opacity: 0.5; }
+    100% { transform: translateY(100%); opacity: 0.5; }
+}
+
+/* Simulación de movimiento reemplazando imágenes rapidísimo en código, 
+   pero el CSS ayuda con el blur */
+
+.slot-payline {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 0, 0, 0.4);
+    z-index: 10;
+    pointer-events: none;
+}
+
+.slot-status {
+    min-height: 1.5rem;
+    font-weight: bold;
+    color: #ff00de;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}

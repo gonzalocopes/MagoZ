@@ -11,6 +11,7 @@ import Cart from "./components/Cart";
 import CheckoutForm from "./components/CheckoutForm";
 import WhatsAppButton from "./components/WhatsAppButton";
 import UpsellModal from "./components/UpsellModal";
+import GameSlotMachine from "./components/GameSlotMachine";
 // 👉 Usamos solo extras para el upsell
 import { extras } from "./data/products";
 
@@ -321,6 +322,9 @@ function App() {
 
       {/* 🧱 Separador solo mobile para que la barra roja no tape el footer */}
       <div className="d-md-none" style={{ height: "64px" }} />
+
+      {/* Juego Tragamonedas */}
+      <GameSlotMachine />
 
       {/* Modal de sugerencias */}
       <UpsellModal
