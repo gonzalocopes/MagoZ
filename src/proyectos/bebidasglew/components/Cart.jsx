@@ -1,4 +1,4 @@
-export default function Cart({ cart, total, onRemove, onChangeQty, onEdit }) {
+export default function Cart({ cart, total, subtotal, shippingCost, discount, discountAmount, onRemove, onChangeQty, onEdit }) {
   return (
     <div className="card mb-4">
       <div className="card-header bg-dark text-white">Mi pedido</div>
@@ -60,17 +60,13 @@ export default function Cart({ cart, total, onRemove, onChangeQty, onEdit }) {
                       </button>
                     )}
 
-                    {/* CONTROL DE CANTIDAD (Para "Productos") O BADGE (Para otros) */}
+                    {/* CONTROL DE CANTIDAD y ELIMINAR */}
                     {item.category === "Productos" ? (
                       <div className="d-flex align-items-center border rounded me-2">
                         <button
                           className="btn btn-sm btn-light px-2 py-0 text-danger fw-bold"
                           onClick={() => {
                             if (item.qty > 1) onChangeQty(item.uuid, item.qty - 1);
-                            // Si es 1, dejamos que el botón eliminar haga el trabajo, o podríamos bajar a 0?
-                            // User pidio "sumar o restar", generalmente si bajas a 0 se borra.
-                            // Pero acá ya tenemos botón eliminar al lado. 
-                            // Hagamos que baje hasta 1. Para borrar usa la X.
                           }}
                           disabled={item.qty <= 1}
                         >
@@ -85,7 +81,6 @@ export default function Cart({ cart, total, onRemove, onChangeQty, onEdit }) {
                         </button>
                       </div>
                     ) : (
-                      /* Para combos/hamburguesas con extras, solo mostramos cantidad si es > 1 */
                       item.qty > 1 && <span className="badge bg-secondary rounded-pill me-2">{item.qty}</span>
                     )}
 
@@ -100,13 +95,34 @@ export default function Cart({ cart, total, onRemove, onChangeQty, onEdit }) {
                 </li>
               ))}
             </ul>
-            <div className="d-flex justify-content-between">
-              <span className="fw-bold">Total</span>
-              <span className="fw-bold">${total}</span>
+
+            {/* Resumen de totales */}
+            <div className="border-top pt-2">
+              <div className="d-flex justify-content-between mb-1">
+                <span>Subtotal</span>
+                <span>${subtotal}</span>
+              </div>
+
+              {discount > 0 && (
+                <div className="d-flex justify-content-between mb-1 text-success">
+                  <span>Descuento</span>
+                  <span>- ${discountAmount}</span>
+                </div>
+              )}
+
+              <div className="d-flex justify-content-between mb-1">
+                <span>Envío</span>
+                <span>{shippingCost === 0 ? "Gratis" : `$${shippingCost}`}</span>
+              </div>
+
+              <div className="d-flex justify-content-between fw-bold fs-5 border-top pt-2 mt-2">
+                <span>Total</span>
+                <span>${total}</span>
+              </div>
             </div>
           </>
         )}
       </div>
-    </div >
+    </div>
   );
 }

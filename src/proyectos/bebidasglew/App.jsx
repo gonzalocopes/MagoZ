@@ -29,6 +29,9 @@ function App() {
     deliveryZone: "Glew", // Default
   });
 
+  const [discount, setDiscount] = useState(0);
+  const [couponName, setCouponName] = useState("");
+
   const [showUpsell, setShowUpsell] = useState(false);
   const [isClosed, setIsClosed] = useState(false);
   const [lastProduct, setLastProduct] = useState(null);
@@ -86,6 +89,7 @@ function App() {
   // Cálculo del envío
   let shippingCost = 0;
   if (customer.deliveryMethod === "Delivery") {
+    // Threshold usually on raw subtotal
     if (subtotal < 40000) {
       if (customer.deliveryZone === "Glew") shippingCost = 2000;
       if (customer.deliveryZone === "Guernica") shippingCost = 2500;
@@ -93,7 +97,8 @@ function App() {
     }
   }
 
-  const total = subtotal + shippingCost;
+  const discountAmount = subtotal * discount;
+  const total = subtotal - discountAmount + shippingCost;
 
   const addToCart = (product, { fromUpsell = false } = {}) => {
     if (isClosed && clientConfig.horario?.enabled) {
@@ -271,11 +276,16 @@ function App() {
                 onRemove={removeFromCart}
                 onChangeQty={changeQty}
                 onEdit={handleEditItem}
+                discount={discount}
+                discountAmount={discountAmount}
               />
               <CheckoutForm
                 customer={customer}
                 onChange={setCustomer}
                 shippingCost={shippingCost}
+                setDiscount={setDiscount}
+                setCouponName={setCouponName}
+                currentDiscount={discount}
               />
               <WhatsAppButton
                 cart={cart}
@@ -284,6 +294,9 @@ function App() {
                 shippingCost={shippingCost}
                 customer={customer}
                 isClosed={isClosed}
+                discount={discount}
+                couponName={couponName}
+                discountAmount={discountAmount}
               />
             </section>
           </div>

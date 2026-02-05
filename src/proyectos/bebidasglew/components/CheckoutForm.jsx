@@ -1,8 +1,39 @@
-// src/components/CheckoutForm.jsx
-export default function CheckoutForm({ customer, onChange, shippingCost }) {
+import { useState } from "react";
+import { coupons } from "../data/coupons";
+
+export default function CheckoutForm({ customer, onChange, shippingCost, setDiscount, setCouponName, currentDiscount }) {
+  const [code, setCode] = useState("");
+  const [message, setMessage] = useState(null);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     onChange({ ...customer, [name]: value });
+  };
+
+  const applyCoupon = () => {
+    setMessage(null);
+    const found = coupons.find((c) => c.code.toUpperCase() === code.toUpperCase().trim());
+
+    if (!found) {
+      setMessage({ type: "error", text: "Código no encontrado" });
+      setDiscount(0);
+      setCouponName("");
+      return;
+    }
+
+    const now = new Date();
+    const expires = new Date(found.expires);
+
+    if (now > expires) {
+      setMessage({ type: "error", text: "Este código ya venció" });
+      setDiscount(0);
+      setCouponName("");
+      return;
+    }
+
+    setDiscount(found.discount);
+    setCouponName(found.code);
+    setMessage({ type: "success", text: `¡Descuento de ${found.discount * 100}% aplicado!` });
   };
 
   return (
@@ -12,6 +43,35 @@ export default function CheckoutForm({ customer, onChange, shippingCost }) {
       </div>
 
       <div className="card-body">
+
+        {/* 0. Cupón de descuento */}
+        <div className="mb-4 p-3 bg-light rounded border">
+          <label className="form-label fw-bold">¿Tenés un cupón?</label>
+          <div className="input-group mb-2">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Ingresá tu código"
+              value={code}
+              onChange={(e) => setCode(e.target.value)}
+              disabled={currentDiscount > 0}
+            />
+            <button
+              className="btn btn-dark"
+              type="button"
+              onClick={applyCoupon}
+              disabled={currentDiscount > 0}
+            >
+              Aplicar
+            </button>
+          </div>
+          {currentDiscount > 0 && <div className="form-text text-success mb-2">Cupón aplicado. Para cambiarlo, recarga la página.</div>}
+          {message && (
+            <div className={`alert py-1 px-2 mb-0 alert-${message.type === "error" ? "danger" : "success"}`}>
+              {message.text}
+            </div>
+          )}
+        </div>
 
         {/* 1. Entrega (Primero, para definir qué campos mostrar) */}
         <div className="mb-3">

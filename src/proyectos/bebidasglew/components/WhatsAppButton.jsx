@@ -1,6 +1,6 @@
 import { clientConfig } from "../config/clientConfig";
 
-export default function WhatsAppButton({ cart, total, subtotal, shippingCost, customer, isClosed }) {
+export default function WhatsAppButton({ cart, total, subtotal, shippingCost, customer, isClosed, discount, couponName, discountAmount }) {
   const buildMessage = () => {
     const lines = [];
 
@@ -35,6 +35,11 @@ export default function WhatsAppButton({ cart, total, subtotal, shippingCost, cu
 
     lines.push("");
     lines.push(`Subtotal: $${subtotal || total - (shippingCost || 0)}`);
+
+    if (discount > 0) {
+      lines.push(`Descuento (${couponName}): -$${discountAmount}`);
+    }
+
     if (shippingCost > 0) {
       lines.push(`Envío (${customer.deliveryZone}): $${shippingCost}`);
     } else if (customer.deliveryMethod === "Delivery") {
