@@ -3,11 +3,14 @@ import "./GameSlotMachine.css";
 
 // Imágenes para los rodillos
 const SYMBOLS = [
-  "/images/combo_fernet_coca.png",
-  "/images/combo_skyy_sprite.png",
+  "/images/combo_skyy_pro.png",
+  "/images/combo_skyy_speed_pro.png",
+  "/images/combo_skyy_cepita.png",
+  "/images/combo_skyy_monster.png",
+  "/images/combo_fernet_pro.png",
   "/images/combo_messi.png",
-  "/images/combo_trumpeter_sprite.png",
   "/images/combo_full_previa.png",
+  "/images/pack_stella.png",
 ];
 
 export default function GameSlotMachine() {

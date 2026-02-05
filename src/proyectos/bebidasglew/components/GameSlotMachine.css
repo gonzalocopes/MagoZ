@@ -57,14 +57,21 @@
 
 .slot-close {
     position: absolute;
-    top: 10px;
-    right: 15px;
-    background: none;
-    border: none;
+    top: -15px; /* Que sobresalga un poco arriba a la derecha */
+    right: -15px;
+    background: #ff0000;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid #fff;
     color: #fff;
     font-size: 1.5rem;
     cursor: pointer;
-    opacity: 0.8;
+    display: flex; /* Centrar la X */
+    align-items: center;
+    justify-content: center;
+    z-index: 20; /* Por encima de todo */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
 .slot-title {
