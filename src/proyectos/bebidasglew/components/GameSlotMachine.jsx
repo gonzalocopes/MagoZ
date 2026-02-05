@@ -15,7 +15,7 @@ const SYMBOLS = [
 
 export default function GameSlotMachine() {
   const [isOpen, setIsOpen] = useState(false);
-  const [spinsLeft, setSpinsLeft] = useState(15);
+  const [spinsLeft, setSpinsLeft] = useState(5);
   const [reels, setReels] = useState([SYMBOLS[0], SYMBOLS[1], SYMBOLS[2]]);
   const [isSpinning, setIsSpinning] = useState(false);
   const [message, setMessage] = useState("");
@@ -27,8 +27,8 @@ export default function GameSlotMachine() {
       const nextReset = parseInt(nextResetStr, 10);
       if (Date.now() > nextReset) {
         // Pasaron 24hs, reiniciar
-        setSpinsLeft(15);
-        localStorage.setItem("slotSpinsLeft", 15);
+        setSpinsLeft(5);
+        localStorage.setItem("slotSpinsLeft", 5);
         localStorage.removeItem("slotNextReset");
         return;
       }
@@ -55,11 +55,11 @@ export default function GameSlotMachine() {
     // Consumir 1 tiro
     const newSpins = spinsLeft - 1;
     saveSpins(newSpins);
-    
+
     // Si se acaban los tiros, seteamos la fecha de desbloqueo (24hs)
     if (newSpins === 0) {
-        const resetTime = Date.now() + 24 * 60 * 60 * 1000; // 24 horas
-        localStorage.setItem("slotNextReset", resetTime);
+      const resetTime = Date.now() + 24 * 60 * 60 * 1000; // 24 horas
+      localStorage.setItem("slotNextReset", resetTime);
     }
 
     // Duración del giro
@@ -80,7 +80,7 @@ export default function GameSlotMachine() {
         r2 = r1; // Dos iguales
         // Asegurar que el tercero sea distinto
         while (r3 === r1) {
-            r3 = Math.floor(Math.random() * SYMBOLS.length);
+          r3 = Math.floor(Math.random() * SYMBOLS.length);
         }
       }
 
@@ -122,10 +122,10 @@ export default function GameSlotMachine() {
             <button className="slot-close" onClick={() => setIsOpen(false)}>
               ✖
             </button>
-            
+
             <h2 className="slot-title">🎰 TRAGAMONEDAS 🎰</h2>
             <p className="slot-subtitle">¡Sacá 3 combos iguales y GANÁ ese combo gratis!</p>
-            
+
             <div className={`slot-machine ${isSpinning ? "spinning" : ""}`}>
               <div className="slot-reel">
                 <img src={reels[0]} alt="slot" />
@@ -136,7 +136,7 @@ export default function GameSlotMachine() {
               <div className="slot-reel">
                 <img src={reels[2]} alt="slot" />
               </div>
-              
+
               {/* Línea ganadora visual */}
               <div className="slot-payline"></div>
             </div>
@@ -145,8 +145,8 @@ export default function GameSlotMachine() {
               <p className="slot-status">
                 {message || "¡Vamos que sale!"}
               </p>
-              
-              <button 
+
+              <button
                 className="btn btn-warning btn-lg w-100 fw-bold shadow-sm"
                 onClick={spin}
                 disabled={isSpinning || spinsLeft <= 0}
