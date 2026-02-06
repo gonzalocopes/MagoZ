@@ -19,25 +19,38 @@ export default function GameSlotMachine() {
   const [reels, setReels] = useState([SYMBOLS[0], SYMBOLS[1], SYMBOLS[2]]);
   const [isSpinning, setIsSpinning] = useState(false);
   const [message, setMessage] = useState("");
+  const [isWinner, setIsWinner] = useState(false);
 
   useEffect(() => {
-    // Verificar si ya pasó el tiempo de espera para recargar tiros
-    const nextResetStr = localStorage.getItem("slotNextReset");
-    if (nextResetStr) {
-      const nextReset = parseInt(nextResetStr, 10);
-      if (Date.now() > nextReset) {
-        // Pasaron 24hs, reiniciar
-        setSpinsLeft(5);
-        localStorage.setItem("slotSpinsLeft", 5);
-        localStorage.removeItem("slotNextReset");
-        return;
-      }
+    // 1. Revisar si hay un "próximo reset" programado
+    let nextReset = parseInt(localStorage.getItem("slotNextReset") || "0", 10);
+    const now = Date.now();
+
+    // Si NO existe fecha de reset, la creamos ahora mismo (para que empiece a correr el ciclo de 24hs)
+    if (!nextReset) {
+      nextReset = now + 24 * 60 * 60 * 1000;
+      localStorage.setItem("slotNextReset", nextReset);
     }
 
-    // Cargar intentos restantes del localStorage
+    // 2. Si YA PASÓ la fecha de reset -> recargamos a 5 y reprogramamos prox reset
+    if (now > nextReset) {
+      setSpinsLeft(5);
+      localStorage.setItem("slotSpinsLeft", 5);
+      // Nuevo ciclo de 24hs desde AHORA
+      localStorage.setItem("slotNextReset", now + 24 * 60 * 60 * 1000);
+      return;
+    }
+
+    // 3. Si todavía estamos dentro del día, cargamos lo que quedó (pero MAXIMO 5)
+    // Esto corrige el bug de que aparezcan 12 o 15 de versiones viejas
     const stored = localStorage.getItem("slotSpinsLeft");
     if (stored !== null) {
-      setSpinsLeft(parseInt(stored, 10));
+      let parsed = parseInt(stored, 10);
+      if (parsed > 5) {
+        parsed = 5;
+        localStorage.setItem("slotSpinsLeft", 5);
+      }
+      setSpinsLeft(parsed);
     }
   }, []);
 
@@ -51,16 +64,13 @@ export default function GameSlotMachine() {
 
     setIsSpinning(true);
     setMessage("");
+    setIsWinner(false);
 
     // Consumir 1 tiro
     const newSpins = spinsLeft - 1;
     saveSpins(newSpins);
 
-    // Si se acaban los tiros, seteamos la fecha de desbloqueo (24hs)
-    if (newSpins === 0) {
-      const resetTime = Date.now() + 24 * 60 * 60 * 1000; // 24 horas
-      localStorage.setItem("slotNextReset", resetTime);
-    }
+    // (La fecha de reset ya se maneja globalmente al cargar la página)
 
     // Duración del giro
     setTimeout(() => {
@@ -86,6 +96,13 @@ export default function GameSlotMachine() {
 
       setReels([SYMBOLS[r1], SYMBOLS[r2], SYMBOLS[r3]]);
       setIsSpinning(false);
+
+      // Chequear ganador REAL (por si algún día querés sacar la trampa)
+      if (r1 === r2 && r2 === r3) {
+        setIsWinner(true);
+        setMessage("🎉 ¡GANASTE! SACA CAPTURA Y MANDALA YA! 📸");
+        return;
+      }
 
       if (newSpins === 0) {
         setMessage("¡Se acabaron los tiros! 😢 Probá de nuevo en 24 horas.");
@@ -118,7 +135,7 @@ export default function GameSlotMachine() {
       {/* Modal / Overlay */}
       {isOpen && (
         <div className="slot-overlay">
-          <div className="slot-container">
+          <div className={`slot-container ${isWinner ? "slot-winner-container" : ""}`}>
             <button className="slot-close" onClick={() => setIsOpen(false)}>
               ✖
             </button>
@@ -126,7 +143,7 @@ export default function GameSlotMachine() {
             <h2 className="slot-title">🎰 TRAGAMONEDAS 🎰</h2>
             <p className="slot-subtitle">¡Sacá 3 combos iguales y GANÁ ese combo gratis!</p>
 
-            <div className={`slot-machine ${isSpinning ? "spinning" : ""}`}>
+            <div className={`slot-machine ${isSpinning ? "spinning" : ""} ${isWinner ? "slot-winner-box" : ""}`}>
               <div className="slot-reel">
                 <img src={reels[0]} alt="slot" />
               </div>
@@ -148,10 +165,16 @@ export default function GameSlotMachine() {
 
               <button
                 className="btn btn-warning btn-lg w-100 fw-bold shadow-sm"
-                onClick={spin}
-                disabled={isSpinning || spinsLeft <= 0}
+                onClick={() => {
+                  if (spinsLeft > 0) {
+                    spin();
+                  } else {
+                    setIsOpen(false);
+                  }
+                }}
+                disabled={isSpinning}
               >
-                {isSpinning ? "GIRANDO..." : spinsLeft > 0 ? `¡GIRAR! (${spinsLeft})` : "FIN DEL JUEGO"}
+                {isSpinning ? "GIRANDO..." : spinsLeft > 0 ? `¡GIRAR! (${spinsLeft})` : "FIN DEL JUEGO (Cerrar)"}
               </button>
             </div>
           </div>
