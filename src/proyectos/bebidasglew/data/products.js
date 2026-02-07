@@ -92,7 +92,7 @@ export const combos = [
     name: "Pack x6 Brahma 354ml",
     category: "Combos",
     description: "Pack de 6 latas 354ml.",
-    price: 8500,
+    price: 9000,
     img: "/images/pack_brahma.jpg",
   },
   {
