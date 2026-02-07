@@ -72,12 +72,36 @@ export const combos = [
     flavors: ["Skyy Cosmic", "Skyy Raspberry"],
   },
   {
+    id: "combo-federico-speed-x2",
+    name: "Federico de Alvear + 2 Speed",
+    category: "Combos",
+    description: "Federico de Alvear Extra Dulce + 2 Speed 473ml. Incluye vaso 1L con hielo.",
+    price: 13500,
+    img: "/images/combo_federico_speed.jpg",
+  },
+  {
     id: "stella-pack-6",
     name: "Pack x6 Stella Artois",
     category: "Combos",
     description: "Pack de 6 unidades 330ml.",
     price: 18000,
     img: "/images/pack_stella.png",
+  },
+  {
+    id: "combo-brahma-pack-6",
+    name: "Pack x6 Brahma 354ml",
+    category: "Combos",
+    description: "Pack de 6 latas 354ml.",
+    price: 8500,
+    img: "/images/pack_brahma.jpg",
+  },
+  {
+    id: "combo-corona-x2",
+    name: "Pack x2 Corona 710ml",
+    category: "Combos",
+    description: "Pack de 2 unidades 710ml.",
+    price: 13000,
+    img: "/images/corona_710.png",
   },
 ];
 
@@ -89,6 +113,8 @@ export const extras = [
   { id: "extra-cepita", name: "Cepita Naranja 1L", price: 3900, category: "Extras" },
   { id: "extra-monster", name: "Monster 473ml", price: 5000, category: "Extras" },
   { id: "extra-vaso", name: "Vaso 1L (con hielo)", price: 1000, category: "Extras" },
+  { id: "extra-corona-710", name: "Cerveza Corona 710ml", price: 6800, category: "Extras" },
+  { id: "extra-brahma-354", name: "Cerveza Brahma 354ml", price: 1700, category: "Extras" },
 
 ];
 
@@ -103,6 +129,8 @@ export const productos = [
   { id: "prod-speed", name: "Speed 473ml", price: 4500, category: "Productos", img: "/images/speed_can.png", description: "Lata 473ml." },
   { id: "prod-cepita", name: "Cepita Naranja 1L", price: 3900, category: "Productos", img: "/images/cepita_bottle.png", description: "Botella plástica 1L." },
   { id: "prod-monster", name: "Monster 473ml", price: 5000, category: "Productos", img: "/images/monster_can.png", description: "Lata 473ml." },
+  { id: "prod-corona-710", name: "Cerveza Corona 710ml", price: 6800, category: "Productos", img: "/images/corona_710.png", description: "Botella de vidrio 710ml." },
+  { id: "prod-brahma-354", name: "Cerveza Brahma 354ml", price: 1700, category: "Productos", img: "/images/brahma_354.png", description: "Lata 354ml." },
   { id: "prod-vaso", name: "Vaso 1L (con hielo)", price: 1000, category: "Productos", img: "/images/cup_ice.png", description: "Vaso de plástico con hielo." },
 
 ];
