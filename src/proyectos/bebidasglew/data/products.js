@@ -103,6 +103,22 @@ export const combos = [
     price: 13000,
     img: "/images/corona_710.png",
   },
+  {
+    id: "combo-heineken-pack-6",
+    name: "Pack x6 Heineken 473ml",
+    category: "Combos",
+    description: "Pack de 6 latas 473ml.",
+    price: 21000,
+    img: "/images/pack_heineken_6.jpg",
+  },
+  {
+    id: "combo-redlabel-speed",
+    name: "COMBO Red Label + 4 Speed",
+    category: "Combos",
+    description: "Johnnie Walker Red Label + 4 Speed Unlimited 473ml.",
+    price: 50000,
+    img: "/images/combo_red_label_speed_v2.jpg",
+  },
 ];
 
 export const extras = [
@@ -132,6 +148,7 @@ export const productos = [
   { id: "prod-corona-710", name: "Cerveza Corona 710ml", price: 6800, category: "Productos", img: "/images/corona_710.png", description: "Botella de vidrio 710ml." },
   { id: "prod-brahma-354", name: "Cerveza Brahma 354ml", price: 1700, category: "Productos", img: "/images/brahma_354.png", description: "Lata 354ml." },
   { id: "prod-vaso", name: "Vaso 1L (con hielo)", price: 1000, category: "Productos", img: "/images/cup_ice.png", description: "Vaso de plástico con hielo." },
+  { id: "prod-heineken-473", name: "Cerveza Heineken 473ml", price: 4500, category: "Productos", img: "/images/heineken_473_v2.jpg", description: "Lata 473ml." },
 
 ];
 export const postres = [];
