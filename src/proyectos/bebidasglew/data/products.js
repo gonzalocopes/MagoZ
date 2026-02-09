@@ -81,9 +81,9 @@ export const combos = [
   },
   {
     id: "combo-redlabel-speed",
-    name: "COMBO Red Label + 4 Speed",
+    name: "COMBO Red Label 1L + 4 Speed",
     category: "Combos",
-    description: "Johnnie Walker Red Label + 4 Speed Unlimited 473ml.",
+    description: "Johnnie Walker Red Label 1L + 4 Speed Unlimited 473ml.",
     price: 50000,
     img: "/images/combo_red_label_speed_v2.jpeg",
   },
