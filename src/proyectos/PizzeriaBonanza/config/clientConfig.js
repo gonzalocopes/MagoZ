@@ -1,20 +1,20 @@
 // src/config/clientConfig.js
 export const clientConfig = {
-  nombre: "Pizzería El Maestro",          // Nombre del local
+  nombre: "Pizzería Bonanza",          // Nombre del local
   tipo: "pizzeria",                     // pizzeria | hamburgueseria | heladeria | etc.
 
   whatsapp: "5491132935209",           // Teléfono del negocio (formato internacional)
 
-  logo: "/images/elmaestro.png",    // Ruta dentro de /public (ej: public/images/logo-pizzeria.png)
+  logo: "/images/bonanza_logo.png",    // Ruta dentro de /public (ej: public/images/logo-pizzeria.png)
 
   colores: {
-    primario: "#e63946",
-    secundario: "#1d3557",
+    primario: "#000000", // Negro (Fondo Premium)
+    secundario: "#FFD700", // Gold (Acentos)
     textoClaro: "#ffffff",
   },
 
   hero: {
-    fondo: "/images/pizzeria_hero_logo.png",   // Imagen de fondo (ponela en /public/images/)
+    fondo: "/images/bonanza_logo.png",   // Imagen de fondo (ponela en /public/images/)
   },
 
   // // 🔔 NUEVO: configuración de horario por día

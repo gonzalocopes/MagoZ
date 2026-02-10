@@ -22,7 +22,7 @@ export default function HeroCarousel() {
 
   const slide3Title = hero?.slides?.[2]?.titulo || "Promos todos los días";
   const slide3Subtitle =
-    hero?.slides?.[2]?.subtitulo || 
+    hero?.slides?.[2]?.subtitulo ||
     "2x1, combos individuales, familiares y mucho más.";
 
   return (
@@ -35,48 +35,48 @@ export default function HeroCarousel() {
         >
           <div className="carousel-inner">
             {/* Slide 1 */}
-            <div className="carousel-item active">
+            <div className="carousel-item active" style={{ backgroundColor: "#000" }}>
               <img
                 src={imageSrc}
                 className="d-block w-100"
                 alt="Slide 1"
-                style={{ maxHeight: "520px", objectFit: "cover" }}
+                style={{ maxHeight: "520px", objectFit: "contain", opacity: 0.9 }}
               />
               <div className="carousel-caption d-block">
-                <div className="bg-dark bg-opacity-50 rounded-3 px-3 py-2 d-inline-block">
-                  <h2 className="fw-bold text-shadow fs-4">{slide1Title}</h2>
+                <div className="bg-black bg-opacity-75 rounded-3 px-3 py-2 d-inline-block">
+                  <h2 className="fw-bold fs-4">{slide1Title}</h2>
                   <p className="mb-0 small">{slide1Subtitle}</p>
                 </div>
               </div>
             </div>
 
             {/* Slide 2 */}
-            <div className="carousel-item">
+            <div className="carousel-item" style={{ backgroundColor: "#000" }}>
               <img
                 src={imageSrc}
                 className="d-block w-100"
                 alt="Slide 2"
-                style={{ maxHeight: "520px", objectFit: "cover" }}
+                style={{ maxHeight: "520px", objectFit: "contain", opacity: 0.9 }}
               />
               <div className="carousel-caption d-block">
-                <div className="bg-dark bg-opacity-50 rounded-3 px-3 py-2 d-inline-block">
-                  <h2 className="fw-bold text-shadow fs-4">{slide2Title}</h2>
+                <div className="bg-black bg-opacity-75 rounded-3 px-3 py-2 d-inline-block">
+                  <h2 className="fw-bold fs-4">{slide2Title}</h2>
                   <p className="mb-0 small">{slide2Subtitle}</p>
                 </div>
               </div>
             </div>
 
             {/* Slide 3 */}
-            <div className="carousel-item">
+            <div className="carousel-item" style={{ backgroundColor: "#000" }}>
               <img
                 src={imageSrc}
                 className="d-block w-100"
                 alt="Slide 3"
-                style={{ maxHeight: "520px", objectFit: "cover" }}
+                style={{ maxHeight: "520px", objectFit: "contain", opacity: 0.9 }}
               />
               <div className="carousel-caption d-block">
-                <div className="bg-dark bg-opacity-50 rounded-3 px-3 py-2 d-inline-block">
-                  <h2 className="fw-bold text-shadow fs-4">{slide3Title}</h2>
+                <div className="bg-black bg-opacity-75 rounded-3 px-3 py-2 d-inline-block">
+                  <h2 className="fw-bold fs-4">{slide3Title}</h2>
                   <p className="mb-0 small">{slide3Subtitle}</p>
                 </div>
               </div>

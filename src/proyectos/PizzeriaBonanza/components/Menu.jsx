@@ -1,11 +1,10 @@
-// src/components/Menu.jsx
 import { useState, useRef } from "react";
 import {
   pizzas,
   empanadas,
-  postres,
   milanesas,
-  promos, // 👈 IMPORTANTE: importamos promos
+  promos,
+  postres,
 } from "../data/pizzeriaProducts";
 
 export default function Menu({ onAddToCart, isClosed }) {
@@ -144,12 +143,13 @@ export default function Menu({ onAddToCart, isClosed }) {
   return (
     <section id="menu" className="py-4 bg-light">
       <div className="container-fluid px-3 px-lg-4">
-        <h2 className="mb-3 text-center text-dark">Menú</h2>
+        <h2 className="mb-3 text-center text-dark" style={{ fontFamily: "Rye, serif", color: "#000" }}>Menú</h2>
 
         {/* === LISTA DE CATEGORÍAS (ESTILO APP) – SOLO MOBILE === */}
         <div className="d-md-none mb-3 menu-category-strip">
           {categories.map((cat) => {
             const isActive = openCategory === cat.id;
+
             return (
               <button
                 key={cat.id}
@@ -159,7 +159,9 @@ export default function Menu({ onAddToCart, isClosed }) {
                   }`}
               >
                 <span className="flex-grow-1 text-start">
-                  <span className="d-block fw-semibold text-dark">{cat.label}</span>
+                  <span className="d-block fw-semibold text-dark">
+                    {cat.label}
+                  </span>
                   <small className="text-muted">
                     {cat.products.length} producto
                     {cat.products.length !== 1 ? "s" : ""}
