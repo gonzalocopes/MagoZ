@@ -143,7 +143,7 @@ export default function Menu({ onAddToCart, isClosed }) {
   return (
     <section id="menu" className="py-4 bg-light">
       <div className="container-fluid px-3 px-lg-4">
-        <h2 className="mb-3 text-center text-dark" style={{ fontFamily: "Rye, serif", color: "#000" }}>Menú</h2>
+        <h2 className="mb-3 text-center text-gold-strong" style={{ fontFamily: "Rye, serif" }}>Menú</h2>
 
         {/* === LISTA DE CATEGORÍAS (ESTILO APP) – SOLO MOBILE === */}
         <div className="d-md-none mb-3 menu-category-strip">
@@ -186,8 +186,8 @@ export default function Menu({ onAddToCart, isClosed }) {
               ref={(el) => (categoryRefs.current[cat.id] = el)} // ref en el contenedor de la categoría
             >
               {/* Título de categoría (solo desktop) */}
-              <div className="d-none d-md-flex align-items-baseline mb-2">
-                <h4 className="me-2 mb-0 text-dark">{cat.label}</h4>
+              <div className="d-none d-md-flex align-items-baseline mb-2 border-bottom border-warning pb-2">
+                <h3 className="me-2 mb-0 text-gold-strong" style={{ fontFamily: "Rye, serif" }}>{cat.label}</h3>
                 <small className="text-muted">
                   {cat.products.length} producto
                   {cat.products.length !== 1 ? "s" : ""}
@@ -199,6 +199,8 @@ export default function Menu({ onAddToCart, isClosed }) {
                 className={`d-md-none menu-category-collapse ${isOpenMobile ? "show" : ""
                   }`}
               >
+                {/** Título también en mobile cuando se abre, para reforzar */}
+                <h4 className="mb-3 text-gold-strong ps-1" style={{ fontFamily: "Rye, serif" }}>{cat.label}</h4>
                 {cat.products.map((item) => renderProductCard(item))}
               </div>
 

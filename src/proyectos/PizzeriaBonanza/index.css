@@ -14,8 +14,15 @@ h6,
 .navbar-brand {
   font-family: 'Rye', serif;
   /* Fuente Western */
-  color: #FFD700 !important;
-  /* Gold */
+  color: #FFD700;
+  /* Gold Default */
+}
+
+/* Stronger Gold for Light Backgrounds */
+.text-gold-strong {
+  color: #D69E00 !important;
+  /* Darker Gold/Orange for visibility on white */
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
 /* Navbar overrides */
