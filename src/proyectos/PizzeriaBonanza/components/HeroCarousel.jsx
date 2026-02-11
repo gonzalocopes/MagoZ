@@ -40,7 +40,7 @@ export default function HeroCarousel() {
                 src={imageSrc}
                 className="d-block w-100"
                 alt="Slide 1"
-                style={{ maxHeight: "520px", objectFit: "contain", opacity: 0.9 }}
+                style={{ maxHeight: "520px", objectFit: "cover", opacity: 1 }}
               />
               <div className="carousel-caption d-block">
                 <div className="bg-black bg-opacity-75 rounded-3 px-3 py-2 d-inline-block">
@@ -56,7 +56,7 @@ export default function HeroCarousel() {
                 src={imageSrc}
                 className="d-block w-100"
                 alt="Slide 2"
-                style={{ maxHeight: "520px", objectFit: "contain", opacity: 0.9 }}
+                style={{ maxHeight: "520px", objectFit: "cover", opacity: 1 }}
               />
               <div className="carousel-caption d-block">
                 <div className="bg-black bg-opacity-75 rounded-3 px-3 py-2 d-inline-block">
@@ -72,7 +72,7 @@ export default function HeroCarousel() {
                 src={imageSrc}
                 className="d-block w-100"
                 alt="Slide 3"
-                style={{ maxHeight: "520px", objectFit: "contain", opacity: 0.9 }}
+                style={{ maxHeight: "520px", objectFit: "cover", opacity: 1 }}
               />
               <div className="carousel-caption d-block">
                 <div className="bg-black bg-opacity-75 rounded-3 px-3 py-2 d-inline-block">

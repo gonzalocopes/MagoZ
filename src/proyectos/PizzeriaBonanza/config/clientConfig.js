@@ -14,7 +14,7 @@ export const clientConfig = {
   },
 
   hero: {
-    fondo: "/images/bonanza_logo.png",   // Imagen de fondo (ponela en /public/images/)
+    fondo: "/images/bonanza_banner_new.png",   // Imagen de fondo (ponela en /public/images/)
   },
 
   // // 🔔 NUEVO: configuración de horario por día
