@@ -78,7 +78,7 @@ export const pizzas = [
     category: "Pizzas",
     description: "Cebolla caramelizada, muzza y orégano.",
     price: 10000,
-    img: "/images/pizzas/fugazeta.jpg",
+    img: "/images/pizzas/fugazzeta_real.jpg",
   },
   {
     id: "pizza-fugazzeta-rellena",
@@ -180,15 +180,23 @@ export const empanadas = [
     category: "Empanadas",
     description: "Choclo y salsa blanca.",
     price: 2200,
-    img: "/images/empanadas/empanada-humita.png", 
+    img: "/images/empanadas/empanada-humita.png",
   },
   {
-    id: "emp-cyq",
-    name: "Empanada de Cebolla y Queso Calabresa",
+    id: "emp-cebolla-queso",
+    name: "Empanada de Cebolla y Queso",
     category: "Empanadas",
-    description: "Cebolla, queso y calabresa.",
+    description: "Cebolla y queso.",
     price: 2200,
-    img: "/images/empanadas/cyq.jpg",
+    img: "/images/empanadas/cebolla_queso.jpg",
+  },
+  {
+    id: "emp-calabresa",
+    name: "Empanada de Calabresa",
+    category: "Empanadas",
+    description: "Calabresa.",
+    price: 2200,
+    img: "/images/empanadas/calabresa.jpg",
   },
 
   {
