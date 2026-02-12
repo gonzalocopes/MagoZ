@@ -38,7 +38,7 @@ export const pizzas = [
     category: "Pizzas",
     description: "Rúcula, Jamón Crudo y Parmesano.",
     price: 16500,
-    img: "/images/pizzas/verduras.avif",
+    img: "/images/pizzas/rucula_jamon_parmesano.jpg",
   },
   {
     id: "pizza-napolitana",
@@ -311,7 +311,7 @@ export const milanesas = [
     name: "Sándwich Completo",
     description: "Lechuga, tomate, jamón, queso y huevo. Con papas fritas.",
     price: 18000,
-    img: "/images/mila/milacomp.jpg",
+    img: "/images/mila/sandwich_completo.jpg",
   },
   {
     id: "sand-mila-bonanza",
@@ -363,59 +363,10 @@ export const postres = [
 //PROMOS
 export const promos = [
   {
-    id: "promo-2",
-    name: "2 Muzzas",
-    description: "Pizza muzza grande x2.",
-    price: 25000,
-    img: "/images/promo.png", // o la ruta que uses
-  },
-  {
     id: "promo-3",
     name: "3 Muzzas",
     description: "Pizza muzza grande x3.",
-    price: 38000,
-    img: "/images/promo.png",
-  },
-  {
-    id: "promo-1-1",
-    name: "1 Muzza y 1 Napolitana",
-    description: "1 Muzza y 1 Napolitana.",
-    price: 28000,
-    img: "/images/promo.png",
-  },
-  {
-    id: "promo-1-jm",
-    name: "1 Muzza y 1 J&M",
-    description: "1 Muzza y 1 Jamon y Morron.",
-    price: 28000,
-    img: "/images/promo.png",
-  },
-  {
-    id: "promo-jm-napo",
-    name: "1 J&M y 1 Napolitana",
-    description: "Una Pizza J&M y Napolitana.",
-    price: 31000,
-    img: "/images/promo.png",
-  },
-  {
-    id: "promo-1-emp",
-    name: "1 Muzza y 6 Empanadas",
-    description: "1 Muzza y 6 Empanadas??????.",
-    price: 24800,
-    img: "/images/promo.png",
-  },
-  {
-    id: "promo-2-esp",
-    name: "2 Muzza y 1 Especial",
-    description: "2 Muzza y 1 Especial (napo, calabresa, J&M).",
-    price: 41000,
-    img: "/images/promo.png",
-  },
-  {
-    id: "promo-3-esp",
-    name: "3 Especiales",
-    description: "3 Especiales (napo, calabresa, J&M).",
-    price: 46000,
+    price: 23000,
     img: "/images/promo.png",
   },
 ];

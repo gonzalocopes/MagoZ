@@ -13,7 +13,7 @@ export default function Menu({ onAddToCart, isClosed }) {
     { id: "empanadas", label: "Empanadas 🥟", products: empanadas },
     { id: "milanesas", label: "Milanesas 🥩🍟", products: milanesas },
     { id: "promos", label: "Promos 💸💸", products: promos },
-    { id: "postres", label: "Postres 🍦", products: postres },
+    { id: "postres", label: "Bebidas 🥤", products: postres },
   ];
 
   // categoría abierta en MOBILE
