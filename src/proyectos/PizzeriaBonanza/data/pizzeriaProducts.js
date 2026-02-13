@@ -341,22 +341,38 @@ export const milanesas = [
 
 // POSTRES
 export const postres = [
-  // {
-  //  id: "flan-casero",
-  // name: "Flan casero",
-  // category: "Postres",
-  //description: "Flan casero con dulce de leche o crema.",
-  //price: 2000,
-  //img: "/images/postres/flan.png",
-  //},
-  //{
-  //id: "helado-1k",
-  //name: "Helado 1kg",
-  //category: "Postres",
-  //description: "Varios sabores a elección.",
-  //price: 4500,
-  //img: "/images/postres/helado.png",
-  //},
+  {
+    id: "bebida-brahma-710",
+    name: "Brahma 710",
+    category: "Bebidas",
+    description: "Cerveza Brahma 710ml.",
+    price: 4200,
+    img: "/images/bebidas/brahma-710.png",
+  },
+  {
+    id: "bebida-schneider-710",
+    name: "Schneider 710",
+    category: "Bebidas",
+    description: "Cerveza Schneider 710ml.",
+    price: 4000,
+    img: "/images/bebidas/schneider-710.png",
+  },
+  {
+    id: "bebida-schneider-253",
+    name: "Schneider 253",
+    category: "Bebidas",
+    description: "Cerveza Schneider 253ml.",
+    price: 2500,
+    img: "/images/bebidas/schneider-253.png",
+  },
+  {
+    id: "bebida-brahma-253",
+    name: "Brahma 253",
+    category: "Bebidas",
+    description: "Cerveza Brahma 253ml.",
+    price: 2700,
+    img: "/images/bebidas/brahma-253.png",
+  },
 ];
 
 
@@ -449,3 +465,4 @@ export const extrasMitad = [
   },
   // …seguí agregando las combinaciones que quieras
 ];
+
