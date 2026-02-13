@@ -180,7 +180,7 @@ export const empanadas = [
     category: "Empanadas",
     description: "Choclo y salsa blanca.",
     price: 2200,
-    img: "/images/empanadas/empanada-humita.png",
+    img: "/images/empanadas/empanada_humita.jpg",
   },
   {
     id: "emp-cebolla-queso",
@@ -188,7 +188,7 @@ export const empanadas = [
     category: "Empanadas",
     description: "Cebolla y queso.",
     price: 2200,
-    img: "/images/empanadas/cebolla_queso.jpg",
+    img: "/images/empanadas/empanada_cebolla_queso.jpg",
   },
   {
     id: "emp-calabresa",
@@ -196,7 +196,7 @@ export const empanadas = [
     category: "Empanadas",
     description: "Calabresa.",
     price: 2200,
-    img: "/images/empanadas/calabresa.jpg",
+    img: "/images/empanadas/empanada_calabresa.jpg",
   },
 
   {
@@ -213,7 +213,7 @@ export const empanadas = [
     category: "Empanadas",
     description: "Carne, cheddar y panceta.",
     price: 2200,
-    img: "/images/empanadas/empanada-cheeseburger.png",
+    img: "/images/empanadas/empanada_cheeseburger.jpg",
   },
 ];
 
@@ -304,7 +304,7 @@ export const milanesas = [
     name: "Sándwich Fugazzeta",
     description: "Sándwich de milanesa fugazzeta con papas fritas.",
     price: 13500,
-    img: "/images/mila/sanwichlt.jpg",
+    img: "/images/mila/sandwich_fugazzeta.jpg",
   },
   {
     id: "sand-mila-completo",
@@ -339,39 +339,71 @@ export const milanesas = [
   },
 ];
 
-// POSTRES
+// BEBIDAS
 export const postres = [
   {
-    id: "bebida-brahma-710",
-    name: "Brahma 710",
+    id: "coca-vidrio",
+    name: "Coca Cola de vidrio",
     category: "Bebidas",
-    description: "Cerveza Brahma 710ml.",
-    price: 4200,
-    img: "/images/bebidas/brahma-710.png",
+    description: "Coca Cola en botella de vidrio.",
+    price: 2800,
+    img: "/images/bebidas/coca_vidrio.jpg",
   },
   {
-    id: "bebida-schneider-710",
-    name: "Schneider 710",
+    id: "coca-lata",
+    name: "Lata de Coca Cola",
     category: "Bebidas",
-    description: "Cerveza Schneider 710ml.",
-    price: 4000,
-    img: "/images/bebidas/schneider-710.png",
+    description: "Coca Cola en lata 354ml.",
+    price: 2000,
+    img: "/images/bebidas/coca_lata.jpg",
   },
   {
-    id: "bebida-schneider-253",
-    name: "Schneider 253",
+    id: "coca-225",
+    name: "Coca Cola 2.25L",
     category: "Bebidas",
-    description: "Cerveza Schneider 253ml.",
+    description: "Coca Cola 2.25 litros.",
+    price: 5500,
+    img: "/images/bebidas/coca_225.jpg",
+  },
+  {
+    id: "sprite-225",
+    name: "Sprite 2.25L",
+    category: "Bebidas",
+    description: "Sprite 2.25 litros.",
+    price: 5500,
+    img: "/images/bebidas/sprite_225.jpg",
+  },
+  {
+    id: "coca-15",
+    name: "Coca Cola 1.5L",
+    category: "Bebidas",
+    description: "Coca Cola 1.5 litros.",
+    price: 1300,
+    img: "/images/bebidas/coca_15.jpg",
+  },
+  {
+    id: "sprite-15",
+    name: "Sprite 1.5L",
+    category: "Bebidas",
+    description: "Sprite 1.5 litros.",
+    price: 1300,
+    img: "/images/bebidas/sprite_15.jpg",
+  },
+  {
+    id: "manaos",
+    name: "Manaos 2.25L",
+    category: "Bebidas",
+    description: "Manaos 2.25 litros.",
     price: 2500,
-    img: "/images/bebidas/schneider-253.png",
+    img: "/images/bebidas/manaos.jpg",
   },
   {
-    id: "bebida-brahma-253",
-    name: "Brahma 253",
+    id: "agua",
+    name: "Agua",
     category: "Bebidas",
-    description: "Cerveza Brahma 253ml.",
-    price: 2700,
-    img: "/images/bebidas/brahma-253.png",
+    description: "Agua mineral.",
+    price: 1500,
+    img: "/images/bebidas/agua.jpg",
   },
 ];
 
