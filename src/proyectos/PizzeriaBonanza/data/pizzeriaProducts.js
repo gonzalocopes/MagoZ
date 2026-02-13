@@ -288,7 +288,7 @@ export const milanesas = [
     name: "Mila Fugazzeta XXL",
     description: "Cebolla y queso. Incluye papas fritas. Comen 3/4 personas.",
     price: 23000,
-    img: "/images/mila/milaalplato.png",
+    img: "/images/mila/mila_fugazzeta_xxl.jpg",
   },
 
   // Sándwiches
