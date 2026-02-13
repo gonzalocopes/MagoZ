@@ -100,7 +100,7 @@ export default function Menu({ onAddToCart, isClosed }) {
             alt={item.name}
             className="img-fluid rounded-start"
             style={{
-              objectFit: "cover",
+              objectFit: "contain",
               width: "100%",
               height: "80px",
             }}
