@@ -1,0 +1,707 @@
+// PIZZAS
+export const pizzas = [
+  {
+    id: "pizza-muzzarella",
+    name: "Muzzarella",
+    category: "Pizzas",
+    description: "Salsa de tomate, muzzarella, aceitunas.",
+    price: 14000,
+    img: "/images/pizzas/muzzarella.jpg",
+  },
+  {
+    id: "pizza-anchoas",
+    name: "Anchoas",
+    category: "Pizzas",
+    description: "Salsa de tomate, anchoas, condimentos.",
+    price: 15000,
+    img: "/images/pizzas/anchoas.jpg",
+  },
+  {
+    id: "pizza-morrones",
+    name: "Morrones",
+    category: "Pizzas",
+    description: "Salsa de tomate, morrones, aceitunas.",
+    price: 15000,
+    img: "/images/pizzas/morrones.jpg",
+  },
+  {
+    id: "pizza-jamon-morrones",
+    name: "Jamón y Morrones",
+    category: "Pizzas",
+    description: "Salsa de tomate, jamón, morrón, muzza, aceitunas.",
+    price: 17000,
+    img: "/images/pizzas/jamon_morrones.jpg",
+  },
+  {
+    id: "pizza-jamon-roquefort",
+    name: "Jamón al Roquefort",
+    category: "Pizzas",
+    description: "Salsa de tomate, jamón, muzza, roquefort, aceitunas negras, morrón.",
+    price: 19000,
+    img: "/images/pizzas/jamon_roquefort.jpg",
+  },
+  {
+    id: "pizza-fugazza",
+    name: "Fugazza",
+    category: "Pizzas",
+    description: "Cebolla, aceite de oliva y gratinada.",
+    price: 12000,
+    img: "/images/pizzas/fugazza.jpg",
+  },
+  {
+    id: "pizza-fugazzetta-rellena",
+    name: "Fugazzetta Rellena",
+    category: "Pizzas",
+    description: "Con queso port salud.",
+    price: 20000,
+    img: "/images/pizzas/fugazzetta_rellena.jpg",
+  },
+  {
+    id: "pizza-fugazzetta-jamon",
+    name: "Fugazzetta con Jamón",
+    category: "Pizzas",
+    description: "Relleno con queso port salud y jamón.",
+    price: 22000,
+    img: "/images/pizzas/fugazzetta_jamon.jpg",
+  },
+  {
+    id: "pizza-brasilera",
+    name: "Brasilera",
+    category: "Pizzas",
+    description: "Jamón, rodajas de ananá, aceite de oliva, gratinado con azúcar, aceitunas negras.",
+    price: 22000,
+    img: "/images/pizzas/brasilera.jpg",
+  },
+  {
+    id: "pizza-especial-geminis",
+    name: "Especial Geminis",
+    category: "Pizzas",
+    description: "Salsa de tomate, jamón, muzzarella, palmitos, huevo duro, aceitunas, morrón.",
+    price: 23000,
+    img: "/images/pizzas/especial_geminis.jpg",
+  },
+  {
+    id: "pizza-calabresa",
+    name: "Calabresa",
+    category: "Pizzas",
+    description: "Salsa de tomate, rodajas de longaniza, muzzarella, ají, aceitunas.",
+    price: 18000,
+    img: "/images/pizzas/calabresa.jpg",
+  },
+  {
+    id: "pizza-huevo",
+    name: "Huevo",
+    category: "Pizzas",
+    description: "Salsa de tomate, muzzarella, huevo rallado.",
+    price: 16000,
+    img: "/images/pizzas/huevo.jpg",
+  },
+  {
+    id: "pizza-napolitana",
+    name: "Napolitana",
+    category: "Pizzas",
+    description: "Salsa de tomate, muzzarella, rodajas de tomate, aceitunas, orégano.",
+    price: 15000,
+    img: "/images/pizzas/napolitana.jpg",
+  },
+  {
+    id: "pizza-napolitana-jamon",
+    name: "Napolitana con Jamón",
+    category: "Pizzas",
+    description: "Jamón, muzzarella y rodajas de tomate.",
+    price: 19000,
+    img: "/images/pizzas/napolitana_jamon.jpg",
+  },
+  {
+    id: "pizza-palmitos",
+    name: "Palmitos",
+    category: "Pizzas",
+    description: "Salsa de tomate, muzzarella, palmitos, salsa golf, aceitunas.",
+    price: 20000,
+    img: "/images/pizzas/palmitos.jpg",
+  },
+  {
+    id: "pizza-palmitos-roquefort",
+    name: "Palmitos al Roquefort",
+    category: "Pizzas",
+    description: "Salsa de tomate, muzzarella, palmitos, roquefort, aceitunas negras.",
+    price: 23000,
+    img: "/images/pizzas/palmitos_roquefort.jpg",
+  },
+  {
+    id: "pizza-roquefort",
+    name: "Roquefort",
+    category: "Pizzas",
+    description: "Salsa de tomate, muzzarella, roquefort y aceitunas.",
+    price: 17000,
+    img: "/images/pizzas/roquefort.jpg",
+  },
+  {
+    id: "pizza-jamon",
+    name: "Jamón",
+    category: "Pizzas",
+    description: "Salsa de tomate, muzzarella, jamón.",
+    price: 16000,
+    img: "/images/pizzas/jamon.jpg",
+  },
+  {
+    id: "pizza-fugarella",
+    name: "Fugarella",
+    category: "Pizzas",
+    description: "Cebolla, muzzarella, aceite de oliva y aceitunas.",
+    price: 16000,
+    img: "/images/pizzas/fugarella.jpg",
+  },
+  {
+    id: "pizza-provolone",
+    name: "Provolone",
+    category: "Pizzas",
+    description: "Salsa de tomate, muzzarella, provolone y aceitunas.",
+    price: 17000,
+    img: "/images/pizzas/provolone.jpg",
+  },
+  {
+    id: "pizza-pollo-muzzarella",
+    name: "Pollo con Muzzarella",
+    category: "Pizzas",
+    description: "Salsa de tomate, muzzarella, pollo y aceitunas.",
+    price: 22000,
+    img: "/images/pizzas/pollo_muzzarella.jpg",
+  },
+  {
+    id: "pizza-primavera",
+    name: "Primavera",
+    category: "Pizzas",
+    description: "Salsa de tomate, jamón, muzzarella, rodajas de tomate y huevo duro.",
+    price: 19000,
+    img: "/images/pizzas/primavera.jpg",
+  },
+  {
+    id: "pizza-especial-rellena",
+    name: "Especial Rellena",
+    category: "Pizzas",
+    description: "Muzzarella, jamón, rodajas de tomate y longaniza.",
+    price: 22000,
+    img: "/images/pizzas/especial_rellena.jpg",
+  },
+  {
+    id: "pizza-verdura",
+    name: "Verdura",
+    category: "Pizzas",
+    description: "Espinaca, muzzarella y condimentos.",
+    price: 16000,
+    img: "/images/pizzas/verdura.jpg",
+  },
+  {
+    id: "pizza-vegetariana",
+    name: "Vegetariana",
+    category: "Pizzas",
+    description: "Rodajas de tomate, morrón, cebolla, muzzarella.",
+    price: 16000,
+    img: "/images/pizzas/vegetariana.jpg",
+  },
+  {
+    id: "pizza-cuatro-quesos",
+    name: "Cuatro Quesos",
+    category: "Pizzas",
+    description: "Provolone, port salud, roquefort, muzzarella.",
+    price: 22000,
+    img: "/images/pizzas/cuatro_quesos.jpg",
+  },
+  {
+    id: "pizza-sorrentina",
+    name: "Sorrentina",
+    category: "Pizzas",
+    description: "Rodajas de tomate, jamón, morrón, muzzarella, aceitunas.",
+    price: 22000,
+    img: "/images/pizzas/sorrentina.jpg",
+  },
+  {
+    id: "pizza-rucula-parmesano",
+    name: "Rúcula con Parmesano",
+    category: "Pizzas",
+    description: "Salsa de tomate, muzzarella, rúcula, parmesano gratinado.",
+    price: 19500,
+    img: "/images/pizzas/rucula_parmesano.jpg",
+  },
+  {
+    id: "pizza-rucula-jamon-crudo",
+    name: "Rúcula con Jamón Crudo",
+    category: "Pizzas",
+    description: "Salsa de tomate, muzzarella, rúcula, jamón crudo, parmesano.",
+    price: 23000,
+    img: "/images/pizzas/rucula_jamon_crudo.jpg",
+  },
+  {
+    id: "pizza-panceta-huevo",
+    name: "Panceta con Huevo",
+    category: "Pizzas",
+    description: "Salsa de tomate, panceta, muzzarella, huevo duro, aceitunas negras.",
+    price: 23000,
+    img: "/images/pizzas/panceta_huevo.jpg",
+  },
+];
+
+// EMPANADAS
+export const empanadas = [
+  {
+    id: "emp-docena",
+    name: "Docena de empanadas",
+    category: "Empanadas",
+    description: "12 empanadas a elección.",
+    price: 20000,
+    img: "/images/empanadas/docena.jpg",
+    upsell: true, // abre el modal para seleccionar sabores
+  },
+  {
+    id: "emp-media-docena",
+    name: "Media docena de empanadas",
+    category: "Empanadas",
+    description: "6 empanadas a elección.",
+    price: 10000,
+    img: "/images/empanadas/media_docena.jpg",
+    upsell: true, // abre el modal para seleccionar sabores
+  },
+  {
+    id: "emp-carne",
+    name: "Empanada de Carne",
+    category: "Empanadas",
+    description: "Carne picada condimentada.",
+    price: 2000,
+    img: "/images/empanadas/carne.jpg",
+  },
+  {
+    id: "emp-pollo",
+    name: "Empanada de Pollo",
+    category: "Empanadas",
+    description: "Pollo trozado y condimentos.",
+    price: 2000,
+    img: "/images/empanadas/pollo.jpg",
+  },
+  {
+    id: "emp-jyq",
+    name: "Empanada de Jamón y Queso",
+    category: "Empanadas",
+    description: "Jamón y queso.",
+    price: 2000,
+    img: "/images/empanadas/jamon_queso.jpg",
+  },
+  {
+    id: "emp-queso-cebolla",
+    name: "Empanada de Queso y Cebolla",
+    category: "Empanadas",
+    description: "Queso y cebolla.",
+    price: 2000,
+    img: "/images/empanadas/queso_cebolla.jpg",
+  },
+  {
+    id: "emp-humita",
+    name: "Empanada de Humita",
+    category: "Empanadas",
+    description: "Choclo y salsa blanca.",
+    price: 2000,
+    img: "/images/empanadas/humita.jpg",
+  },
+  {
+    id: "emp-roquefort",
+    name: "Empanada de Roquefort",
+    category: "Empanadas",
+    description: "Roquefort.",
+    price: 2000,
+    img: "/images/empanadas/roquefort.jpg",
+  },
+  {
+    id: "emp-verdura",
+    name: "Empanada de Verdura",
+    category: "Empanadas",
+    description: "Verduras y condimentos.",
+    price: 2000,
+    img: "/images/empanadas/verdura.jpg",
+  },
+  {
+    id: "emp-calabresa",
+    name: "Empanada de Calabresa",
+    category: "Empanadas",
+    description: "Calabresa.",
+    price: 2000,
+    img: "/images/empanadas/calabresa.jpg",
+  },
+  {
+    id: "emp-caprese",
+    name: "Empanada Caprese",
+    category: "Empanadas",
+    description: "Tomate, muzzarella y albahaca.",
+    price: 2000,
+    img: "/images/empanadas/caprese.jpg",
+  },
+];
+
+
+// TARTAS
+export const tartas = [
+  {
+    id: "tarta-individual",
+    name: "Tarta Individual",
+    category: "Tartas",
+    description: "Elegí tu sabor favorito. (Verdura, J&Q, Pollo)",
+    price: 6000,
+    img: "/images/tartas/individual.jpg",
+    upsell: true,
+  },
+  {
+    id: "tarta-entera",
+    name: "Tarta Entera",
+    category: "Tartas",
+    description: "Elegí tu sabor favorito. (Verdura, J&Q, Pollo)",
+    price: 22000,
+    img: "/images/tartas/entera.jpg",
+    upsell: true,
+  },
+];
+
+export const tartaFlavors = [
+  {
+    id: "tarta-verdura",
+    name: "Verdura",
+    description: "Acelga, cebolla, morrón, huevo y queso.",
+    img: "/images/tartas/verdura.jpg",
+  },
+  {
+    id: "tarta-jyq",
+    name: "Jamón y Queso",
+    description: "Abundante jamón y queso muzzarella.",
+    img: "/images/tartas/jamon_queso.jpg",
+  },
+  {
+    id: "tarta-pollo",
+    name: "Pollo",
+    description: "Pollo desmenuzado con salsa blanca y verdeo.",
+    img: "/images/tartas/pollo.jpg",
+  },
+];
+
+// CALZONES
+export const calzones = [
+  {
+    id: "calzon-roquefort",
+    name: "Calzón Roquefort",
+    category: "Calzones",
+    description: "Jamón, muzzarella, huevo, roquefort.",
+    price: 18500,
+    img: "/images/calzones/roquefort.jpg",
+  },
+  {
+    id: "calzon-napolitano",
+    name: "Calzón Napolitano",
+    category: "Calzones",
+    description: "Jamón, muzzarella, rodajas de tomate, huevo.",
+    price: 18500,
+    img: "/images/calzones/napolitano.jpg",
+  },
+  {
+    id: "calzon-calabres",
+    name: "Calzón Calabrés",
+    category: "Calzones",
+    description: "Jamón, muzzarella, longaniza, huevo.",
+    price: 18500,
+    img: "/images/calzones/calabres.jpg",
+  },
+  {
+    id: "porcion-faina",
+    name: "Porción de Fainá",
+    category: "Calzones",
+    description: "Porción individual de fainá.",
+    price: 1500,
+    img: "/images/calzones/faina.jpg",
+  },
+  {
+    id: "faina-verdeo",
+    name: "Fainá con Verdeo",
+    category: "Calzones",
+    description: "Porción de fainá con verdeo.",
+    price: 2000,
+    img: "/images/calzones/faina_verdeo.jpg",
+  },
+];
+
+// MILANESAS
+export const milanesas = [
+  {
+    id: "mila-simple",
+    name: "Milanesa Simple",
+    category: "Milanesas",
+    description: "Milanesa con guarnición de fritas.",
+    price: 17000,
+    img: "/images/mila/simple.jpg",
+  },
+  {
+    id: "mila-cuatro-quesos",
+    name: "Milanesa Cuatro Quesos",
+    category: "Milanesas",
+    description: "Milanesa con cuatro quesos y guarnición de fritas.",
+    price: 21000,
+    img: "/images/mila/cuatro_quesos.jpg",
+  },
+  {
+    id: "mila-calabresa",
+    name: "Milanesa a la Calabresa",
+    category: "Milanesas",
+    description: "Milanesa con calabresa y guarnición de fritas.",
+    price: 21000,
+    img: "/images/mila/calabresa.jpg",
+  },
+  {
+    id: "mila-cheddar-bacon",
+    name: "Milanesa con Cheddar y Bacon",
+    category: "Milanesas",
+    description: "Milanesa con cheddar y bacon, guarnición de fritas.",
+    price: 23000,
+    img: "/images/mila/cheddar_bacon.jpg",
+  },
+  {
+    id: "combo-plato",
+    name: "Al Plato Cualquier Combo",
+    category: "Milanesas",
+    description: "Cualquier milanesa al plato con guarnición de fritas.",
+    price: 24000,
+    img: "/images/mila/combo_plato.jpg",
+  },
+];
+
+// FRITAS
+export const fritas = [
+  {
+    id: "fritas-grande-simple",
+    name: "Porción Fritas Grande Simple",
+    category: "Fritas",
+    description: "Porción grande de papas fritas.",
+    price: 8500,
+    img: "/images/fritas/grande_simple.jpg",
+  },
+  {
+    id: "fritas-grande-cheddar",
+    name: "Fritas Grande con Cheddar",
+    category: "Fritas",
+    description: "Porción grande con cheddar.",
+    price: 9000,
+    img: "/images/fritas/grande_cheddar.jpg",
+  },
+  {
+    id: "fritas-grande-cheddar-bacon",
+    name: "Fritas Grande con Cheddar y Bacon",
+    category: "Fritas",
+    description: "Porción grande con cheddar y bacon.",
+    price: 10500,
+    img: "/images/fritas/grande_cheddar_bacon.jpg",
+  },
+  {
+    id: "fritas-chica-simple",
+    name: "Porción de Fritas Chica Simple",
+    category: "Fritas",
+    description: "Porción chica de papas fritas.",
+    price: 5000,
+    img: "/images/fritas/chica_simple.jpg",
+  },
+  {
+    id: "fritas-chica-cheddar",
+    name: "Fritas Chica con Cheddar",
+    category: "Fritas",
+    description: "Porción chica con cheddar.",
+    price: 5500,
+    img: "/images/fritas/chica_cheddar.jpg",
+  },
+  {
+    id: "fritas-chica-cheddar-bacon",
+    name: "Fritas Chica con Cheddar y Bacon",
+    category: "Fritas",
+    description: "Porción chica con cheddar y bacon.",
+    price: 7000,
+    img: "/images/fritas/chica_cheddar_bacon.jpg",
+  },
+];
+
+// HAMBURGUESAS
+export const hamburguesas = [
+  {
+    id: "chese-burger-bebida",
+    name: "Chese Burger + Bebida",
+    category: "Hamburguesas",
+    description: "1 medallón + cheddar.",
+    price: 12500,
+    img: "/images/hamburguesas/chese_burger.jpg",
+  },
+  {
+    id: "chese-bacon-bebida",
+    name: "Chese Bacon + Bebida",
+    category: "Hamburguesas",
+    description: "2 medallones + bacon + cheddar.",
+    price: 14500,
+    img: "/images/hamburguesas/chese_bacon.jpg",
+  },
+  {
+    id: "burger-geminis-bebida",
+    name: "Burger Géminis + Bebida",
+    category: "Hamburguesas",
+    description: "2 medallones + cheddar + bacon + cebolla caramelizada.",
+    price: 15500,
+    img: "/images/hamburguesas/burger_geminis.jpg",
+  },
+];
+
+// BONDIOLAS
+export const bondiolas = [
+  {
+    id: "bondiola-cebolla-papas",
+    name: "Bondiola con Cebolla Caramelizada",
+    category: "Bondiolas",
+    description: "Bondiola con cebolla caramelizada + papas + gaseosa chica.",
+    price: 12000,
+    img: "/images/bondiolas/cebolla_papas.jpg",
+  },
+  {
+    id: "bondiola-cebolla-huevo-papas",
+    name: "Bondiola con Cebolla y Huevo",
+    category: "Bondiolas",
+    description: "Bondiola con cebolla caramelizada + huevo + papas + gaseosa chica.",
+    price: 14000,
+    img: "/images/bondiolas/cebolla_huevo_papas.jpg",
+  },
+  {
+    id: "bondiola-cebolla-huevo-jamon",
+    name: "Bondiola con Cebolla, Huevo y Jamón",
+    category: "Bondiolas",
+    description: "Bondiola con cebolla caramelizada + huevo + jamón + gaseosa chica.",
+    price: 15500,
+    img: "/images/bondiolas/cebolla_huevo_jamon.jpg",
+  },
+  {
+    id: "bondiola-cheddar-bacon",
+    name: "Bondiola con Cheddar y Bacon",
+    category: "Bondiolas",
+    description: "Bondiola con cheddar + bacon + huevo + papas + gaseosa chica.",
+    price: 17000,
+    img: "/images/bondiolas/cheddar_bacon.jpg",
+  },
+];
+
+// PROMOS
+export const promos = [
+  {
+    id: "promo-1",
+    name: "Promo 1",
+    category: "Promos",
+    description: "1 Muzza + 1 Jamón + 1 Fugarella.",
+    price: 43000,
+    img: "/images/promos/promo1.jpg",
+  },
+  {
+    id: "promo-2",
+    name: "Promo 2",
+    category: "Promos",
+    description: "1 Muzza + 1 Fugarella + 1 Napo.",
+    price: 43000,
+    img: "/images/promos/promo2.jpg",
+  },
+  {
+    id: "promo-3",
+    name: "Promo 3",
+    category: "Promos",
+    description: "1 Muzza + 1 Huevo + 2 Fainá.",
+    price: 30000,
+    img: "/images/promos/promo3.jpg",
+  },
+  {
+    id: "promo-4",
+    name: "Promo 4",
+    category: "Promos",
+    description: "1 Muzzarella + 1 Jamón + 6 Empanadas.",
+    price: 40000,
+    img: "/images/promos/promo4.jpg",
+  },
+  {
+    id: "promo-5",
+    name: "Promo 5",
+    category: "Promos",
+    description: "3 Muzza.",
+    price: 39000,
+    img: "/images/promos/promo5.jpg",
+  },
+  {
+    id: "promo-6",
+    name: "Promo 6",
+    category: "Promos",
+    description: "1 Muzzarella + 12 Empanadas.",
+    price: 32000,
+    img: "/images/promos/promo6.jpg",
+  },
+];
+
+// BEBIDAS
+export const postres = [
+  // Ejemplo:
+  // {
+  //   id: "coca-lata",
+  //   name: "Coca Cola Lata",
+  //   category: "Bebidas",
+  //   description: "Coca Cola en lata 354ml.",
+  //   price: 2000,
+  //   img: "/images/bebidas/coca_lata.jpg",
+  // },
+];
+
+// EXTRAS PARA PIZZAS
+export const extrasPizza = [
+  {
+    id: "al-molde",
+    name: "Al Molde 🍕🟫",
+    price: 0,
+    category: "Extras",
+  },
+  {
+    id: "ala-piedra",
+    name: "A la Piedra 🔥🍕",
+    price: 0,
+    category: "Extras",
+  },
+  {
+    id: "extra-anchoas-cmp",
+    name: "Extra Anchoas Completa 🍤",
+    price: 2000,
+    category: "Extras",
+  },
+  {
+    id: "extra-anchoas-mit",
+    name: "Extra Anchoas Mitad 🍤",
+    price: 1000,
+    category: "Extras",
+  },
+  {
+    id: "huevo",
+    name: "Extra Huevo 🍳",
+    price: 1500,
+    category: "Extras",
+  }
+];
+
+// EXTRAS MITAD Y MITAD
+export const extrasMitad = [
+  {
+    id: "al-molde-mitad",
+    name: "Al Molde 🍕🟫",
+    price: 0,
+    category: "Extras Mitad",
+  },
+  {
+    id: "ala-piedra-mitad",
+    name: "A la Piedra 🔥🍕",
+    price: 0,
+    category: "Extras Mitad",
+  },
+  // Ejemplo de combinaciones mitad y mitad:
+  // {
+  //   id: "mitad-muzza-napo",
+  //   name: "1/2 Muzza + 1/2 Napolitana",
+  //   price: 15000,
+  //   category: "Mitad y Mitad",
+  // },
+];

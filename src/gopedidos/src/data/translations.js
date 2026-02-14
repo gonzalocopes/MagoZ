@@ -107,7 +107,6 @@ export const translations = {
         feat_sellers: 'Módulo de Vendedores',
         feat_custom_logo: 'Personalización Logo/Favicon',
         feat_branches: 'Multi-Sucursales',
-        feat_domain: 'Dominio personalizado',
         feat_maps: 'Integración Google Maps',
         feat_webapp: 'Versión WebApp Instalable',
         feat_wpp: 'Integración WhatsApp',

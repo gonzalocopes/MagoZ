@@ -1,0 +1,362 @@
+/* === PREMIUM DARK THEME === */
+body {
+  background-color: #121212;
+  /* Fondo casi negro */
+  color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand {
+  font-family: 'Rye', serif;
+  /* Fuente Western */
+  color: #FFD700;
+  /* Gold Default */
+}
+
+/* Stronger Gold for Light Backgrounds */
+.text-gold-strong {
+  color: #D69E00 !important;
+  /* Darker Gold/Orange for visibility on white */
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar overrides */
+.navbar {
+  background-color: #000000 !important;
+  border-bottom: 2px solid #FFD700;
+}
+
+.navbar-brand span {
+  color: #FFD700 !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  color: #ffffff !important;
+  font-family: 'Rubik', sans-serif;
+  /* Fuente secundaria legible */
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.nav-link:hover {
+  color: #FFD700 !important;
+}
+
+/* Hero Carousel overrides */
+.carousel-caption h2 {
+  font-family: 'Rye', serif;
+  color: #FFD700;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.carousel-caption p {
+  font-family: 'Rubik', sans-serif;
+  color: #fff;
+  text-shadow: 1px 1px 3px #000;
+}
+
+/* Menu Container Revert to Light */
+#menu {
+  background-color: #f8f9fa !important;
+  /* bg-light */
+}
+
+#menu h2 {
+  border-bottom: 3px solid #FFD700;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 25px;
+  color: #000 !important;
+  /* Force black text */
+}
+
+/* === Menú estilo app actual === */
+.menu-category-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.menu-category-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  border: none;
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  font-size: 0.9rem;
+  transition: background-color 0.15s ease, transform 0.12s ease,
+    box-shadow 0.12s ease;
+  color: #000;
+  /* Texto negro por defecto */
+}
+
+.menu-category-pill:active {
+  transform: scale(0.98);
+}
+
+.menu-category-pill span,
+.menu-category-pill small,
+.menu-category-pill .fw-semibold {
+  color: #000 !important;
+}
+
+.menu-cat-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  border: 1px solid #ddd;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #000;
+}
+
+/* Categoría Activa GOLD */
+.menu-category-pill-active {
+  background: linear-gradient(135deg, #FFD700, #FFA500) !important;
+  box-shadow: 0 3px 8px rgba(255, 215, 0, 0.4);
+  color: #000 !important;
+}
+
+.menu-category-pill-active span,
+.menu-category-pill-active small,
+.menu-category-pill-active .fw-semibold {
+  color: #000 !important;
+}
+
+.menu-category-pill-active .menu-cat-icon {
+  background-color: #000 !important;
+  color: #FFD700 !important;
+  border-color: #000 !important;
+}
+
+
+/* Tarjetas de Producto Dark -> Revert to Light/Standard */
+.menu-product-card {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+@media (min-width: 768px) {
+  .menu-product-card {
+    border-radius: 10px;
+  }
+}
+
+.menu-category-collapse {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.25s ease;
+}
+
+.menu-category-collapse.show {
+  max-height: 5000px;
+  opacity: 1;
+}
+
+/* Hover extra */
+.menu-category-pill:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.card-title {
+  color: #000;
+  font-family: 'Rubik', sans-serif;
+  /* Back to normal font for readability */
+}
+
+.card-text {
+  color: #6c757d !important;
+  /* text-muted */
+}
+
+.fw-bold {
+  color: #000;
+}
+
+/* Botones "Agregar" - Keep Gold Style */
+.btn-success {
+  background-color: #FFD700;
+  border-color: #FFD700;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-success:hover,
+.btn-success:active,
+.btn-success:focus {
+  background-color: #ffca00 !important;
+  border-color: #ffca00 !important;
+  color: #000 !important;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+}
+
+/* Floating WhatsApp Button */
+.floating-wpp {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1040;
+  padding: 0.75rem 1rem;
+  background-color: #FFD700;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.floating-wpp-label {
+  font-size: 0.95rem;
+}
+
+.floating-wpp-chip {
+  background-color: #fff;
+  color: #333;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 0.82rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .floating-wpp {
+    padding: 0.9rem 1.5rem;
+  }
+
+  .floating-wpp-label {
+    font-size: 1rem;
+  }
+
+  .floating-wpp-chip {
+    padding: 6px 14px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .floating-wpp {
+    display: none !important;
+  }
+}
+
+/* === Hero Caption Moderno (Glassmorphism) - ESTILO BONANZA/GLEW === */
+.hero-caption-glass {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.4);
+  /* Fondo oscuro semitransparente */
+  backdrop-filter: blur(8px);
+  /* Efecto blur */
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  /* Borde Gold sutil */
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  max-width: 90%;
+  animation: fadeUp 0.8s ease-out;
+}
+
+.hero-title {
+  font-family: 'Rye', serif;
+  font-weight: 400;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+  letter-spacing: 1px;
+  color: #FFD700;
+  /* Gold */
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero-description {
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-caption-glass {
+    padding: 1rem 1.25rem;
+    background: rgba(0, 0, 0, 0.6);
+    /* Más oscuro en mobile */
+    border-radius: 12px;
+    width: 95%;
+    animation-name: fadeUp;
+    transform: translateY(0);
+  }
+
+  .hero-title {
+    font-size: 1.4rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .hero-description {
+    font-size: 0.85rem;
+    display: block;
+    /* Asegurar que se vea */
+  }
+
+  /* Altura de imagen en mobile */
+  .carousel-item img {
+    height: 380px !important;
+    /* Un poco más alto para que entre el texto */
+    object-fit: cover !important;
+  }
+}
