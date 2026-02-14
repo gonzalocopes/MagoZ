@@ -84,7 +84,7 @@ export const combos = [
     name: "COMBO Red Label 1L + 4 Speed",
     category: "Combos",
     description: "Johnnie Walker Red Label 1L + 4 Speed Unlimited 473ml.",
-    price: 50000,
+    price: 48000,
     img: "/images/combo_red_label_speed_v2.jpeg",
   },
   {

@@ -324,7 +324,7 @@ function App() {
       <div className="d-md-none" style={{ height: "64px" }} />
 
       {/* Juego Tragamonedas */}
-      <GameSlotMachine />
+      {/* <GameSlotMachine /> */}
 
       {/* Modal de sugerencias */}
       <UpsellModal
