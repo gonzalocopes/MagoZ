@@ -240,6 +240,22 @@ export const pizzas = [
     price: 23000,
     img: "/images/pizzas/panceta_huevo.jpg",
   },
+  {
+    id: "porcion-faina",
+    name: "Porción de Fainá",
+    category: "Pizzas",
+    description: "Porción individual de fainá.",
+    price: 1500,
+    img: "/images/calzones/faina.jpg",
+  },
+  {
+    id: "faina-verdeo",
+    name: "Fainá con Verdeo",
+    category: "Pizzas",
+    description: "Porción de fainá con verdeo.",
+    price: 2000,
+    img: "/images/calzones/faina_verdeo.jpg",
+  },
 ];
 
 // EMPANADAS
@@ -405,22 +421,6 @@ export const calzones = [
     description: "Jamón, muzzarella, longaniza, huevo.",
     price: 18500,
     img: "/images/calzones/calabres.jpg",
-  },
-  {
-    id: "porcion-faina",
-    name: "Porción de Fainá",
-    category: "Calzones",
-    description: "Porción individual de fainá.",
-    price: 1500,
-    img: "/images/calzones/faina.jpg",
-  },
-  {
-    id: "faina-verdeo",
-    name: "Fainá con Verdeo",
-    category: "Calzones",
-    description: "Porción de fainá con verdeo.",
-    price: 2000,
-    img: "/images/calzones/faina_verdeo.jpg",
   },
 ];
 

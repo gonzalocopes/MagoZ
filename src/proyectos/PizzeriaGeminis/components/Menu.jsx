@@ -14,7 +14,6 @@ import {
 
 export default function Menu({ onAddToCart, isClosed }) {
   const categories = [
-    { id: "promos", label: "Promos 🎁", products: promos },
     { id: "pizzas", label: "Pizzas 🍕", products: pizzas },
     { id: "empanadas", label: "Empanadas 🥟", products: empanadas },
     { id: "tartas", label: "Tartas 🥧", products: tartas },
@@ -24,6 +23,7 @@ export default function Menu({ onAddToCart, isClosed }) {
     { id: "hamburguesas", label: "Hamburguesas 🍔", products: hamburguesas },
     { id: "bondiolas", label: "Bondiolas 🥩", products: bondiolas },
     { id: "postres", label: "Bebidas 🥤", products: postres },
+    { id: "promos", label: "Promos 🎁", products: promos },
   ];
 
   // categoría abierta en MOBILE
