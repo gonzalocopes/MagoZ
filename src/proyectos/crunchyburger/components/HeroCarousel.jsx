@@ -71,10 +71,7 @@ export default function HeroCarousel() {
                 alt="Slide 2"
                 style={{ maxHeight: "520px", objectFit: "cover" }}
               />
-              <div
-                className="carousel-caption d-flex align-items-center justify-content-center"
-                style={{ top: 0, right: 0, bottom: 0, left: 0 }}
-              >
+              <div className="carousel-caption d-block" style={{ top: "25%", bottom: "auto" }}>
                 <div className="hero-caption-glass">
                   <h2 className="hero-title">{slide2Title}</h2>
                   <p className="hero-subtitle" style={{ whiteSpace: 'pre-line' }}>{slide2Subtitle}</p>
