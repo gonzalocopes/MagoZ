@@ -39,10 +39,17 @@ export default function WhatsAppButton({ cart, total, customer, isClosed }) {
         });
       }
 
-      // Exclusiones (Ingredientes quitados)
+      // Exclusiones (Ingredientes quitados de la burger)
       if (item.exclusions && item.exclusions.length > 0) {
         item.exclusions.forEach((ex) => {
           lines.push(`   - SIN ${ex}`);
+        });
+      }
+
+      // Exclusiones de las papas (combos mediodía)
+      if (item.papasExclusiones && item.papasExclusiones.length > 0) {
+        item.papasExclusiones.forEach((ex) => {
+          lines.push(`   🍟 SIN ${ex}`);
         });
       }
     });

@@ -427,12 +427,6 @@ button:focus-visible {
     transform: translateY(0);
   }
 
-  /* Solo el slide de horarios usa la animación baja */
-  .hours-slide {
-    animation-name: fadeUpMobile;
-    transform: translateY(7vh);
-  }
-
   .hero-title {
     font-size: 1.4rem;
   }
@@ -442,18 +436,53 @@ button:focus-visible {
   }
 }
 
-@keyframes fadeUpMobile {
-  from {
-    opacity: 0;
-    transform: translateY(12vh);
-    /* Empieza bien abajo */
-  }
+/* === Promo Mediodía — pastilla especial === */
+.menu-category-pill-mediodia {
+  background: linear-gradient(135deg, #fff7ed, #ffedd5) !important;
+  border-color: #f97316 !important;
+  box-shadow: 0 8px 24px rgba(249, 115, 22, 0.15) !important;
+}
 
-  to {
-    opacity: 1;
-    transform: translateY(7vh);
-    /* Termina proporcional a la altura de la pantalla */
-  }
+.menu-category-pill-mediodia .fw-semibold,
+.menu-category-pill-mediodia small {
+  color: #7c2d12 !important;
+}
+
+.menu-category-pill-mediodia .menu-cat-icon {
+  background-color: #f97316 !important;
+  border-color: #ea580c !important;
+  color: #fff !important;
+}
+
+/* Mediodía activa */
+.menu-category-pill-mediodia.menu-category-pill-active {
+  background: linear-gradient(135deg, #f97316, #ea580c) !important;
+  box-shadow: 0 12px 32px rgba(249, 115, 22, 0.45) !important;
+  border-color: transparent !important;
+}
+
+.menu-category-pill-mediodia.menu-category-pill-active .fw-semibold,
+.menu-category-pill-mediodia.menu-category-pill-active small {
+  color: #fff !important;
+}
+
+.menu-category-pill-mediodia.menu-category-pill-active .menu-cat-icon {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  color: #fff !important;
+}
+
+/* Badge "Disp. 11-18hs" en la tarjeta de producto */
+.badge-mediodia {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #f97316, #ea580c);
+  color: #fff;
+  border-radius: 999px;
+  padding: 2px 8px;
+  margin-bottom: 4px;
+  letter-spacing: 0.3px;
 }
 
 /* === Marca en Navbar === */

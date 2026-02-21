@@ -22,7 +22,8 @@ export const clientConfig = {
       },
       {
         titulo: "Horarios",
-        subtitulo: `Miércoles a lunes (martes cerrado)\nLun / Mié / Jue: 18:00 – 01:00\nVie / Sáb / Dom: 18:00 – 02:00`,
+        subtitulo: `Martes a Sábados: 11:00hs a 02:00hs\nDomingo: 18:00hs a 02:00hs`,
+
       },
       {
         titulo: "Encontranos",

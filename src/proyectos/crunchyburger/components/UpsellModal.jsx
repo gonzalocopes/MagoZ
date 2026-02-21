@@ -11,13 +11,15 @@ export default function UpsellModal({
 }) {
   const [addedIds, setAddedIds] = useState([]);
   const [ingredients, setIngredients] = useState([]);
+  const [papasIngredients, setPapasIngredients] = useState([]);
 
   // Detectamos ingredientes cada vez que cambia el producto
   useEffect(() => {
     if (show && lastProduct?.description) {
-      // 1. Limpiamos la frase de las papas (si existe) y punto final
+      // 1. Limpiamos frases que no son ingredientes quitables
       let cleanDesc = lastProduct.description
         .replace(/Incluye papas fritas\.?/i, "")
+        .replace(/Incluye Papas c\/ Cheddar y Bacon \+ Coca 355ml\.?/i, "")
         .replace(/\.$/, ""); // sacar punto final
 
       // 2. Separamos por comas
@@ -52,7 +54,7 @@ export default function UpsellModal({
       // Mapeamos a objetos con estado "checked" (inicialmente true)
       // Usamos el nombre original, pero chequeamos si ya estaba excluido en lastProduct.exclusions
       const currentExclusions = lastProduct.exclusions || [];
-      
+
       setIngredients(
         finalIngredients.map((ing) => ({
           name: ing,
@@ -61,24 +63,43 @@ export default function UpsellModal({
       );
 
       setAddedIds([]); // Reseteamos extras agregados
+
+      // Inicializamos las opciones de papas (sólo si el producto las tiene)
+      const currentPapasExclusiones = lastProduct.papasExclusiones || [];
+      if (lastProduct.papasOpciones?.length > 0) {
+        setPapasIngredients(
+          lastProduct.papasOpciones.map((op) => ({
+            name: op,
+            checked: !currentPapasExclusiones.includes(op),
+          }))
+        );
+      } else {
+        setPapasIngredients([]);
+      }
     }
   }, [show, lastProduct]);
 
-  // Manejo de checkboxes de ingredientes
+  // Manejo de checkboxes de ingredientes de la burger
   const handleToggleIngredient = (ingName) => {
     const newIngredients = ingredients.map((ing) =>
       ing.name === ingName ? { ...ing, checked: !ing.checked } : ing
     );
     setIngredients(newIngredients);
-
-    // Calculamos la lista de EXCLUSIONES (los unchecked)
-    const exclusions = newIngredients
-      .filter((ing) => !ing.checked)
-      .map((ing) => ing.name);
-
-    // Actualizamos el producto padre en el carrito
+    const exclusions = newIngredients.filter((ing) => !ing.checked).map((ing) => ing.name);
     if (lastProduct?.uuid && onUpdateItem) {
       onUpdateItem(lastProduct.uuid, { exclusions });
+    }
+  };
+
+  // Manejo de checkboxes de ingredientes de las papas
+  const handleTogglePapasIngredient = (ingName) => {
+    const newPapas = papasIngredients.map((ing) =>
+      ing.name === ingName ? { ...ing, checked: !ing.checked } : ing
+    );
+    setPapasIngredients(newPapas);
+    const papasExclusiones = newPapas.filter((ing) => !ing.checked).map((ing) => ing.name);
+    if (lastProduct?.uuid && onUpdateItem) {
+      onUpdateItem(lastProduct.uuid, { papasExclusiones });
     }
   };
 
@@ -87,11 +108,14 @@ export default function UpsellModal({
   const productName = lastProduct?.name || "tu pedido";
   const category = lastProduct?.category || "";
   const isHamburguesa = category === "Hamburguesas";
+  const isMedianodia = category === "Mediodía";
 
-  const icon = isHamburguesa ? "🍔" : "🍽️";
-  const title = isHamburguesa
-    ? `Personalizá tu Hamburguesa ${icon}`
-    : `¿Le sumamos algo a tu pedido? ${icon}`;
+  const icon = isHamburguesa || isMedianodia ? "🍔" : "🍽️";
+  const title = isMedianodia
+    ? `Personalizá tu combo Mediodía 🌞`
+    : isHamburguesa
+      ? `Personalizá tu Hamburguesa ${icon}`
+      : `¿Le sumamos algo a tu pedido? ${icon}`;
 
   const itemsToShow = upsellItems || [];
 
@@ -120,10 +144,10 @@ export default function UpsellModal({
               Estás armando <strong>{productName}</strong>.
             </p>
 
-            {/* SECCIÓN DE INGREDIENTES (Solo si hay detectados) */}
+            {/* SECCIÓN: Ingredientes de la burger */}
             {ingredients.length > 0 && (
-              <div className="mb-4">
-                <h6 className="fw-bold mb-2">Ingredientes:</h6>
+              <div className="mb-3">
+                <h6 className="fw-bold mb-2">Ingredientes de la hamburguesa:</h6>
                 <div className="card p-2 bg-light border-0">
                   {ingredients.map((ing, idx) => (
                     <div className="form-check" key={idx}>
@@ -135,9 +159,8 @@ export default function UpsellModal({
                         id={`ing-${idx}`}
                       />
                       <label
-                        className={`form-check-label ${
-                          !ing.checked ? "text-decoration-line-through text-danger" : ""
-                        }`}
+                        className={`form-check-label ${!ing.checked ? "text-decoration-line-through text-danger" : ""
+                          }`}
                         htmlFor={`ing-${idx}`}
                       >
                         {ing.name}
@@ -147,6 +170,36 @@ export default function UpsellModal({
                 </div>
                 <small className="text-muted d-block mt-1">
                   Desmarcá lo que NO quieras incluír.
+                </small>
+              </div>
+            )}
+
+            {/* SECCIÓN: Personalización de papas (solo mediodía) */}
+            {papasIngredients.length > 0 && (
+              <div className="mb-3">
+                <h6 className="fw-bold mb-2">🍟 Tus papas incluyen:</h6>
+                <div className="card p-2 bg-light border-0">
+                  {papasIngredients.map((ing, idx) => (
+                    <div className="form-check" key={idx}>
+                      <input
+                        className="form-check-input"
+                        type="checkbox"
+                        checked={ing.checked}
+                        onChange={() => handleTogglePapasIngredient(ing.name)}
+                        id={`papas-${idx}`}
+                      />
+                      <label
+                        className={`form-check-label ${!ing.checked ? "text-decoration-line-through text-danger" : ""
+                          }`}
+                        htmlFor={`papas-${idx}`}
+                      >
+                        {ing.name}
+                      </label>
+                    </div>
+                  ))}
+                </div>
+                <small className="text-muted d-block mt-1">
+                  Desmarcá lo que NO quieras en tus papas.
                 </small>
               </div>
             )}

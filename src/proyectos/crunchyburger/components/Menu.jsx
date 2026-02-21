@@ -1,6 +1,6 @@
 // src/components/Menu.jsx
 import { useState, useRef } from "react";
-import { promos, hamburguesas, papas, combos, bebidas, postres } from "../data/products";
+import { promos, hamburguesas, papas, combos, bebidas, postres, promosMedianodia } from "../data/products";
 
 export default function Menu({ onAddToCart, isClosed }) {
   // Filtrar promos según el día actual
@@ -21,11 +21,18 @@ export default function Menu({ onAddToCart, isClosed }) {
     return { isAvailable: false, message: `Solo ${daysStr}` };
   };
 
+  // ✅ Detectar si estamos en horario de mediodía (11:00 – 18:00)
+  const nowHour = new Date().getHours();
+  const isMediodiaTime = nowHour >= 11 && nowHour < 18;
+
   const categories = [
     { id: "hamburguesas", label: "Hamburguesas 🍔", products: hamburguesas },
     { id: "papas", label: "Papas y Acompañamientos 🍟", products: papas },
     { id: "combos", label: "Combos y Baldes 🍔🥤", products: combos },
     { id: "promos", label: "Promos 🔥", products: promos },
+    ...(promosMedianodia.length > 0
+      ? [{ id: "mediodia", label: "Promo Mediodía 🌞", products: promosMedianodia, mediodiaOnly: true }]
+      : []),
     { id: "bebidas", label: "Bebidas 🥤", products: bebidas },
   ];
 
@@ -121,8 +128,12 @@ export default function Menu({ onAddToCart, isClosed }) {
     }, 600);
   };
 
-  const renderProductCard = (item) => {
+  const renderProductCard = (item, options = {}) => {
     const { isAvailable, message } = getAvailabilityInfo(item);
+    const { mediodiaOnly = false } = options;
+
+    // Lógica de disponibilidad horaria mediodía
+    const mediodiaBlocked = mediodiaOnly && !isMediodiaTime;
 
     return (
       <div key={item.id} className="card mb-3 menu-product-card shadow-sm">
@@ -137,8 +148,6 @@ export default function Menu({ onAddToCart, isClosed }) {
                 objectFit: "contain",
                 width: "100%",
                 height: "80px",
-                width: "100%",
-                height: "80px",
               }}
             />
           </div>
@@ -147,25 +156,41 @@ export default function Menu({ onAddToCart, isClosed }) {
           <div className="col-9">
             <div className="card-body py-2 d-flex justify-content-between align-items-start gap-2">
               <div>
+                {mediodiaOnly && (
+                  <span className="badge-mediodia">
+                    {isMediodiaTime ? "🌞 Disponible ahora" : "🕐 Disp. 11-18hs"}
+                  </span>
+                )}
                 <h6 className="card-title mb-1 fw-semibold">{item.name}</h6>
                 {item.description && (
                   <p className="card-text mb-1 small text-muted">
                     {item.description}
                   </p>
                 )}
-                <div className="fw-bold">${item.price}</div>
+                <div className="fw-bold">${item.price.toLocaleString("es-AR")}</div>
               </div>
 
               <div className="text-end">
                 <button
-                  className={`btn btn-sm ${!isAvailable ? "btn-danger" : "btn-success"}`}
-                  disabled={isClosed || !isAvailable}
+                  className={`btn btn-sm ${mediodiaBlocked
+                    ? "btn-secondary"
+                    : !isAvailable
+                      ? "btn-danger"
+                      : "btn-success"
+                    }`}
+                  disabled={isClosed || !isAvailable || mediodiaBlocked}
                   onClick={(e) => {
                     triggerFlyAnimation(e, item.img);
                     onAddToCart(item);
                   }}
                 >
-                  {isClosed ? "Cerrado" : (!isAvailable ? message : "Agregar")}
+                  {isClosed
+                    ? "Cerrado"
+                    : mediodiaBlocked
+                      ? "11-18hs"
+                      : !isAvailable
+                        ? message
+                        : "Agregar"}
                 </button>
               </div>
             </div>
@@ -189,14 +214,14 @@ export default function Menu({ onAddToCart, isClosed }) {
                 key={cat.id}
                 type="button"
                 onClick={() => handleToggleCategory(cat.id)}
-                className={`menu-category-pill ${isActive ? "menu-category-pill-active" : ""
-                  }`}
+                className={`menu-category-pill ${isActive ? "menu-category-pill-active" : ""}`}
               >
                 <span className="flex-grow-1 text-start">
                   <span className="d-block fw-semibold">{cat.label}</span>
                   <small className="text-muted">
                     {cat.products.length} producto
                     {cat.products.length !== 1 ? "s" : ""}
+                    {cat.mediodiaOnly && !isMediodiaTime && " · 11-18hs"}
                   </small>
                 </span>
                 <span className="menu-cat-icon">
@@ -215,7 +240,7 @@ export default function Menu({ onAddToCart, isClosed }) {
             <div
               key={cat.id}
               className="mb-4"
-              ref={(el) => (categoryRefs.current[cat.id] = el)} // ref en el contenedor de la categoría
+              ref={(el) => (categoryRefs.current[cat.id] = el)}
             >
               {/* Título de categoría (solo desktop) */}
               <div className="d-none d-md-flex align-items-baseline mb-2">
@@ -223,20 +248,22 @@ export default function Menu({ onAddToCart, isClosed }) {
                 <small className="text-muted">
                   {cat.products.length} producto
                   {cat.products.length !== 1 ? "s" : ""}
+                  {cat.mediodiaOnly && !isMediodiaTime && (
+                    <span className="ms-2 badge-mediodia">🕐 Disp. 11-18hs</span>
+                  )}
                 </small>
               </div>
 
               {/* MOBILE: contenedor con animación de apertura/cierre */}
               <div
-                className={`d-md-none menu-category-collapse ${isOpenMobile ? "show" : ""
-                  }`}
+                className={`d-md-none menu-category-collapse ${isOpenMobile ? "show" : ""}`}
               >
-                {cat.products.map((item) => renderProductCard(item))}
+                {cat.products.map((item) => renderProductCard(item, { mediodiaOnly: !!cat.mediodiaOnly }))}
               </div>
 
               {/* DESKTOP: siempre visibles todas las categorías */}
               <div className="d-none d-md-block">
-                {cat.products.map((item) => renderProductCard(item))}
+                {cat.products.map((item) => renderProductCard(item, { mediodiaOnly: !!cat.mediodiaOnly }))}
               </div>
             </div>
           );
