@@ -430,7 +430,8 @@ export const extras = [
   { id: "extra-panceta", name: "Panceta", price: 1000, category: "Extras" },
   { id: "extra-cheddar", name: "Cheddar x2", price: 1000, category: "Extras" },
   { id: "dip-cheddar", name: "Dip de Cheddar", price: 3000, category: "Extras" },
-  { id: "salsa-cheddar-panceta", name: "Salsa Cheddar + Panceta a las papas", price: 2500, category: "Extras" },
+  { id: "salsa-cheddar-panceta", name: "Salsa Cheddar + Panceta a las papas", price: 3500, category: "Extras" },
+
 ];
 
 // 🌞 Promos Mediodía — disponibles de 11:00 a 18:00 hs
