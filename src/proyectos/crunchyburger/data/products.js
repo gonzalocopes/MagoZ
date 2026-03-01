@@ -25,6 +25,17 @@ export const promos = [
     img: "/images/bebidas/cerveza_golden_1l.png",
   },
   */
+
+  // Promo todos los días
+  {
+    id: "promo-estrella",
+    name: "El Producto Estrella",
+    category: "Promos",
+    description: "4 Cheese burgers, 1Kg de papas y 1L de cerveza (se puede reemplazar por una gaseosa).",
+    price: 29990,
+    img: "/images/burgas/producto-estrella.png", // ID: producto-estrella
+  },
+
   // Combos del Día
   {
     id: "promo-miercoles",
