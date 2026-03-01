@@ -3,7 +3,7 @@ export const clientConfig = {
   nombre: "Pizzería Bonanza",          // Nombre del local
   tipo: "pizzeria",                     // pizzeria | hamburgueseria | heladeria | etc.
 
-  whatsapp: "5491132935209",           // Teléfono del negocio (formato internacional)
+  whatsapp: "5491151445357",           // Teléfono del negocio (formato internacional)
 
   logo: "/images/bonanza_logo.png",    // Ruta dentro de /public (ej: public/images/logo-pizzeria.png)
 
