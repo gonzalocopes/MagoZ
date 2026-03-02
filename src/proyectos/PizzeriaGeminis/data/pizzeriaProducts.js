@@ -592,7 +592,7 @@ export const promos = [
     category: "Promos",
     description: "1 Muzza + 1 Jamón + 1 Fugarella.",
     price: 43000,
-    img: "/images/promos/promo1.jpg",
+    img: "/images/promos/promo_generica.jpg",
   },
   {
     id: "promo-2",
@@ -600,7 +600,7 @@ export const promos = [
     category: "Promos",
     description: "1 Muzza + 1 Fugarella + 1 Napo.",
     price: 43000,
-    img: "/images/promos/promo2.jpg",
+    img: "/images/promos/promo_generica.jpg",
   },
   {
     id: "promo-3",
@@ -608,7 +608,7 @@ export const promos = [
     category: "Promos",
     description: "1 Muzza + 1 Huevo + 2 Fainá.",
     price: 30000,
-    img: "/images/promos/promo3.jpg",
+    img: "/images/promos/promo_generica.jpg",
   },
   {
     id: "promo-4",
@@ -616,7 +616,7 @@ export const promos = [
     category: "Promos",
     description: "1 Muzzarella + 1 Jamón + 6 Empanadas.",
     price: 40000,
-    img: "/images/promos/promo4.jpg",
+    img: "/images/promos/promo_generica.jpg",
   },
   {
     id: "promo-5",
@@ -624,7 +624,7 @@ export const promos = [
     category: "Promos",
     description: "3 Muzza.",
     price: 39000,
-    img: "/images/promos/promo5.jpg",
+    img: "/images/promos/promo_generica.jpg",
   },
   {
     id: "promo-6",
@@ -632,7 +632,7 @@ export const promos = [
     category: "Promos",
     description: "1 Muzzarella + 12 Empanadas.",
     price: 32000,
-    img: "/images/promos/promo6.jpg",
+    img: "/images/promos/promo_generica.jpg",
   },
 ];
 

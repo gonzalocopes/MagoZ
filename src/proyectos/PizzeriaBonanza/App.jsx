@@ -13,6 +13,7 @@ import WhatsAppButton from "./components/WhatsAppButton";
 import UpsellModal from "./components/UpsellModal";
 
 import {
+  pizzas,
   empanadas,
   extrasPizza,
   extrasMitad,
@@ -166,8 +167,8 @@ function App() {
       setActiveLineId(lineId);
 
       if (product.id === "pizza-mitad") {
-        setUpsellMode("mitad");
-        setUpsellItems(extrasMitad);
+        // 🍕 Modo especial: el usuario elige los gustos de cada mitad
+        setUpsellMode("mitadSabores");
       } else {
         setUpsellMode("extras");
         setUpsellItems(extrasPizza);
@@ -297,6 +298,24 @@ function App() {
     setRequiredPackCount(0);
   };
 
+  // 🍕 confirmar mitad y mitad: precio promedio de ambas
+  const handleConfirmMitad = (m1, m2) => {
+    const price = Math.round((m1.price + m2.price) / 2);
+    setCart((prev) =>
+      prev.map((item) => {
+        if (item.lineId !== activeLineId) return item;
+        return {
+          ...item,
+          price,
+          name: `Mitad ${m1.name} + Mitad ${m2.name}`,
+          mitad: { primera: m1, segunda: m2 },
+        };
+      })
+    );
+    setShowUpsell(false);
+    setActiveLineId(null);
+  };
+
   const removeFromCart = (idOrLineId) => {
     setCart((prev) =>
       prev.filter((item) => item.id !== idOrLineId && item.lineId !== idOrLineId)
@@ -337,8 +356,7 @@ function App() {
     } else if (item.category === "Pizzas" || item.id.startsWith("promo-")) {
       // Pizzas o Promos de Pizza simples
       if (item.id === "pizza-mitad") {
-        setUpsellMode("mitad");
-        setUpsellItems(extrasMitad);
+        setUpsellMode("mitadSabores");
       } else {
         setUpsellMode("extras");
         setUpsellItems(extrasPizza);
@@ -427,6 +445,8 @@ function App() {
         // 👇 para pintar seleccionados
         activeLine={cart.find((x) => x.lineId === activeLineId) || null}
         onConfirmEmpanadaPack={handleConfirmEmpanadaPack}
+        mitadFlavors={pizzas}
+        onConfirmMitad={handleConfirmMitad}
       />
     </div>
   );

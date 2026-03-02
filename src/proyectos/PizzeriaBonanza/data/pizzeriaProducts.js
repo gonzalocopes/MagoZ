@@ -1,6 +1,15 @@
 // PIZZAS
 export const pizzas = [
   {
+    id: "pizza-mitad",
+    name: "Mitad y Mitad",
+    category: "Pizzas",
+    description: "Elegí el gusto de cada mitad entre todas nuestras pizzas.",
+    price: 0,
+    img: "/images/pizzas/mitad.png",
+    noExtras: false,
+  },
+  {
     id: "pizza-muzarella",
     name: "Muzza",
     category: "Pizzas",
@@ -120,14 +129,6 @@ export const pizzas = [
     price: 12000,
     img: "/images/pizzas/muzza_huevo_real.png",
   },
-  // {
-  //   id: "pizza-mitad",
-  //   name: "Mitad y Mitad",
-  //   category: "Pizzas",
-  //   description: "Selceccione las pizzas mitad y mitad que tenemos para ofrecer.",
-  //   price: 0,
-  //   img: "/images/pizzas/mitad.png",
-  // },
 ];
 
 // EMPANADAS
@@ -474,24 +475,6 @@ export const extrasPizza = [
     price: 0,
     category: "Extras",
   },
-  {
-    id: "extra-anchoas-cmp",
-    name: "Extra Anchoas Completa 🍤",
-    price: 2000,
-    category: "Extras",
-  },
-  {
-    id: "extra-anchoas-mit",
-    name: "Extra Anchoas Mitad 🍤",
-    price: 1000,
-    category: "Extras",
-  },
-  {
-    id: "huevo",
-    name: "Extra Huevo 🍳",
-    price: 1500,
-    category: "Extras",
-  }
 ];
 
 // 🔥 NUEVO: extras especiales para la pizza "Mitad y Mitad"
