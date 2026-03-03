@@ -464,33 +464,44 @@ export const promos = [
 // Extras para pizzas
 export const extrasPizza = [
   {
-    id: "al-molde",
-    name: "Al Molde 🍕🟫",
-    price: 0,
+    id: "extra-huevo",
+    name: "Huevo 🍳",
+    price: 1000,
     category: "Extras",
   },
   {
-    id: "ala-piedra",
-    name: "A la Piedra 🔥🍕",
-    price: 0,
-    category: "Extras",
+    id: "extra-coca-15",
+    name: "Coca Cola 1.5L 🥤",
+    price: 4300,
+    category: "Bebidas",
   },
+  {
+    id: "extra-sprite-15",
+    name: "Sprite 1.5L 🥤",
+    price: 4300,
+    category: "Bebidas",
+  }
 ];
 
-// 🔥 NUEVO: extras especiales para la pizza "Mitad y Mitad"
 export const extrasMitad = [
-  // Mantiene molde / piedra
+  // Mantiene los extras especiales para mitad
   {
-    id: "al-molde-mitad",
-    name: "Al Molde 🍕🟫",
-    price: 0,
+    id: "extra-huevo-mitad",
+    name: "Huevo 🍳",
+    price: 1000,
     category: "Extras Mitad",
   },
   {
-    id: "ala-piedra-mitad",
-    name: "A la Piedra 🔥🍕",
-    price: 0,
-    category: "Extras Mitad",
+    id: "extra-coca-15-mitad",
+    name: "Coca Cola 1.5L 🥤",
+    price: 4300,
+    category: "Bebidas",
+  },
+  {
+    id: "extra-sprite-15-mitad",
+    name: "Sprite 1.5L 🥤",
+    price: 4300,
+    category: "Bebidas",
   },
 
   // Combos de mitad y mitad (podés agregar todos los que quieras)

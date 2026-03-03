@@ -247,30 +247,12 @@ function App() {
   const toggleExtraOnActiveLine = (extraItem) => {
     if (!activeLineId) return;
 
-    const PREP_IDS = new Set([
-      "al-molde",
-      "ala-piedra",
-      "al-molde-mitad",
-      "ala-piedra-mitad",
-    ]);
-
     setCart((prev) =>
       prev.map((line) => {
         if (line.lineId !== activeLineId) return line;
         const extras = Array.isArray(line.extras) ? line.extras : [];
 
         const exists = extras.some((x) => x.id === extraItem.id);
-
-        // si es preparación (molde/piedra) => solo puede haber 1 seleccionado
-        if (PREP_IDS.has(extraItem.id)) {
-          const withoutPrep = extras.filter((x) => !PREP_IDS.has(x.id));
-          if (exists) {
-            // si ya estaba, lo quito
-            return { ...line, extras: withoutPrep };
-          }
-          // lo pongo como único de preparación
-          return { ...line, extras: [...withoutPrep, extraItem] };
-        }
 
         // extras comunes => toggle normal
         if (exists) {
@@ -298,9 +280,9 @@ function App() {
     setRequiredPackCount(0);
   };
 
-  // 🍕 confirmar mitad y mitad: precio promedio de ambas
+  // 🍕 confirmar mitad y mitad: cobra la mitad más cara
   const handleConfirmMitad = (m1, m2) => {
-    const price = Math.round((m1.price + m2.price) / 2);
+    const price = Math.max(m1.price, m2.price);
     setCart((prev) =>
       prev.map((item) => {
         if (item.lineId !== activeLineId) return item;
