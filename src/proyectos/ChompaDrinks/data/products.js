@@ -1,45 +1,59 @@
 export const combos = [
-  // Image 1
-  { id: "gordons-pink-tonicas", name: "Gordons pink + 2 tónicas", category: "Combos", price: 19000, img: "/images/placeholder_combo.png" },
-  { id: "beefeter-tonicas", name: "Beefeter + 2 tónicas", category: "Combos", price: 27000, img: "/images/placeholder_combo.png" },
-  { id: "beefeter-pink-tonicas", name: "Beefeter pink + 2 tónicas", category: "Combos", price: 30000, img: "/images/placeholder_combo.png" },
-  { id: "jagger-speed", name: "Jagger + 3 speed xl", category: "Combos", price: 38000, img: "/images/placeholder_combo.png" },
-  { id: "red-label-speed", name: "red label + 3 speed xl", category: "Combos", price: 33000, img: "/images/placeholder_combo.png" },
-  { id: "black-label-speed", name: "black label + 3 speed xl", category: "Combos", price: 55000, img: "/images/placeholder_combo.png" },
-  { id: "absolut-speed", name: "absolut + 3 speed xl", category: "Combos", price: 29000, img: "/images/placeholder_combo.png" },
-  { id: "baron-b-speed", name: "baron b + 1 speed xl", category: "Combos", price: 34000, img: "/images/placeholder_combo.png" },
-  { id: "santa-julia-speed", name: "santa julia + 1 speed xl", category: "Combos", price: 13000, img: "/images/placeholder_combo.png" },
-  { id: "tardia-speed", name: "tardía + 1 speed xl", category: "Combos", price: 8000, img: "/images/placeholder_combo.png" },
-  { id: "brigthon-tonicas", name: "brigthon + 2 tonicas", category: "Combos", price: 14000, img: "/images/placeholder_combo.png" },
-  { id: "brigtgon-pink-tonicas", name: "brigthon pink + 2 tónicas", category: "Combos", price: 15000, img: "/images/placeholder_combo.png" },
-  { id: "merle-pink-tonicas", name: "merle pink + 2 tónicas", category: "Combos", price: 16000, img: "/images/placeholder_combo.png" },
-  { id: "gordons-clasico-tonicas", name: "gordons clásico + 2 tónicas", category: "Combos", price: 18000, img: "/images/placeholder_combo.png" },
-  { id: "jack-daniels-speed", name: "jack daniels + 3 speed xl", category: "Combos", price: 50000, img: "/images/placeholder_combo.png" },
+  // --- Gin ---
+  { id: "gordons-pink-tonicas", name: "Gordons pink + 2 tónicas", category: "Combos", price: 19000, img: "/images/combo_gordons_pink.png" },
+  { id: "beefeter-tonicas", name: "Beefeater + 2 tónicas", category: "Combos", price: 27000, img: "/images/combo_beefeater.png" },
+  { id: "beefeter-pink-tonicas", name: "Beefeater pink + 2 tónicas", category: "Combos", price: 30000, img: "/images/combo_beefeater_pink.png" },
+  { id: "brigthon-tonicas", name: "Brighton + 2 tónicas", category: "Combos", price: 14000, img: "/images/combo_brighton.png" },
+  { id: "brigtgon-pink-tonicas", name: "Brighton pink + 2 tónicas", category: "Combos", price: 15000, img: "/images/combo_brighton_pink.png" },
+  { id: "merle-pink-tonicas", name: "Merle pink + 2 tónicas", category: "Combos", price: 16000, img: "/images/combo_merle_pink.png" },
+  { id: "gordons-clasico-tonicas", name: "Gordon's clásico + 2 tónicas", category: "Combos", price: 18000, img: "/images/combo_gordons_clasico.png" },
 
-  // Image 2
-  { id: "skyy-speed-2", name: "Skyy + 2 speed xl", category: "Combos", price: 16500, img: "/images/placeholder_combo.png" },
-  { id: "skyy-jugos", name: "skyy + 2 jugos", category: "Combos", price: 16500, img: "/images/placeholder_combo.png" },
-  { id: "skyy-monster", name: "skyy + 2 monster", category: "Combos", price: 17000, img: "/images/placeholder_combo.png" },
+  // --- Whisky ---
+  { id: "jagger-speed", name: "Jägermeister + 3 speed xl", category: "Combos", price: 38000, img: "/images/combo_jagermeister.png" },
+  { id: "red-label-speed", name: "Red Label + 3 speed xl", category: "Combos", price: 33000, img: "/images/combo_red_label.png" },
+  { id: "black-label-speed", name: "Black Label + 3 speed xl", category: "Combos", price: 55000, img: "/images/combo_black_label.png" },
+  { id: "jack-daniels-speed", name: "Jack Daniel's + 3 speed xl", category: "Combos", price: 50000, img: "/images/combo_jack_daniels.png" },
+
+  // --- Vodka ---
+  { id: "absolut-speed", name: "Absolut + 3 speed xl", category: "Combos", price: 29000, img: "/images/combo_absolut.png" },
+  { id: "skyy-speed-2", name: "Skyy + 2 speed xl", category: "Combos", price: 16500, img: "/images/combo_skyy_speed_real.png" },
+  { id: "skyy-jugos", name: "skyy + 2 jugos", category: "Combos", price: 16500, img: "/images/combo_skyy_cepita.png" },
+  { id: "skyy-monster", name: "skyy + 2 monster", category: "Combos", price: 17000, img: "/images/combo_skyy_monster.png" },
   { id: "smirnoff-speed", name: "smirnoff + 2 speed xl", category: "Combos", price: 15000, img: "/images/placeholder_combo.png" },
   { id: "smirnoff-jugos", name: "smirnoff + 2 jugos", category: "Combos", price: 15000, img: "/images/placeholder_combo.png" },
   { id: "smirnoff-monster", name: "sminroff + 2 monster", category: "Combos", price: 16000, img: "/images/placeholder_combo.png" },
+
+  // --- Champagne / Vino espumante ---
+  { id: "baron-b-speed", name: "baron b + 1 speed xl", category: "Combos", price: 34000, img: "/images/placeholder_combo.png" },
   { id: "chandon-speed", name: "chandon + 1 speed xl", category: "Combos", price: 19500, img: "/images/placeholder_combo.png" },
   { id: "chandon-monster", name: "chandon + 1 monster", category: "Combos", price: 20000, img: "/images/placeholder_combo.png" },
-  { id: "federico-speed", name: "federico + 1 speed xl", category: "Combos", price: 9000, img: "/images/placeholder_combo.png" },
-  { id: "federico-monster", name: "Federico + 1 monster", category: "Combos", price: 9500, img: "/images/placeholder_combo.png" },
-  { id: "fernet-450-coca", name: "fernet 450p + 1 coca", category: "Combos", price: 17000, img: "/images/placeholder_combo.png" },
-  { id: "fernet-750-coca", name: "fernet 750 + 2 cocas", category: "Combos", price: 24000, img: "/images/placeholder_combo.png" },
-  { id: "gancia-sprite", name: "gancia + Sprite", category: "Combos", price: 12500, img: "/images/placeholder_combo.png" },
-  { id: "melon-speed", name: "melon + 2 speed xl", category: "Combos", price: 13000, img: "/images/placeholder_combo.png" },
+
+  // --- Vino ---
+  { id: "santa-julia-speed", name: "santa julia + 1 speed xl", category: "Combos", price: 13000, img: "/images/placeholder_combo.png" },
+  { id: "tardia-speed", name: "tardía + 1 speed xl", category: "Combos", price: 8000, img: "/images/placeholder_combo.png" },
   { id: "santa-filomena-manaos", name: "santa Filomena + 1 manaos", category: "Combos", price: 6500, img: "/images/placeholder_combo.png" },
   { id: "vinas-alvear-manaos", name: "viñas de Alvear + 1 manaos", category: "Combos", price: 6500, img: "/images/placeholder_combo.png" },
+
+  // --- Fernet ---
+  { id: "fernet-450-coca", name: "fernet 450p + 1 coca", category: "Combos", price: 17000, img: "/images/combo_fernet_coca.png" },
+  { id: "fernet-750-coca", name: "fernet 750 + 2 cocas", category: "Combos", price: 24000, img: "/images/combo_fernet_coca.png" },
+
+  // --- Gancia ---
+  { id: "gancia-sprite", name: "gancia + Sprite", category: "Combos", price: 12500, img: "/images/placeholder_combo.png" },
+
+  // --- Melón ---
+  { id: "melon-speed", name: "melon + 2 speed xl", category: "Combos", price: 13000, img: "/images/placeholder_combo.png" },
+
+  // --- Federico ---
+  { id: "federico-speed", name: "federico + 1 speed xl", category: "Combos", price: 9000, img: "/images/combo_federico_speed.jpg" },
+  { id: "federico-monster", name: "Federico + 1 monster", category: "Combos", price: 9500, img: "/images/placeholder_combo.png" },
 ];
 
 export const latas = [
   { id: "grolsch", name: "grolsch", category: "Latas", price: 2800, img: "/images/placeholder_lata.png" },
   { id: "miller-lata", name: "miller", category: "Latas", price: 2800, img: "/images/placeholder_lata.png" },
-  { id: "brahma-lata", name: "brahma", category: "Latas", price: 2300, img: "/images/placeholder_lata.png" },
-  { id: "heineken-lata", name: "heineken", category: "Latas", price: 3000, img: "/images/placeholder_lata.png" },
+  { id: "brahma-lata", name: "brahma", category: "Latas", price: 2300, img: "/images/bebidas/lata_brahma.jpg" },
+  { id: "heineken-lata", name: "heineken", category: "Latas", price: 3000, img: "/images/heineken_473.png" },
   { id: "andes-rubia", name: "andes rubia", category: "Latas", price: 2500, img: "/images/placeholder_lata.png" },
   { id: "andes-roja", name: "andes roja", category: "Latas", price: 2500, img: "/images/placeholder_lata.png" },
   { id: "andes-negra", name: "andes negra", category: "Latas", price: 2500, img: "/images/placeholder_lata.png" },
@@ -50,18 +64,18 @@ export const latas = [
   { id: "imperial-apa", name: "imperial apa", category: "Latas", price: 2500, img: "/images/placeholder_lata.png" },
   { id: "imperial-negra", name: "imperial negra", category: "Latas", price: 2500, img: "/images/placeholder_lata.png" },
   { id: "warsteiner", name: "warsteiner", category: "Latas", price: 2300, img: "/images/placeholder_lata.png" },
-  { id: "amstel", name: "amstel", category: "Latas", price: 2300, img: "/images/placeholder_lata.png" },
-  { id: "scheneider-lata", name: "scheneider", category: "Latas", price: 2300, img: "/images/placeholder_lata.png" },
+  { id: "amstel", name: "amstel", category: "Latas", price: 2300, img: "/images/bebidas/amstel_473.png" },
+  { id: "scheneider-lata", name: "scheneider", category: "Latas", price: 2300, img: "/images/bebidas/lata_schneider.jpg" },
 ];
 
 export const latones = [
-  { id: "heineken-laton", name: "Heineken", category: "Latones", price: 5000, img: "/images/placeholder_laton.png" },
-  { id: "brahma-laton", name: "brahma", category: "Latones", price: 3700, img: "/images/placeholder_laton.png" },
+  { id: "heineken-laton", name: "Heineken", category: "Latones", price: 5000, img: "/images/bebidas/laton_heineken.jpg" },
+  { id: "brahma-laton", name: "brahma", category: "Latones", price: 3700, img: "/images/bebidas/laton_brahma.jpg" },
   { id: "budweiser-laton", name: "budweiser", category: "Latones", price: 3700, img: "/images/placeholder_laton.png" },
   { id: "golden-laton", name: "golden", category: "Latones", price: 4200, img: "/images/placeholder_laton.png" },
   { id: "scheneider-laton", name: "scheneider", category: "Latones", price: 4000, img: "/images/placeholder_laton.png" },
   { id: "miller-laton", name: "miller", category: "Latones", price: 4500, img: "/images/placeholder_laton.png" },
-  { id: "corona-laton", name: "corona", category: "Latones", price: 5000, img: "/images/placeholder_laton.png" },
+  { id: "corona-laton", name: "corona", category: "Latones", price: 5000, img: "/images/corona_710.png" },
   { id: "patagonia-247", name: "patagonia 24/7", category: "Latones", price: 5000, img: "/images/placeholder_laton.png" },
   { id: "patagonia-amber", name: "patagonia amber", category: "Latones", price: 5000, img: "/images/placeholder_laton.png" },
   { id: "patagonia-bohe", name: "patagonia bohe", category: "Latones", price: 5000, img: "/images/placeholder_laton.png" },
@@ -87,7 +101,7 @@ export const tragos = [
   { id: "caipi-monster-sandia", name: "caipi Monster sandia", category: "Tragos", price: 9000, img: "/images/placeholder_trago.png" },
   { id: "caipi-malibu", name: "caipi Malibú tropical", category: "Tragos", price: 10000, img: "/images/placeholder_trago.png" },
   { id: "caipi-clasica", name: "caipi clásica", category: "Tragos", price: 7000, img: "/images/placeholder_trago.png" },
-  { id: "caipiskyy", name: "caipiskyy", category: "Tragos", price: 8500, img: "/images/placeholder_trago.png" },
+  { id: "caipiskyy", name: "caipiskyy", category: "Tragos", price: 8500, img: "/images/bebidas/trago_sky_speed_1l.png" },
   { id: "caipi-saborizada", name: "caipi saborizada", description: "Frutilla, cereza, frutos rojos, durazno, frambuesa, melón, ananá, mango, maracuya", category: "Tragos", price: 7500, img: "/images/placeholder_trago.png" },
 
   { id: "daikiri", name: "daikiri", description: "Frutilla, cereza, frutos rojos, durazno, frambuesa, melón, ananá, mango, maracuya", category: "Tragos", price: 7500, img: "/images/placeholder_trago.png" },
@@ -102,7 +116,7 @@ export const tragos = [
   { id: "ginplaff", name: "ginplaff", category: "Tragos", price: 8500, img: "/images/placeholder_trago.png" },
 
   { id: "lemon-chomp", name: "Lemon chomp", category: "Tragos", price: 9500, img: "/images/placeholder_trago.png" },
-  { id: "gancia-chomp", name: "gancia chomp", category: "Tragos", price: 8500, img: "/images/placeholder_trago.png" },
+  { id: "gancia-chomp", name: "gancia chomp", category: "Tragos", price: 8500, img: "/images/bebidas/trago_gancia_1l_new.png" },
   { id: "caipylenguentazo", name: "caipylenguentazo", category: "Tragos", price: 9000, img: "/images/placeholder_trago.png" },
   { id: "bubalu-sour", name: "bubalu sour", category: "Tragos", price: 9000, img: "/images/placeholder_trago.png" },
 ];

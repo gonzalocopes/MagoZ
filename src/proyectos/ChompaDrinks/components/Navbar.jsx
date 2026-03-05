@@ -31,10 +31,9 @@ export default function Navbar({ cartCount }) {
               src={clientConfig.logo}
               alt={clientConfig.nombre}
               style={{
-                height: "40px",
-                width: "40px",
-                objectFit: "cover",
-                borderRadius: "50%",
+                height: "48px",
+                width: "auto",
+                objectFit: "contain",
               }}
             />
           )}
