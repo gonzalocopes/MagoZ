@@ -3,7 +3,7 @@ import { useState, useRef } from "react";
 import {
   pizzas,
   empanadas,
-  postres,
+  papas,
   milanesas,
   promos, // 👈 IMPORTANTE: importamos promos
 } from "../data/pizzeriaProducts";
@@ -12,9 +12,9 @@ export default function Menu({ onAddToCart, isClosed }) {
   const categories = [
     { id: "pizzas", label: "Pizzas 🍕", products: pizzas },
     { id: "empanadas", label: "Empanadas 🥟", products: empanadas },
-    { id: "milanesas", label: "Milanesas 🥩🍟", products: milanesas },
+    { id: "papas", label: "Papas Fritas 🍟", products: papas },
+    { id: "milanesas", label: "Milanesas y Sándwiches 🥩", products: milanesas },
     { id: "promos", label: "Promos 💸💸", products: promos },
-    { id: "postres", label: "Postres 🍦", products: postres },
   ];
 
   // categoría abierta en MOBILE
