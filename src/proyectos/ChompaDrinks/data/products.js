@@ -71,33 +71,33 @@ export const latas = [
 export const latones = [
   { id: "heineken-laton", name: "Heineken", category: "Latones", price: 5000, img: "/images/bebidas/laton_heineken.jpg" },
   { id: "brahma-laton", name: "brahma", category: "Latones", price: 3700, img: "/images/bebidas/laton_brahma.jpg" },
-  { id: "budweiser-laton", name: "budweiser", category: "Latones", price: 3700, img: "/images/placeholder_laton.png" },
-  { id: "golden-laton", name: "golden", category: "Latones", price: 4200, img: "/images/placeholder_laton.png" },
-  { id: "scheneider-laton", name: "scheneider", category: "Latones", price: 4000, img: "/images/placeholder_laton.png" },
-  { id: "miller-laton", name: "miller", category: "Latones", price: 4500, img: "/images/placeholder_laton.png" },
+  { id: "budweiser-laton", name: "budweiser", category: "Latones", price: 3700, img: "/images/laton_budweiser.png" },
+  { id: "golden-laton", name: "golden", category: "Latones", price: 4200, img: "/images/laton_golden.png" },
+  { id: "scheneider-laton", name: "scheneider", category: "Latones", price: 4000, img: "/images/laton_schneider.png" },
+  { id: "miller-laton", name: "miller", category: "Latones", price: 4500, img: "/images/laton_miller.png" },
   { id: "corona-laton", name: "corona", category: "Latones", price: 5000, img: "/images/corona_710.png" },
-  { id: "patagonia-247", name: "patagonia 24/7", category: "Latones", price: 5000, img: "/images/placeholder_laton.png" },
-  { id: "patagonia-amber", name: "patagonia amber", category: "Latones", price: 5000, img: "/images/placeholder_laton.png" },
-  { id: "patagonia-bohe", name: "patagonia bohe", category: "Latones", price: 5000, img: "/images/placeholder_laton.png" },
+  { id: "patagonia-247", name: "patagonia 24/7", category: "Latones", price: 5000, img: "/images/laton_patagonia_247.png" },
+  { id: "patagonia-amber", name: "patagonia amber", category: "Latones", price: 5000, img: "/images/laton_patagonia_amber.png" },
+  { id: "patagonia-bohe", name: "patagonia bohe", category: "Latones", price: 5000, img: "/images/laton_patagonia_bohe.png" },
 ];
 
 export const comida = [
-  { id: "empanadas-1", name: "Empanada de Carne Cortada a Cuchillo", description: "Fritas o al horno", category: "Comida", price: 1500, img: "/images/placeholder_food.png" },
-  { id: "empanadas-6", name: "Media Docena Empanadas de Carne", description: "Fritas o al horno", category: "Comida", price: 8000, img: "/images/placeholder_food.png" },
-  { id: "empanadas-12", name: "Docena Empanadas de Carne", description: "Fritas o al horno", category: "Comida", price: 15000, img: "/images/placeholder_food.png" },
-  { id: "superpancho", name: "Superpancho", description: "Pan fargo y salchicha unión granadera", category: "Comida", price: 2000, img: "/images/placeholder_food.png" },
-  { id: "hamburguesa-simple", name: "Hamburguesa Completa Simple", description: "Jamón, queso, lechuga, tomate y huevo. Pan fargo y hamburguesa finexcor", category: "Comida", price: 6000, img: "/images/placeholder_food.png" },
-  { id: "hamburguesa-doble", name: "Hamburguesa Completa Parrillera Doble", description: "Jamón, queso, lechuga, tomate y huevo. Pan fargo y hamburguesa finexcor", category: "Comida", price: 8000, img: "/images/placeholder_food.png" },
-  { id: "porcion-papas", name: "Porción de Papas Fritas", category: "Comida", price: 5000, img: "/images/placeholder_food.png" },
-  { id: "sanguche-milanesa", name: "Sanguche de Milanesa", description: "Jamón, queso, lechuga, tomate", category: "Comida", price: 12000, img: "/images/placeholder_food.png" },
-  { id: "sanguche-milanesa-huevo", name: "Sanguche de Milanesa Con Huevo", description: "Jamón, queso, lechuga, tomate y huevo", category: "Comida", price: 13000, img: "/images/placeholder_food.png" },
+  { id: "empanadas-1", name: "Empanada de Carne Cortada a Cuchillo", description: "Fritas o al horno", category: "Comida", price: 1500, img: "/images/empanadas.png" },
+  { id: "empanadas-6", name: "Media Docena Empanadas de Carne", description: "Fritas o al horno", category: "Comida", price: 8000, img: "/images/empanadas.png" },
+  { id: "empanadas-12", name: "Docena Empanadas de Carne", description: "Fritas o al horno", category: "Comida", price: 15000, img: "/images/empanadas.png" },
+  { id: "superpancho", name: "Superpancho", description: "Pan fargo y salchicha unión granadera", category: "Comida", price: 2000, img: "/images/superpancho.png" },
+  { id: "hamburguesa-simple", name: "Hamburguesa Completa Simple", description: "Jamón, queso, lechuga, tomate y huevo. Pan fargo y hamburguesa finexcor", category: "Comida", price: 6000, img: "/images/hamburguesa_simple.png" },
+  { id: "hamburguesa-doble", name: "Hamburguesa Completa Parrillera Doble", description: "Jamón, queso, lechuga, tomate y huevo. Pan fargo y hamburguesa finexcor", category: "Comida", price: 8000, img: "/images/hamburguesa_doble.png" },
+  { id: "porcion-papas", name: "Porción de Papas Fritas", category: "Comida", price: 5000, img: "/images/papas_fritas.png" },
+  { id: "sanguche-milanesa", name: "Sanguche de Milanesa", description: "Jamón, queso, lechuga, tomate", category: "Comida", price: 12000, img: "/images/sanguche_milanesa.png" },
+  { id: "sanguche-milanesa-huevo", name: "Sanguche de Milanesa Con Huevo", description: "Jamón, queso, lechuga, tomate y huevo", category: "Comida", price: 13000, img: "/images/sanguche_milanesa_huevo.png" },
 ];
 
 export const tragos = [
-  { id: "caipi-frutos-rojos", name: "caipi fruta frutos rojo", category: "Tragos", price: 9000, img: "/images/placeholder_trago.png" },
+  { id: "caipi-frutos-rojos", name: "caipi fruta frutos rojo", category: "Tragos", price: 9000, img: "/images/caipi_frutos_rojos.png" },
   { id: "caipi-frutilla", name: "caipi fruta frutilla", category: "Tragos", price: 9000, img: "/images/placeholder_trago.png" },
   { id: "caipi-mango", name: "caipi fruta mango", category: "Tragos", price: 9000, img: "/images/placeholder_trago.png" },
-  { id: "caipi-mango-loco", name: "caipi mango loco", category: "Tragos", price: 9000, img: "/images/placeholder_trago.png" },
+  { id: "caipi-mango-loco", name: "caipi mango loco", category: "Tragos", price: 9000, img: "/images/caipi_mango_loco.png" },
   { id: "caipi-monster-sandia", name: "caipi Monster sandia", category: "Tragos", price: 9000, img: "/images/placeholder_trago.png" },
   { id: "caipi-malibu", name: "caipi Malibú tropical", category: "Tragos", price: 10000, img: "/images/placeholder_trago.png" },
   { id: "caipi-clasica", name: "caipi clásica", category: "Tragos", price: 7000, img: "/images/placeholder_trago.png" },
@@ -105,7 +105,7 @@ export const tragos = [
   { id: "caipi-saborizada", name: "caipi saborizada", description: "Frutilla, cereza, frutos rojos, durazno, frambuesa, melón, ananá, mango, maracuya", category: "Tragos", price: 7500, img: "/images/placeholder_trago.png" },
 
   { id: "daikiri", name: "daikiri", description: "Frutilla, cereza, frutos rojos, durazno, frambuesa, melón, ananá, mango, maracuya", category: "Tragos", price: 7500, img: "/images/placeholder_trago.png" },
-  { id: "daikiri-super-cream", name: "daikiri súper cream", description: "Gomitas y crema", category: "Tragos", price: 9000, img: "/images/placeholder_trago.png" },
+  { id: "daikiri-super-cream", name: "daikiri súper cream", description: "Gomitas y crema", category: "Tragos", price: 9000, img: "/images/daikiri_super_cream.png" },
 
   { id: "gin-tonic-clasico", name: "Gin tonic clasico", category: "Tragos", price: 7500, img: "/images/placeholder_trago.png" },
   { id: "gin-tonic-pink", name: "gin tonic pink", category: "Tragos", price: 7500, img: "/images/placeholder_trago.png" },
@@ -113,11 +113,11 @@ export const tragos = [
   { id: "gin-tonic-frutilla", name: "Gin tonic con frutilla", category: "Tragos", price: 9000, img: "/images/placeholder_trago.png" },
   { id: "gin-tonic-mango", name: "gin tonic con mango", category: "Tragos", price: 9000, img: "/images/placeholder_trago.png" },
   { id: "gin-tonic-saborizado", name: "gin tonic saborizado", category: "Tragos", price: 8000, img: "/images/placeholder_trago.png" },
-  { id: "ginplaff", name: "ginplaff", category: "Tragos", price: 8500, img: "/images/placeholder_trago.png" },
+  { id: "ginplaff", name: "ginplaff", category: "Tragos", price: 8500, img: "/images/ginplaff.png" },
 
   { id: "lemon-chomp", name: "Lemon chomp", category: "Tragos", price: 9500, img: "/images/placeholder_trago.png" },
-  { id: "gancia-chomp", name: "gancia chomp", category: "Tragos", price: 8500, img: "/images/bebidas/trago_gancia_1l_new.png" },
-  { id: "caipylenguentazo", name: "caipylenguentazo", category: "Tragos", price: 9000, img: "/images/placeholder_trago.png" },
+  { id: "gancia-chomp", name: "gancia chomp", category: "Tragos", price: 8500, img: "/images/gancia_chomp.png" },
+  { id: "caipylenguentazo", name: "caipylenguentazo", category: "Tragos", price: 9000, img: "/images/caipi_lenguetazo.png" },
   { id: "bubalu-sour", name: "bubalu sour", category: "Tragos", price: 9000, img: "/images/placeholder_trago.png" },
 ];
 

@@ -14,7 +14,7 @@ export const clientConfig = {
   },
 
   hero: {
-    fondo: "/images/combos_banner.png", // New Combos Banner
+    fondo: "/images/custom_banner.png", // New Combos Banner
     slides: [
       {
         titulo: "CHOMPA DRINKS",

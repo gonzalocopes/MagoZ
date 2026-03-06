@@ -22,23 +22,25 @@ export default function Navbar({ cartCount }) {
       <div className="container">
         {/* Logo + Nombre */}
         <a
-          className="navbar-brand d-flex align-items-center gap-2"
+          className="navbar-brand d-flex align-items-center flex-nowrap gap-2"
           href="#hero"
           onClick={handleNavClick}
+          style={{ maxWidth: "calc(100% - 60px)" }}
         >
           {clientConfig.logo && (
             <img
               src={clientConfig.logo}
               alt={clientConfig.nombre}
+              className="flex-shrink-0"
               style={{
-                height: "48px",
+                height: "44px",
                 width: "auto",
                 objectFit: "contain",
               }}
             />
           )}
           <span
-            className="brand-text neon-text"
+            className="brand-text neon-text text-truncate"
             style={{
               color: clientConfig.colores.acento,
               textShadow: `0 0 5px ${clientConfig.colores.acento}, 0 0 10px ${clientConfig.colores.acento}`

@@ -475,9 +475,9 @@ button:focus-visible {
   /* Force neon font */
   font-weight: 400;
   text-transform: uppercase;
-  font-size: 1.8rem;
-  /* Slightly larger */
-  letter-spacing: 2px;
+  font-size: clamp(1.2rem, 5.5vw, 1.8rem);
+  /* Responsive size */
+  letter-spacing: clamp(1px, 0.5vw, 2px);
   text-shadow:
     0 0 5px #fff,
     0 0 10px #fff,
