@@ -15,18 +15,18 @@ export const combos = [
   { id: "jack-daniels-speed", name: "Jack Daniel's + 3 speed xl", category: "Combos", price: 50000, img: "/images/combo_jack_daniels.png" },
 
   // --- Vodka ---
-  { id: "absolut-speed", name: "Absolut + 3 speed xl", category: "Combos", price: 29000, img: "/images/combo_absolut.png" },
-  { id: "skyy-speed-2", name: "Skyy + 2 speed xl", category: "Combos", price: 16500, img: "/images/combo_skyy_speed_real.png" },
-  { id: "skyy-jugos", name: "skyy + 2 jugos", category: "Combos", price: 16500, img: "/images/combo_skyy_cepita.png" },
-  { id: "skyy-monster", name: "skyy + 2 monster", category: "Combos", price: 17000, img: "/images/combo_skyy_monster.png" },
-  { id: "smirnoff-speed", name: "smirnoff + 2 speed xl", category: "Combos", price: 15000, img: "/images/smirnoff_raspberry.png" },
-  { id: "smirnoff-jugos", name: "smirnoff + 2 jugos", category: "Combos", price: 15000, img: "/images/smirnoff_raspberry.png" },
-  { id: "smirnoff-monster", name: "sminroff + 2 monster", category: "Combos", price: 16000, img: "/images/smirnoff_raspberry.png" },
+  { id: "absolut-speed", name: "Absolut + 3 speed xl", category: "Combos", price: 29000, img: "/images/combo_absolut.png", upsell: true, flavors: ["Berry Mango", "Wild Berry", "Pera"] },
+  { id: "skyy-speed-2", name: "skyy cosmic + 2 speed xl", category: "Combos", price: 20000, img: "/images/combo_skyy_speed_real.png" },
+  { id: "skyy-jugos", name: "skyy + 2 jugos", category: "Combos", price: 16500, img: "/images/combo_skyy_cepita.png", upsell: true, flavors: ["Raspberry", "Ananá", "Durazno"] },
+  { id: "skyy-monster", name: "skyy + 2 monster", category: "Combos", price: 17000, img: "/images/combo_skyy_monster.png", upsell: true, flavors: ["Raspberry", "Ananá", "Durazno"] },
+  { id: "smirnoff-speed", name: "smirnoff + 2 speed xl", category: "Combos", price: 15000, img: "/images/smirnoff_raspberry.png", upsell: true, flavors: ["Manzana", "Sandia", "Maracuya", "Raspberry"] },
+  { id: "smirnoff-jugos", name: "smirnoff + 2 jugos", category: "Combos", price: 15000, img: "/images/smirnoff_raspberry.png", upsell: true, flavors: ["Manzana", "Sandia", "Maracuya", "Raspberry"] },
+  { id: "smirnoff-monster", name: "smirnoff + 2 monster", category: "Combos", price: 16000, img: "/images/smirnoff_raspberry.png", upsell: true, flavors: ["Manzana", "Sandia", "Maracuya", "Raspberry"] },
 
   // --- Champagne / Vino espumante ---
   { id: "baron-b-speed", name: "baron b + 1 speed xl", category: "Combos", price: 34000, img: "/images/baron_b.png" },
-  { id: "chandon-speed", name: "chandon + 1 speed xl", category: "Combos", price: 19500, img: "/images/chandon.png" },
-  { id: "chandon-monster", name: "chandon + 1 monster", category: "Combos", price: 20000, img: "/images/chandon.png" },
+  { id: "chandon-speed", name: "chandon + 1 speed xl", category: "Combos", price: 19500, img: "/images/chandon.png", upsell: true, flavors: ["Aperitif", "Délice", "Rosé", "Délice Rosé"] },
+  { id: "chandon-monster", name: "chandon + 1 monster", category: "Combos", price: 20000, img: "/images/chandon.png", upsell: true, flavors: ["Aperitif", "Délice", "Rosé", "Délice Rosé"] },
 
   // --- Vino ---
   { id: "santa-julia-speed", name: "santa julia + 1 speed xl", category: "Combos", price: 13000, img: "/images/santa_julia.png" },
@@ -119,7 +119,45 @@ export const tragos = [
   { id: "gancia-chomp", name: "gancia chomp", category: "Tragos", price: 8500, img: "/images/gancia_chomp.png" },
   { id: "caipylenguentazo", name: "caipylenguentazo", category: "Tragos", price: 9000, img: "/images/caipi_lenguetazo.png" },
   { id: "bubalu-sour", name: "bubalu sour", category: "Tragos", price: 9000, img: "/images/placeholder_trago.png" },
+
+  // --- Clásicos ---
+  { id: "skyy-con-speed", name: "Skyy con speed", category: "Tragos", price: 7500, img: "/images/placeholder_trago.png" },
+  { id: "smirnoff-con-speed", name: "smirnoff con speed", category: "Tragos", price: 7000, img: "/images/placeholder_trago.png" },
+  { id: "gancia-con-sprite", name: "gancia con Sprite", category: "Tragos", price: 6500, img: "/images/placeholder_trago.png" },
+  { id: "chandon-con-speed", name: "chandon con speed", category: "Tragos", price: 8000, img: "/images/placeholder_trago.png" },
+  { id: "destornillador", name: "destornillador", category: "Tragos", price: 6500, img: "/images/placeholder_trago.png" },
+  { id: "fernet-con-coca", name: "fernet con coca", category: "Tragos", price: 7000, img: "/images/placeholder_trago.png" },
+  { id: "melon-con-speed", name: "melón con speed", category: "Tragos", price: 7000, img: "/images/placeholder_trago.png" },
+  { id: "sex-on-the-beach", name: "sex on the beach", category: "Tragos", price: 7000, img: "/images/placeholder_trago.png" },
+
+  // --- Baileys ---
+  { id: "baileys-dulce-de-leche", name: "Baileys dulce de leche", category: "Tragos", price: 9000, img: "/images/placeholder_trago.png" },
+  { id: "baileys-oreo", name: "Baileys oreo", category: "Tragos", price: 10000, img: "/images/baileys_oreo_real.png" },
+  { id: "baileys-frutilla", name: "Baileys frutilla", category: "Tragos", price: 10000, img: "/images/placeholder_trago.png" },
+  { id: "baileys-rocher", name: "Baileys rocher", category: "Tragos", price: 10000, img: "/images/placeholder_trago.png" },
+  { id: "baileys-kinder", name: "baileys kinder", category: "Tragos", price: 10000, img: "/images/placeholder_trago.png" },
+  { id: "baileys-banana-chocolinas", name: "baileys banana y chocolinas", category: "Tragos", price: 10000, img: "/images/placeholder_trago.png" },
 ];
 
-export const extras = [];
+export const gaseosas = [
+  { id: "coca-225", name: "Coca 2,25", category: "Gaseosas", price: 4500, img: "/images/g_coca_cola_15l.png" },
+  { id: "sprite-225", name: "sprite 2,25", category: "Gaseosas", price: 4500, img: "/images/g_sprite_15l.png" },
+  { id: "paso-de-los-toros-15", name: "paso de los toros 1,5", category: "Gaseosas", price: 3000, img: "/images/g_paso_de_los_toros_15l.png" },
+  { id: "manaos-225", name: "manaos 2,25", category: "Gaseosas", price: 2500, img: "/images/manaos_225_real.png" },
+  { id: "baggio", name: "baggio", category: "Gaseosas", price: 3000, img: "/images/baggio_15l_real.png" },
+  { id: "speed-xl", name: "speed xl", category: "Gaseosas", price: 3000, img: "/images/speed_can_real.png" },
+  { id: "powerade", name: "powerade", category: "Gaseosas", price: 2500, img: "/images/powerade_real.png" },
+  { id: "red-bull", name: "Red Bull", category: "Gaseosas", price: 3000, img: "/images/g_redbull_can.png" },
+  { id: "monster", name: "monster", category: "Gaseosas", price: 3500, img: "/images/monster_can_real.png" },
+  { id: "vaso-de-hielo", name: "vaso de hielo", category: "Gaseosas", price: 1500, img: "/images/g_vaso_de_hielo.png" },
+  { id: "lata-de-smirnoff", name: "Lata de smirnoff", category: "Gaseosas", price: 3000, img: "/images/g_smirnoff_can.png" },
+];
+
+export const extras = [
+  { id: "hielo", name: "Bolsa de Hielo", price: 1500, category: "Extras" },
+  { id: "vasos", name: "Vasos x10", price: 1000, category: "Extras" },
+  { id: "speed-adicional", name: "Speed Adicional", price: 3000, category: "Extras" },
+  { id: "monster-adicional", name: "Monster Adicional", price: 3500, category: "Extras" },
+  { id: "jugo-adicional", name: "Jugo Baggio Adicional", price: 3000, category: "Extras" },
+];
 export const promos = [];

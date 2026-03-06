@@ -23,10 +23,12 @@ function App() {
     name: "",
     address: "",
     address2: "",
+    localidad: "",
     phone: "",
     deliveryMethod: "Delivery",
     paymentMethod: "Transferencia",
     comments: "",
+    shippingCost: 0,
   });
 
 
@@ -84,7 +86,7 @@ function App() {
     return sum + (itemTotal + extrasTotal * item.qty);
   }, 0);
 
-  const total = subtotal;
+  const total = subtotal + (customer.shippingCost || 0);
 
   const addToCart = (product, { fromUpsell = false } = {}) => {
     if (isClosed && clientConfig.horario?.enabled) {
@@ -103,7 +105,7 @@ function App() {
 
     setCart((prev) => {
       // 1. Agrupamos por ID para categorías que no requieren configuración extra
-      if (["Latas", "Latones", "Comida", "Tragos", "Combos"].includes(product.category)) {
+      if (["Latas", "Latones", "Comida", "Tragos", "Gaseosas"].includes(product.category)) {
         const existingIndex = prev.findIndex((item) => item.id === product.id);
         if (existingIndex >= 0) {
           // Ya existe, aumentamos cantidad
@@ -258,6 +260,7 @@ function App() {
                 cart={cart}
                 total={total}
                 subtotal={subtotal}
+                shippingCost={customer.shippingCost}
                 onRemove={removeFromCart}
                 onChangeQty={changeQty}
                 onEdit={handleEditItem}

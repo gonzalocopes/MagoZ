@@ -13,7 +13,7 @@ export default function WhatsAppButton({ cart, total, subtotal, customer, isClos
       // Linea principal del producto (en negrita)
       // Si qty > 1, lo mostramos (aunque con IDs únicos será mayormente 1)
       const qtyStr = item.qty > 1 ? `${item.qty}x ` : "";
-      lines.push(`*• ${qtyStr}${item.name}* ($${item.price})`);
+      lines.push(`*• ${qtyStr}${item.name}* ($${item.price.toLocaleString("es-AR")})`);
       if (item.variant) {
         lines.push(`   > Sabor: ${item.variant}`);
       }
@@ -21,7 +21,7 @@ export default function WhatsAppButton({ cart, total, subtotal, customer, isClos
       // Extras del producto
       if (item.extras && item.extras.length > 0) {
         item.extras.forEach((extra) => {
-          lines.push(`   + ${extra.name} ($${extra.price})`);
+          lines.push(`   + ${extra.name} ($${extra.price.toLocaleString("es-AR")})`);
         });
       }
 
@@ -34,12 +34,16 @@ export default function WhatsAppButton({ cart, total, subtotal, customer, isClos
     });
 
     lines.push("");
-    lines.push(`Subtotal: $${subtotal || total}`);
-    lines.push(`💰 Total: $${total}`);
+    lines.push(`Subtotal: $${(subtotal).toLocaleString("es-AR")}`);
+    if (customer.shippingCost > 0) {
+      lines.push(`Envío a domicilio: $${customer.shippingCost.toLocaleString("es-AR")}`);
+    }
+    lines.push(`💰 Total: $${total.toLocaleString("es-AR")}`);
     lines.push("");
     lines.push("👤 Datos del cliente:");
     lines.push(`Nombre: ${customer.name || "-"}`);
     lines.push(`Dirección Y Numeracion: ${customer.address || "-"}`);
+    lines.push(`Localidad: ${customer.localidad || "-"}`);
     lines.push(`Entre calles: ${customer.address2 || "-"}`);
     lines.push(`Teléfono: ${customer.phone || "-"}`);
     lines.push(`Entrega: ${customer.deliveryMethod || "-"}`);
@@ -158,7 +162,7 @@ export default function WhatsAppButton({ cart, total, subtotal, customer, isClos
             🛒
           </span>
           <span>
-            {itemCount} · ${total}
+            {itemCount} · ${total.toLocaleString("es-AR")}
           </span>
         </span>
       </button>

@@ -1,4 +1,4 @@
-export default function Cart({ cart, total, subtotal, onRemove, onChangeQty, onEdit }) {
+export default function Cart({ cart, total, subtotal, shippingCost, onRemove, onChangeQty, onEdit }) {
   return (
     <div className="card mb-4">
       <div className="card-header bg-dark text-white">Mi pedido</div>
@@ -18,7 +18,7 @@ export default function Cart({ cart, total, subtotal, onRemove, onChangeQty, onE
                   <div className="ms-2 me-auto">
                     <div className="fw-bold">{item.name}</div>
                     <small className="text-muted d-block">
-                      ${item.price}
+                      ${item.price.toLocaleString("es-AR")}
                     </small>
                     {item.variant && (
                       <small className="d-block fw-bold" style={{ color: "#da00ff" }}>
@@ -40,7 +40,7 @@ export default function Cart({ cart, total, subtotal, onRemove, onChangeQty, onE
                       <ul className="list-unstyled mt-1 mb-0 ms-2 border-start ps-2">
                         {item.extras.map((extra, idx) => (
                           <li key={idx} className="small text-secondary">
-                            + {extra.name} (${extra.price})
+                            + {extra.name} (${extra.price.toLocaleString("es-AR")})
                           </li>
                         ))}
                       </ul>
@@ -100,14 +100,19 @@ export default function Cart({ cart, total, subtotal, onRemove, onChangeQty, onE
             <div className="border-top pt-2">
               <div className="d-flex justify-content-between mb-1">
                 <span>Subtotal</span>
-                <span>${subtotal}</span>
+                <span>${subtotal.toLocaleString("es-AR")}</span>
               </div>
 
-
+              {shippingCost > 0 && (
+                <div className="d-flex justify-content-between mb-1 text-primary">
+                  <span>Envío a domicilio</span>
+                  <span>${shippingCost.toLocaleString("es-AR")}</span>
+                </div>
+              )}
 
               <div className="d-flex justify-content-between fw-bold fs-5 border-top pt-2 mt-2">
                 <span>Total</span>
-                <span>${total}</span>
+                <span>${total.toLocaleString("es-AR")}</span>
               </div>
             </div>
           </>

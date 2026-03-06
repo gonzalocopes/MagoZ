@@ -1,6 +1,6 @@
 // src/components/Menu.jsx
 import { useState, useRef } from "react";
-import { combos, latas, latones, comida, tragos } from "../data/products";
+import { combos, latas, latones, comida, tragos, gaseosas } from "../data/products";
 
 export default function Menu({ onAddToCart, isClosed, cart, onChangeQty, onRemove }) {
   const categories = [
@@ -9,6 +9,7 @@ export default function Menu({ onAddToCart, isClosed, cart, onChangeQty, onRemov
     { id: "latones", label: "Latones", products: latones },
     { id: "comida", label: "Comida", products: comida },
     { id: "tragos", label: "Tragos", products: tragos },
+    { id: "gaseosas", label: "Gaseosas", products: gaseosas },
   ];
 
   // categoría abierta en MOBILE
@@ -105,7 +106,7 @@ export default function Menu({ onAddToCart, isClosed, cart, onChangeQty, onRemov
 
   const renderProductCard = (item) => {
     // Verificamos si es un producto "simple" (que permite cantidad) y si ya está en el carrito
-    const isSimpleProduct = ["Latas", "Latones", "Comida", "Tragos", "Combos"].includes(item.category);
+    const isSimpleProduct = ["Latas", "Latones", "Comida", "Tragos", "Gaseosas"].includes(item.category);
     const cartItem = isSimpleProduct && cart ? cart.find((c) => c.id === item.id) : null;
     const qty = cartItem ? cartItem.qty : 0;
 
@@ -136,7 +137,7 @@ export default function Menu({ onAddToCart, isClosed, cart, onChangeQty, onRemov
                     {item.description}
                   </p>
                 )}
-                <div className="fw-bold">${item.price}</div>
+                <div className="fw-bold">${item.price.toLocaleString("es-AR")}</div>
               </div>
 
               <div className="text-end">
