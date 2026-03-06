@@ -27,11 +27,8 @@ function App() {
     deliveryMethod: "Delivery",
     paymentMethod: "Transferencia",
     comments: "",
-    deliveryZone: "Glew", // Default
   });
 
-  const [discount, setDiscount] = useState(0);
-  const [couponName, setCouponName] = useState("");
 
   const [showUpsell, setShowUpsell] = useState(false);
   const [isClosed, setIsClosed] = useState(false);
@@ -87,19 +84,7 @@ function App() {
     return sum + (itemTotal + extrasTotal * item.qty);
   }, 0);
 
-  // Cálculo del envío
-  let shippingCost = 0;
-  if (customer.deliveryMethod === "Delivery") {
-    // Threshold usually on raw subtotal
-    if (subtotal < 40000) {
-      if (customer.deliveryZone === "Glew") shippingCost = 2000;
-      if (customer.deliveryZone === "Guernica") shippingCost = 2500;
-      if (customer.deliveryZone === "Longchamps") shippingCost = 2500;
-    }
-  }
-
-  const discountAmount = subtotal * discount;
-  const total = subtotal - discountAmount + shippingCost;
+  const total = subtotal;
 
   const addToCart = (product, { fromUpsell = false } = {}) => {
     if (isClosed && clientConfig.horario?.enabled) {
@@ -273,31 +258,20 @@ function App() {
                 cart={cart}
                 total={total}
                 subtotal={subtotal}
-                shippingCost={shippingCost}
                 onRemove={removeFromCart}
                 onChangeQty={changeQty}
                 onEdit={handleEditItem}
-                discount={discount}
-                discountAmount={discountAmount}
               />
               <CheckoutForm
                 customer={customer}
                 onChange={setCustomer}
-                shippingCost={shippingCost}
-                setDiscount={setDiscount}
-                setCouponName={setCouponName}
-                currentDiscount={discount}
               />
               <WhatsAppButton
                 cart={cart}
                 total={total}
                 subtotal={subtotal}
-                shippingCost={shippingCost}
                 customer={customer}
                 isClosed={isClosed}
-                discount={discount}
-                couponName={couponName}
-                discountAmount={discountAmount}
               />
             </section>
           </div>

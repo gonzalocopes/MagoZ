@@ -1,4 +1,4 @@
-export default function Cart({ cart, total, subtotal, shippingCost, discount, discountAmount, onRemove, onChangeQty, onEdit }) {
+export default function Cart({ cart, total, subtotal, onRemove, onChangeQty, onEdit }) {
   return (
     <div className="card mb-4">
       <div className="card-header bg-dark text-white">Mi pedido</div>
@@ -103,17 +103,7 @@ export default function Cart({ cart, total, subtotal, shippingCost, discount, di
                 <span>${subtotal}</span>
               </div>
 
-              {discount > 0 && (
-                <div className="d-flex justify-content-between mb-1 text-success">
-                  <span>Descuento</span>
-                  <span>- ${discountAmount}</span>
-                </div>
-              )}
 
-              <div className="d-flex justify-content-between mb-1">
-                <span>Envío</span>
-                <span>{shippingCost === 0 ? "Gratis" : `$${shippingCost}`}</span>
-              </div>
 
               <div className="d-flex justify-content-between fw-bold fs-5 border-top pt-2 mt-2">
                 <span>Total</span>

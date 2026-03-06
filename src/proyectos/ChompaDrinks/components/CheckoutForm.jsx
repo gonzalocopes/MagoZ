@@ -1,41 +1,9 @@
-import { useState } from "react";
-import { coupons } from "../data/coupons";
-
-export default function CheckoutForm({ customer, onChange, shippingCost, setDiscount, setCouponName, currentDiscount }) {
-  const [code, setCode] = useState("");
-  const [message, setMessage] = useState(null);
+export default function CheckoutForm({ customer, onChange }) {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     onChange({ ...customer, [name]: value });
   };
-
-  const applyCoupon = () => {
-    setMessage(null);
-    const found = coupons.find((c) => c.code.toUpperCase() === code.toUpperCase().trim());
-
-    if (!found) {
-      setMessage({ type: "error", text: "Código no encontrado" });
-      setDiscount(0);
-      setCouponName("");
-      return;
-    }
-
-    const now = new Date();
-    const expires = new Date(found.expires);
-
-    if (now > expires) {
-      setMessage({ type: "error", text: "Este código ya venció" });
-      setDiscount(0);
-      setCouponName("");
-      return;
-    }
-
-    setDiscount(found.discount);
-    setCouponName(found.code);
-    setMessage({ type: "success", text: `¡Descuento de ${found.discount * 100}% aplicado!` });
-  };
-
   return (
     <div className="card mb-4">
       <div className="card-header bg-secondary text-white">
@@ -44,34 +12,7 @@ export default function CheckoutForm({ customer, onChange, shippingCost, setDisc
 
       <div className="card-body">
 
-        {/* 0. Cupón de descuento */}
-        <div className="mb-4 p-3 bg-light rounded border">
-          <label className="form-label fw-bold">¿Tenés un cupón?</label>
-          <div className="input-group mb-2">
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Ingresá tu código"
-              value={code}
-              onChange={(e) => setCode(e.target.value)}
-              disabled={currentDiscount > 0}
-            />
-            <button
-              className="btn btn-dark"
-              type="button"
-              onClick={applyCoupon}
-              disabled={currentDiscount > 0}
-            >
-              Aplicar
-            </button>
-          </div>
-          {currentDiscount > 0 && <div className="form-text text-success mb-2">Cupón aplicado. Para cambiarlo, recarga la página.</div>}
-          {message && (
-            <div className={`alert py-1 px-2 mb-0 alert-${message.type === "error" ? "danger" : "success"}`}>
-              {message.text}
-            </div>
-          )}
-        </div>
+
 
         {/* 1. Entrega (Primero, para definir qué campos mostrar) */}
         <div className="mb-3">
@@ -87,27 +28,7 @@ export default function CheckoutForm({ customer, onChange, shippingCost, setDisc
           </select>
         </div>
 
-        {/* 1.1 Zona de envío (Solo para Delivery) */}
-        {customer.deliveryMethod === "Delivery" && (
-          <div className="mb-3">
-            <label className="form-label fw-bold">Zona de envío</label>
-            <select
-              className="form-select"
-              name="deliveryZone"
-              value={customer.deliveryZone}
-              onChange={handleChange}
-            >
-              <option value="Glew">Glew ($2000)</option>
-              <option value="Guernica">Guernica ($2500)</option>
-              <option value="Longchamps">Longchamps ($2500)</option>
-            </select>
-            <div className="form-text text-success">
-              {shippingCost === 0
-                ? "¡Envío GRATIS por superar los $40.000!"
-                : `Costo de envío: $${shippingCost}`}
-            </div>
-          </div>
-        )}
+
 
         {/* 2. Nombre (Siempre obligatorio) */}
         <div className="mb-3">
