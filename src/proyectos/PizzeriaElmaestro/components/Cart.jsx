@@ -1,4 +1,6 @@
 // src/components/Cart.jsx
+import { pizzas, empanadas } from "../data/pizzeriaProducts";
+
 export default function Cart({ cart, total, onRemove, onChangeQty, onEdit }) {
   return (
     <div className="card mb-4">
@@ -21,7 +23,19 @@ export default function Cart({ cart, total, onRemove, onChangeQty, onEdit }) {
                   <div className="ms-2 me-auto">
                     <div className="fw-semibold">{item.name}</div>
                     <small className="text-muted">
-                      ${item.price} c/u
+                      ${(() => {
+                        if (item.id === "pizza-mitad" && item.pack?.items) {
+                          let maxP = 0;
+                          Object.entries(item.pack.items).forEach(([fid, count]) => {
+                            if (count > 0) {
+                              const p = pizzas.find((x) => x.id === fid);
+                              if (p && p.price > maxP) maxP = p.price;
+                            }
+                          });
+                          return maxP;
+                        }
+                        return item.price;
+                      })()} c/u
                     </small>
 
                     {/* Mostrar extras seleccionados (Pizzas) */}
@@ -40,7 +54,11 @@ export default function Cart({ cart, total, onRemove, onChangeQty, onEdit }) {
                       <div className="small text-secondary mt-1 border-start ps-2">
                         {Object.entries(item.pack.items || {})
                           .filter(([, qty]) => qty > 0)
-                          .map(([id, qty]) => `${qty}x ${id}`) // mejora: mapear id->nombre si podés
+                          .map(([id, qty]) => {
+                            const p = pizzas.find((x) => x.id === id) || empanadas.find((x) => x.id === id);
+                            const name = p ? p.name : id;
+                            return `${qty}x ${name}`;
+                          })
                           .join(", ")}
                       </div>
                     )}

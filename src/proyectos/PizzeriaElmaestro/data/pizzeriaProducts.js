@@ -541,7 +541,6 @@ export const extrasPizza = [
   }
 ];
 
-// 🔥 NUEVO: extras especiales para la pizza "Mitad y Mitad"
 export const extrasMitad = [
   // Mantiene molde / piedra
   {
@@ -556,31 +555,4 @@ export const extrasMitad = [
     price: 0,
     category: "Extras Mitad",
   },
-
-  // Combos de mitad y mitad (podés agregar todos los que quieras)
-  {
-    id: "mitad-muzza-jm",
-    name: "1/2 Muzza + 1/2 Jamón y Morrón",
-    price: 15000,
-    category: "Mitad y Mitad",
-  },
-  {
-    id: "mitad-muzza-napo",
-    name: "1/2 Muzza + 1/2 Napolitana",
-    price: 15000,
-    category: "Mitad y Mitad",
-  },
-  {
-    id: "mitad-napo-jm",
-    name: "1/2 Napolitana + 1/2 Jamón y Morrón",
-    price: 15000,
-    category: "Mitad y Mitad",
-  },
-  {
-    id: "mitad-calabresa-muzza",
-    name: "1/2 Calabresa + 1/2 Muzza",
-    price: 15000,
-    category: "Mitad y Mitad",
-  },
-  // …seguí agregando las combinaciones que quieras
 ];

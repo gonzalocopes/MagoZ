@@ -13,6 +13,7 @@ import WhatsAppButton from "./components/WhatsAppButton";
 import UpsellModal from "./components/UpsellModal";
 
 import {
+  pizzas,
   empanadas,
   extrasPizza,
   extrasMitad,
@@ -52,6 +53,15 @@ function App() {
 
   const empanadaFlavors = useMemo(() => {
     return empanadas.filter((e) => !e.upsell); // sabores individuales (sin docena/media)
+  }, []);
+
+  const pizzasParaMitad = useMemo(() => {
+    return pizzas.filter((p) => 
+      p.id !== "pizza-mitad" && 
+      !p.id.includes("calzones") && 
+      p.id !== "pizza-faina" && 
+      p.id !== "pizza-faina-por"
+    );
   }, []);
 
   // 🔔 FORZAR CAMBIO DE FAVICON (Solución "bruta" para ganarle al index.html)
@@ -159,7 +169,13 @@ function App() {
       const lineId = uid();
       setCart((prev) => [
         ...prev,
-        { ...product, lineId, qty: 1, extras: [] }, // 👈 extras pegados a esta pizza
+        { 
+          ...product, 
+          lineId, 
+          qty: 1, 
+          extras: [],
+          pack: product.id === "pizza-mitad" ? { size: 2, items: {} } : null
+        },
       ]);
 
       setLastProduct(product);
@@ -234,6 +250,13 @@ function App() {
       setUpsellMode("pack");
       setRequiredPackCount(6);
       // No cerramos el modal, solo cambiamos el modo
+      return;
+    }
+
+    if (activeItem && activeItem.id === "pizza-mitad" && upsellMode === "mitad") {
+      // PASO 2: Ir a elegir las 2 mitades
+      setUpsellMode("pack");
+      setRequiredPackCount(2);
       return;
     }
 
@@ -350,8 +373,21 @@ function App() {
   // ✅ total incluye extras por línea
   const total = cart.reduce((sum, item) => {
     const qty = item.qty || 1;
+    let basePrice = item.price;
+
+    if (item.id === "pizza-mitad" && item.pack?.items) {
+      let maxHalfPrice = 0;
+      Object.entries(item.pack.items).forEach(([flavorId, count]) => {
+        if (count > 0) {
+          const p = pizzas.find((x) => x.id === flavorId);
+          if (p && p.price > maxHalfPrice) maxHalfPrice = p.price;
+        }
+      });
+      basePrice = maxHalfPrice;
+    }
+
     const extrasSum = (item.extras || []).reduce((a, e) => a + (e.price || 0), 0);
-    return sum + (item.price + extrasSum) * qty;
+    return sum + (basePrice + extrasSum) * qty;
   }, 0);
 
   return (
@@ -420,7 +456,11 @@ function App() {
         mode={upsellMode}
         lastProduct={lastProduct}
         upsellItems={upsellItems}
-        empanadaFlavors={empanadaFlavors}
+        empanadaFlavors={
+          (upsellMode === "pack" && lastProduct?.id === "pizza-mitad")
+            ? pizzasParaMitad
+            : empanadaFlavors
+        }
         requiredCount={requiredPackCount}
         // 👇 ahora NO “agrega al carrito”, sino que lo pega a la pizza activa
         onToggleExtra={toggleExtraOnActiveLine}

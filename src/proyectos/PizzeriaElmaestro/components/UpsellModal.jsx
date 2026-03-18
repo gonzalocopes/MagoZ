@@ -48,7 +48,9 @@ export default function UpsellModal({
 
           <div className="modal-header">
             <h5 className="modal-title">
-              {mode === "pack" ? `Elegí ${requiredCount} empanadas` : "Extras / Preparación"}
+              {mode === "pack" 
+                ? (lastProduct?.id === "pizza-mitad" ? `Elegí ${requiredCount} sabores` : `Elegí ${requiredCount} empanadas`)
+                : "Extras / Preparación"}
             </h5>
             <button className="btn-close" onClick={onClose}></button>
           </div>
@@ -154,7 +156,9 @@ export default function UpsellModal({
                     onClick={onClose}
                     disabled={!hasPrep}
                   >
-                    {hasPrep ? "Listo" : "Seleccioná: Al Molde o A la Piedra"}
+                    {hasPrep 
+                      ? (lastProduct?.id === "pizza-mitad" ? "Listo, ahora elegí los sabores" : "Listo") 
+                      : "Seleccioná: Al Molde o A la Piedra"}
                   </button>
                 );
               })()
