@@ -481,7 +481,7 @@ export const promosMedianodia = [
     id: "mediodia-mega-balde",
     name: "Mega Balde Crunchy Mediodía",
     category: "Mediodía",
-    description: "4 Cheese Burgers + 1 kilo de papas. Ideal para compartir. Incluye Coca GRATIS.",
+    description: "4 Cheese Burgers + 1 kilo de papas. Ideal para compartir.",
     price: 21990,
     img: "/images/burgas/mega-balde-clasico.png",
   },
