@@ -46,14 +46,7 @@ export const combos = [
     price: 25000,
     img: "/images/combo_fernet_pro.png",
   },
-  {
-    id: "combo-fernet-coca-175",
-    name: "COMBO Fernet + 2 Cocas 1.75L",
-    category: "Combos",
-    description: "Fernet Branca 750ml + 2 Coca-Cola 1.75L. Incluye vaso 1L con hielo gratis.",
-    price: 26000,
-    img: "/images/combo_fernet_pro.png",
-  },
+
   {
     id: "combo-trumpeter-sprite",
     name: "COMBO Messi",
