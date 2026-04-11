@@ -432,7 +432,40 @@ export const bebidas = [
   },
 ];
 
-export const postres = []; // Vacío o se puede eliminar si se borra en Menu.jsx también
+export const postres = [
+  {
+    id: "cheesecake-frutilla",
+    name: "Cheesecake de Frutilla",
+    category: "Postres",
+    description: "",
+    price: 7000,
+    img: "/images/postres/cheesecake_frutilla.jpg",
+  },
+  {
+    id: "postre-oreo",
+    name: "Postre Oreo",
+    category: "Postres",
+    description: "Oreo, dulce de leche y crema",
+    price: 7000,
+    img: "/images/postres/postre_oreo.jpg",
+  },
+  {
+    id: "chocotorta",
+    name: "Chocotorta",
+    category: "Postres",
+    description: "",
+    price: 7000,
+    img: "/images/postres/chocotorta.jpg",
+  },
+  {
+    id: "cheesecake-maracuya",
+    name: "Cheesecake de Maracuyá",
+    category: "Postres",
+    description: "",
+    price: 7000,
+    img: "/images/postres/cheesecake_maracuya.jpg",
+  },
+];
 
 export const extras = [
   { id: "extra-carne", name: "Extra Carne", price: 2500, category: "Extras" },

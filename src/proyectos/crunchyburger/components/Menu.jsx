@@ -34,6 +34,7 @@ export default function Menu({ onAddToCart, isClosed }) {
       ? [{ id: "mediodia", label: "Promo Mediodía 🌞", products: promosMedianodia, mediodiaOnly: true }]
       : []),
     { id: "bebidas", label: "Bebidas 🥤", products: bebidas },
+    { id: "postres", label: "Postres 🍰", products: postres },
   ];
 
   // categoría abierta en MOBILE
