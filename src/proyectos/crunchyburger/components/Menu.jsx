@@ -53,28 +53,25 @@ export default function Menu({ onAddToCart, isClosed }) {
 
       // solo hacemos scroll en mobile y si la estamos abriendo
       if (next && typeof window !== "undefined" && window.innerWidth < 768) {
-        // esperamos a que termine la animación de abrir/cerrar
+        // esperamos a que funcione la animación CSS de apertura
         setTimeout(() => {
           const el = categoryRefs.current[next];
-          const stripEl = stripRef.current;
 
           if (el) {
-            // Altura aproximada del Navbar fijo (generalmente ~70px)
+            // Altura aproximada del Navbar fijo
             const navbarHeight = 70;
-            // Altura real de la barra de categorías sticky (si existe)
-            const stripHeight = stripEl ? stripEl.offsetHeight : 0;
             // Un poco de "aire" extra
             const extraPadding = 15;
 
-            // Calculamos el offset total que ocupan las barras superiores
-            const totalOffset = navbarHeight + stripHeight + extraPadding;
+            // Offset total solo del navbar y padding (ya no se resta el strip completo)
+            const totalOffset = navbarHeight + extraPadding;
 
-            // Posición top del elemento menos todo lo que hay arriba
+            // Posición top del elemento menos el offset arriba
             const topPosition = el.offsetTop - totalOffset;
 
             window.scrollTo({ top: topPosition, behavior: "smooth" });
           }
-        }, 350); // tiempo para que se acomode el layout
+        }, 300); // 300ms espera a que el acordeón se despliegue un poco
       }
 
       return next;
@@ -206,45 +203,44 @@ export default function Menu({ onAddToCart, isClosed }) {
       <div className="container-fluid px-3 px-lg-4">
         <h2 className="mb-3 text-center user-select-none text-dark">Menú</h2>
 
-        {/* === LISTA DE CATEGORÍAS (ESTILO APP) – SOLO MOBILE === */}
+        {/* === VISTA MOBILE: ACORDEÓN === */}
         <div className="d-md-none mb-3 menu-category-strip" ref={stripRef}>
           {categories.map((cat) => {
             const isActive = openCategory === cat.id;
             return (
-              <button
-                key={cat.id}
-                type="button"
-                onClick={() => handleToggleCategory(cat.id)}
-                className={`menu-category-pill ${isActive ? "menu-category-pill-active" : ""}`}
-              >
-                <span className="flex-grow-1 text-start">
-                  <span className="d-block fw-semibold">{cat.label}</span>
-                  <small className="text-muted">
-                    {cat.products.length} producto
-                    {cat.products.length !== 1 ? "s" : ""}
-                    {cat.mediodiaOnly && !isMediodiaTime && " · 11-18hs"}
-                  </small>
-                </span>
-                <span className="menu-cat-icon">
-                  {isActive ? "−" : "+"}
-                </span>
-              </button>
+              <div key={cat.id} ref={(el) => (categoryRefs.current[cat.id] = el)} className="mb-2">
+                <button
+                  type="button"
+                  onClick={() => handleToggleCategory(cat.id)}
+                  className={`menu-category-pill ${isActive ? "menu-category-pill-active" : ""}`}
+                >
+                  <span className="flex-grow-1 text-start">
+                    <span className="d-block fw-semibold">{cat.label}</span>
+                    <small className="text-muted">
+                      {cat.products.length} producto
+                      {cat.products.length !== 1 ? "s" : ""}
+                      {cat.mediodiaOnly && !isMediodiaTime && " · 11-18hs"}
+                    </small>
+                  </span>
+                  <span className="menu-cat-icon">
+                    {isActive ? "−" : "+"}
+                  </span>
+                </button>
+
+                {/* MOBILE: contenedor con animación, se renderiza JUSTO ABAJO del botón */}
+                <div className={`menu-category-collapse ${isActive ? "show mt-3" : ""}`}>
+                  {cat.products.map((item) => renderProductCard(item, { mediodiaOnly: !!cat.mediodiaOnly }))}
+                </div>
+              </div>
             );
           })}
         </div>
 
-        {/* === PRODUCTOS POR CATEGORÍA === */}
-        {categories.map((cat) => {
-          const isOpenMobile = openCategory === cat.id;
-
-          return (
-            <div
-              key={cat.id}
-              className="mb-4"
-              ref={(el) => (categoryRefs.current[cat.id] = el)}
-            >
-              {/* Título de categoría (solo desktop) */}
-              <div className="d-none d-md-flex align-items-baseline mb-2">
+        {/* === VISTA DESKTOP: LISTA COMPLETA === */}
+        <div className="d-none d-md-block">
+          {categories.map((cat) => (
+            <div key={cat.id} className="mb-4">
+              <div className="d-flex align-items-baseline mb-2">
                 <h4 className="me-2 mb-0 text-dark">{cat.label}</h4>
                 <small className="text-muted">
                   {cat.products.length} producto
@@ -254,21 +250,12 @@ export default function Menu({ onAddToCart, isClosed }) {
                   )}
                 </small>
               </div>
-
-              {/* MOBILE: contenedor con animación de apertura/cierre */}
-              <div
-                className={`d-md-none menu-category-collapse ${isOpenMobile ? "show" : ""}`}
-              >
-                {cat.products.map((item) => renderProductCard(item, { mediodiaOnly: !!cat.mediodiaOnly }))}
-              </div>
-
-              {/* DESKTOP: siempre visibles todas las categorías */}
-              <div className="d-none d-md-block">
+              <div>
                 {cat.products.map((item) => renderProductCard(item, { mediodiaOnly: !!cat.mediodiaOnly }))}
               </div>
             </div>
-          );
-        })}
+          ))}
+        </div>
       </div>
     </section>
   );
