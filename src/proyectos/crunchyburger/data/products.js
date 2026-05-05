@@ -481,36 +481,6 @@ export const extras = [
 // 🌞 Promos Mediodía — disponibles de 11:00 a 18:00 hs
 export const promosMedianodia = [
   {
-    id: "mediodia-cheese-simple",
-    name: "Cheese Simple Mediodía",
-    category: "Mediodía",
-    description: "Pan de papa, Medallón de 120grs, Cheddar x2. Incluye Papas c/ Cheddar y Bacon + Coca 355ml.",
-    price: 8990,
-    img: "/images/burgas/cheese-simple.png",
-    papasOpciones: ["Cheddar en papas", "Bacon en papas"],
-    upsell: true,
-  },
-  {
-    id: "mediodia-cheese-doble",
-    name: "Cheese Doble Mediodía",
-    category: "Mediodía",
-    description: "Pan de papa, Doble medallón, Cheddar x4. Incluye Papas c/ Cheddar y Bacon + Coca 355ml.",
-    price: 11990,
-    img: "/images/burgas/cheese-doble-dark.png",
-    papasOpciones: ["Cheddar en papas", "Bacon en papas"],
-    upsell: true,
-  },
-  {
-    id: "mediodia-cheese-triple",
-    name: "Cheese Triple Mediodía",
-    category: "Mediodía",
-    description: "Pan de papa, Triple medallón, Cheddar x6. Incluye Papas c/ Cheddar y Bacon + Coca 355ml.",
-    price: 15990,
-    img: "/images/burgas/cheese-triple-dark.png",
-    papasOpciones: ["Cheddar en papas", "Bacon en papas"],
-    upsell: true,
-  },
-  {
     id: "mediodia-mega-balde",
     name: "Mega Balde Crunchy Mediodía",
     category: "Mediodía",
