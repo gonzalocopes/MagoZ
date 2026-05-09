@@ -24,6 +24,24 @@ export const pizzas = [
     price: 1400,
     img: "/images/pizzas/fainapor.jpg",
     noExtras: true,          // 👈 NO mostrar extras
+  },
+  {
+    id: "pizza-porcion-fugazzeta",
+    name: "Porción de Fugazzeta",
+    category: "Pizzas",
+    description: "Porción de fugazzeta.",
+    price: 2500,
+    img: "/images/pizzas/porcion-fugazzeta.jpg",
+    noExtras: true,
+  },
+  {
+    id: "pizza-porcion-fuga-faina",
+    name: "Porción de Fugazzeta + Porción de Faina",
+    category: "Pizzas",
+    description: "Porción de fugazzeta y porción de faina.",
+    price: 3500,
+    img: "/images/pizzas/porcion-fuga-faina.jpg",
+    noExtras: true,
   }, {
     id: "pizza-mitad",
     name: "Mitad y Mitad",
