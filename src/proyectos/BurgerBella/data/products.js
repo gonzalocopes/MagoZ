@@ -41,7 +41,7 @@ export const promos = [
     id: "promo-miercoles",
     name: "Miércoles: BBQ Crunchy",
     category: "Promos",
-    description: "Solo Miércoles. Precio regular $17.000.",
+    description: "Solo Miércoles. Precio regular $16.000.",
     price: 12990,
     img: "/images/burgas/bbq-crunchy.png", // ID: bbq-crunchy
     allowedDays: [3], // Miércoles
@@ -50,7 +50,7 @@ export const promos = [
     id: "promo-jueves",
     name: "Jueves: Chicken Crunchy",
     category: "Promos",
-    description: "Solo Jueves. Precio regular $13.000.",
+    description: "Solo Jueves. Precio regular $11.000.",
     price: 7999,
     img: "/images/burgas/chicken-crunchy.png", // ID: chicken-crunchy
     allowedDays: [4], // Jueves
@@ -59,7 +59,7 @@ export const promos = [
     id: "promo-viernes",
     name: "Viernes: Mega Provo",
     category: "Promos",
-    description: "Solo Viernes. Precio regular $17.000.",
+    description: "Solo Viernes. Precio regular $16.000.",
     price: 12990,
     img: "/images/burgas/mega-provo.png", // ID: mega-provo
     allowedDays: [5], // Viernes
@@ -68,7 +68,7 @@ export const promos = [
     id: "promo-sabado",
     name: "Sábado: Clásica Argenta",
     category: "Promos",
-    description: "Solo Sábado. Precio regular $17.000.",
+    description: "Solo Sábado. Precio regular $16.000.",
     price: 12990,
     img: "/images/burgas/clasica-argenta.png", // ID: clasica-argenta
     allowedDays: [6], // Sábado
@@ -77,7 +77,7 @@ export const promos = [
     id: "promo-domingo",
     name: "Domingo: Cheese Bacon",
     category: "Promos",
-    description: "Solo Domingo. Precio regular $11.000.",
+    description: "Solo Domingo. Precio regular $9.500.",
     price: 6990,
     img: "/images/burgas/bacon.jpg", // ID: cheese-bacon-simple
     allowedDays: [0], // Domingo
@@ -91,7 +91,7 @@ export const hamburguesas = [
     name: "BBQ Crunchy",
     category: "Hamburguesas",
     description: "Pan de papa, Salsa barbacoa, Doble medallón de 120grs c/u, MOZZARELLA, Panceta y Cebolla crispy. Incluye papas fritas.",
-    price: 17000,
+    price: 16000,
     img: "/images/burgas/bbq-crunchy.png",
   },
   {
@@ -99,7 +99,7 @@ export const hamburguesas = [
     name: "Mega Provo",
     category: "Hamburguesas",
     description: "Pan de papa, Doble medallón de carne 120grs c/u, Provoleta, Cebolla Caramelizada, Cheddar liquido y Panceta. Incluye papas fritas.",
-    price: 17000,
+    price: 16000,
     img: "/images/burgas/mega-provo.png",
   },
   {
@@ -107,7 +107,7 @@ export const hamburguesas = [
     name: "Cheese Simple",
     category: "Hamburguesas",
     description: "Pan de papa, Medallón de 120grs, Cheddar x2. Incluye papas fritas.",
-    price: 10000,
+    price: 8500,
     img: "/images/burgas/cheese-simple.png",
   },
   {
@@ -123,7 +123,7 @@ export const hamburguesas = [
     name: "Cheese Doble",
     category: "Hamburguesas",
     description: "Pan de papa, Doble medallón, Cheddar x4. Incluye papas fritas.",
-    price: 13500,
+    price: 12000,
     img: "/images/burgas/cheese-doble-dark.png",
   },
   {
@@ -131,7 +131,7 @@ export const hamburguesas = [
     name: "Cheese Triple",
     category: "Hamburguesas",
     description: "Pan de papa, Triple medallón, Cheddar x6. Incluye papas fritas.",
-    price: 16000,
+    price: 15000,
     img: "/images/burgas/cheese-triple-dark.png",
   },
   {
@@ -139,7 +139,7 @@ export const hamburguesas = [
     name: "Cheese Bacon Simple",
     category: "Hamburguesas",
     description: "Pan de papa, Medallón de 120grs, Cheddar x2, Panceta. Incluye papas fritas.",
-    price: 11000,
+    price: 9500,
     img: "/images/burgas/cheese-bacon.png",
   },
   {
@@ -147,7 +147,7 @@ export const hamburguesas = [
     name: "Cheese Bacon Doble",
     category: "Hamburguesas",
     description: "Pan de papa, Doble medallón, Cheddar x4, Panceta. Incluye papas fritas.",
-    price: 14500,
+    price: 12500,
     img: "/images/burgas/cheese-bacon-doble-new.png",
   },
   {
@@ -155,7 +155,7 @@ export const hamburguesas = [
     name: "Cheese Bacon Triple",
     category: "Hamburguesas",
     description: "Pan de papa, Triple medallón, Cheddar x6, Panceta. Incluye papas fritas.",
-    price: 17000,
+    price: 16000,
     img: "/images/burgas/cheese-bacon-triple-new.png",
   },
   {
@@ -163,7 +163,7 @@ export const hamburguesas = [
     name: "Oklahoma Simple",
     category: "Hamburguesas",
     description: "Pan de papa, Medallón de 120grs cocinado con cebolla, Doble cheddar. Incluye papas fritas.",
-    price: 11000,
+    price: 9900,
     img: "/images/burgas/oklahoma.png",
   },
   {
@@ -171,7 +171,7 @@ export const hamburguesas = [
     name: "Oklahoma Doble",
     category: "Hamburguesas",
     description: "Pan de papa, Doble medallón cocinado con cebolla, Doble cheddar. Incluye papas fritas.",
-    price: 14500,
+    price: 13900,
     img: "/images/burgas/oklahoma.png",
   },
   {
@@ -179,7 +179,7 @@ export const hamburguesas = [
     name: "Oklahoma Triple",
     category: "Hamburguesas",
     description: "Pan de papa, Triple medallón cocinado con cebolla, Doble cheddar. Incluye papas fritas.",
-    price: 17000,
+    price: 16000,
     img: "/images/burgas/oklahoma.png",
   },
   {
@@ -187,7 +187,7 @@ export const hamburguesas = [
     name: "Clásica Argenta",
     category: "Hamburguesas",
     description: "Pan de papa, Doble medallón de 120grs c/u, Cheddar x2, Tomate, Lechuga y Huevo. Incluye papas fritas.",
-    price: 17000,
+    price: 16000,
     img: "/images/burgas/clasica-argenta.png",
   },
   {
@@ -195,7 +195,7 @@ export const hamburguesas = [
     name: "Big",
     category: "Hamburguesas",
     description: "Pan de papa, Salsa big, Doble medallón de 120grs c/u, Cheddar x4, Rodajas de pepino y Lechuga. Incluye papas fritas.",
-    price: 16000,
+    price: 15000,
     img: "/images/burgas/big-mac.png",
   },
   {
@@ -203,7 +203,7 @@ export const hamburguesas = [
     name: "Chicken Crunchy",
     category: "Hamburguesas",
     description: "Salsa de mayonesa cremosa, Medallon de pollo, Doble cheddar, Tomate, Lechuga, Panceta. Incluye papas fritas.",
-    price: 13000,
+    price: 11000,
     img: "/images/burgas/chicken-crunchy.png",
   },
 ];
@@ -214,7 +214,7 @@ export const papas = [
     name: "Papas Simples",
     category: "Papas",
     description: "Para compartir.",
-    price: 8500,
+    price: 7500,
     img: "/images/papas/papasfritas.png",
   },
   {
@@ -222,7 +222,7 @@ export const papas = [
     name: "Papas c/ Cheddar",
     category: "Papas",
     description: "Para compartir. Con salsa cheddar.",
-    price: 10000,
+    price: 8500,
     img: "/images/papas/papas-cheddar.png",
   },
   {
@@ -230,7 +230,7 @@ export const papas = [
     name: "Papas Completas",
     category: "Papas",
     description: "Para compartir. Cheddar, Verdeo y Bacon.",
-    price: 12000,
+    price: 10500,
     img: "/images/papas/papacompleta.png",
   },
   {
@@ -238,7 +238,7 @@ export const papas = [
     name: "Papas Crunchy Cheese Bacon",
     category: "Papas",
     description: "Para compartir. Papas fritas con Carne, cheddar liquido, panceta y verdeo.",
-    price: 17000,
+    price: 15500,
     img: "/images/papas/papas-crunchy.png",
   },
   {
@@ -246,7 +246,7 @@ export const papas = [
     name: "Cremato Crispy",
     category: "Papas",
     description: "Para compartir. Cremato (Base de queso crema), Mayonesa, Trozos de Nuggets, Verdeo.",
-    price: 17000,
+    price: 15500,
     img: "/images/papas/cremato-crispy.png",
   },
   {
@@ -254,7 +254,7 @@ export const papas = [
     name: "Papas Bondiola BBQ",
     category: "Papas",
     description: "Para compartir. Papas fritas + bondiola Desmenuzada, Salsa BBQ, Cebolla Crispy, Verdeo y MOZZARELLA.",
-    price: 17000,
+    price: 15500,
     img: "/images/papas/papas-bondiola-bbq.jpg",
   },
   {
@@ -262,7 +262,7 @@ export const papas = [
     name: "8 Nuggets + Papas",
     category: "Papas",
     description: "Para compartir. Incluye Dip Barbacoa.",
-    price: 9900,
+    price: 9000,
     img: "/images/papas/nuggets-papas.png",
   },
 ];
@@ -281,7 +281,7 @@ export const combos = [
     name: "Box 5 Mini Cheese",
     category: "Combos",
     description: "5 mini Cheese Burger + dip de cheddar + papas fritas.",
-    price: 19990,
+    price: 17999,
     img: "/images/burgas/box-5-mini.jpg",
   },
   {
@@ -289,7 +289,7 @@ export const combos = [
     name: "Box 10 Mini Cheese",
     category: "Combos",
     description: "10 mini Cheese Burger + dip de cheddar + papas fritas.",
-    price: 34990,
+    price: 29990,
     img: "/images/burgas/box-10-mini.jpg",
   },
 ];
@@ -359,7 +359,7 @@ export const bebidas = [
     name: "Gancia 1L",
     category: "Bebidas",
     description: "Trago de litro.",
-    price: 8000,
+    price: 7000,
     img: "/images/bebidas/trago_gancia_1l_new.png",
   },
   {
@@ -385,7 +385,7 @@ export const bebidas = [
     name: "Amstel 473ml",
     category: "Bebidas",
     description: "Lata.",
-    price: 4000,
+    price: 3000,
     img: "/images/bebidas/amstel_473.png",
   },
   {
@@ -403,7 +403,7 @@ export const bebidas = [
     name: "Agua 500ml",
     category: "Bebidas",
     description: "Botella personal.",
-    price: 2000,
+    price: 1500,
     img: "/images/bebidas/agua_500.png",
   },
   {
@@ -411,7 +411,7 @@ export const bebidas = [
     name: "Agua Saborizada 500ml",
     category: "Bebidas",
     description: "Botella personal.",
-    price: 3000,
+    price: 2500,
     img: "/images/bebidas/aquarius_500.png",
   },
   {
@@ -419,7 +419,7 @@ export const bebidas = [
     name: "Coca Cola 500ml",
     category: "Bebidas",
     description: "Botella personal.",
-    price: 3500,
+    price: 2700,
     img: "/images/bebidas/coca_500.png",
   },
   {
@@ -427,21 +427,12 @@ export const bebidas = [
     name: "Sprite 500ml",
     category: "Bebidas",
     description: "Botella personal.",
-    price: 3500,
+    price: 2700,
     img: "/images/bebidas/sprite_500.png",
-  },
-  {
-    id: "vaso-litro-gaseosa",
-    name: "Vaso de Litro Económico de Gaseosa",
-    category: "Bebidas",
-    description: "Coca cola / Sprite / Tónica.",
-    price: 5000,
-    img: "/images/bebidas/vaso_litro_gaseosa.png",
   },
 ];
 
 export const postres = [
-  /*
   {
     id: "cheesecake-frutilla",
     name: "Cheesecake de Frutilla",
@@ -474,7 +465,6 @@ export const postres = [
     price: 7000,
     img: "/images/postres/cheesecake_maracuya.jpg",
   },
-  */
 ];
 
 export const extras = [
@@ -490,14 +480,12 @@ export const extras = [
 
 // 🌞 Promos Mediodía — disponibles de 11:00 a 18:00 hs
 export const promosMedianodia = [
-  /*
   {
     id: "mediodia-mega-balde",
-    name: "Mega Balde Crunchy Mediodía",
+    name: "Mega Balde Bella Mediodía",
     category: "Mediodía",
     description: "4 Cheese Burgers + 1 kilo de papas. Ideal para compartir.",
     price: 21990,
     img: "/images/burgas/mega-balde-clasico.png",
   },
-  */
 ];
