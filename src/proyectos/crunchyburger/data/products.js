@@ -475,6 +475,14 @@ export const postres = [
     img: "/images/postres/cheesecake_maracuya.jpg",
   },
   */
+  {
+    id: "alfajor-luka",
+    name: "Alfajores LUKA",
+    category: "Postres",
+    description: "Auténticos alfajores artesanales LUKA. Puro chocolate y extra dulce de leche.",
+    price: 2000,
+    img: "/images/postres/alfajores_luka.png",
+  },
 ];
 
 export const extras = [
