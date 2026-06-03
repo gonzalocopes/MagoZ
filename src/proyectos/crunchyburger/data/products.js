@@ -115,7 +115,7 @@ export const hamburguesas = [
     name: "Hamburguesa simple cheese SIN PAPAS",
     category: "Hamburguesas",
     description: "Pan de papa, Medallón de 120grs, Cheddar x2.",
-    price: 4500,
+    price: 6000,
     img: "/images/burgas/cheese-simple.png",
   },
   {
