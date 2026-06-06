@@ -1,9 +1,34 @@
-export const promos = [];
+export const promos = [
+  {
+    id: "promo-clasica-bacon",
+    name: "Clásica Bacon Doble",
+    category: "Promos",
+    description: "Promo solo por hoy. Medallón 120gr x2, Cheddar, Bacon. Incluye papas fritas.",
+    price: 12000,
+    img: "/images/burgas/cheese-bacon.png"
+  },
+  {
+    id: "promo-clasica-cuarto-libra",
+    name: "Clásica 1/4 Libra Doble",
+    category: "Promos",
+    description: "Promo solo por hoy. Medallón 120gr x2, Cheddar, Cebolla picada, Ketchup. Incluye papas fritas.",
+    price: 12000,
+    img: "/images/burgas/mega-provo.png"
+  },
+  {
+    id: "promo-clasica-galaxy",
+    name: "Clásica Galaxy Doble",
+    category: "Promos",
+    description: "Promo solo por hoy. Medallón 120gr x2, Cheddar, Lechuga, Tomate, Cebolla Morada, Pepino. Incluye papas fritas.",
+    price: 12000,
+    img: "/images/burgas/clasica-argenta.png"
+  }
+];
 
 export const hamburguesas = [
   {
     id: "cheese-burger",
-    name: "Cheese Burger",
+    name: "Cheese Simple",
     category: "Hamburguesas",
     description: "Incluye papas fritas.",
     price: 8000,
@@ -11,15 +36,15 @@ export const hamburguesas = [
   },
   {
     id: "cheese-burger-doble",
-    name: "Cheese Burger Doble",
+    name: "Cheese Doble",
     category: "Hamburguesas",
     description: "Incluye papas fritas.",
-    price: 12000,
+    price: 14000,
     img: "/images/burgas/cheese-doble-dark.png",
   },
   {
     id: "cheese-burger-triple",
-    name: "Cheese Burger Triple",
+    name: "Cheese Triple",
     category: "Hamburguesas",
     description: "Incluye papas fritas.",
     price: 16000,
@@ -85,7 +110,7 @@ export const hamburguesas = [
     id: "jupiter",
     name: "Jupiter",
     category: "Hamburguesas",
-    description: "Medallon 120gr x2, Cheddar x4, Bacon, Cebolla Crispy. Incluye papas fritas.",
+    description: "Medallon 120gr x2, Cheddar x4, Bacon, Cebolla. Incluye papas fritas.",
     price: 13500,
     img: "/images/burgas/bbq-crunchy.png",
   },
@@ -93,7 +118,7 @@ export const hamburguesas = [
     id: "mercurio",
     name: "Mercurio",
     category: "Hamburguesas",
-    description: "Medallon 120gr x2, Cheddar x4, Bacon, Cebolla Caramelizada, Barbacoa. Incluye papas fritas.",
+    description: "Medallon 120gr x2, Cheddar x4, Bacon, Cebolla Caramelizada. Incluye papas fritas.",
     price: 13500,
     img: "/images/burgas/mega-provo.png",
   },
@@ -101,7 +126,7 @@ export const hamburguesas = [
     id: "saturno",
     name: "Saturno",
     category: "Hamburguesas",
-    description: "Medallon 120gr x2, Cheddar x4, Lechuga, Tomate, Cebolla Morada, Pepino. Incluye papas fritas.",
+    description: "Medallon 120gr x2, Cheddar x4, Lechuga, Tomate, Cebolla, Pepino. Incluye papas fritas.",
     price: 13500,
     img: "/images/burgas/clasica-argenta.png",
   },
@@ -109,7 +134,7 @@ export const hamburguesas = [
     id: "venus",
     name: "Venus",
     category: "Hamburguesas",
-    description: "Medallon 120gr x2, Jamon, Queso, Tomate, Lechuga, Huevo. Incluye papas fritas.",
+    description: "Medallon 120gr x2, Jamon, Queso, Tomate, Lechuga. Incluye papas fritas.",
     price: 13500,
     img: "/images/burgas/clasica-argenta.png",
   }
@@ -142,7 +167,16 @@ export const papas = [
   }
 ];
 export const combos = [];
-export const bebidas = [];
+export const bebidas = [
+  {
+    id: "coca-cola-lata",
+    name: "Lata de Coca-Cola",
+    category: "Bebidas",
+    description: "Coca-Cola sabor original.",
+    price: 2000,
+    img: "/images/bebidas/coca-cola.png"
+  }
+];
 export const postres = [];
 export const extras = [];
 export const promosMedianodia = [];
