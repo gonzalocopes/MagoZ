@@ -11,7 +11,7 @@ export const promos = [
     id: "promo-clasica-cuarto-libra",
     name: "Clásica 1/4 Libra Doble",
     category: "Promos",
-    description: "Promo solo por hoy. Medallón 120gr x2, Cheddar, Cebolla picada, Ketchup. Incluye papas fritas.",
+    description: "Promo solo por hoy. Medallón 120gr x2, Cheddar, Cebolla, Ketchup. Incluye papas fritas.",
     price: 12000,
     img: "/images/burgas/mega-provo.png"
   },
@@ -19,7 +19,7 @@ export const promos = [
     id: "promo-clasica-galaxy",
     name: "Clásica Galaxy Doble",
     category: "Promos",
-    description: "Promo solo por hoy. Medallón 120gr x2, Cheddar, Lechuga, Tomate, Cebolla Morada, Pepino. Incluye papas fritas.",
+    description: "Promo solo por hoy. Medallón 120gr x2, Cheddar, Lechuga, Tomate, Cebolla, Pepino. Incluye papas fritas.",
     price: 12000,
     img: "/images/burgas/clasica-argenta.png"
   }
