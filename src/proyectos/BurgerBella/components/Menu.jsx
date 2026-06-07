@@ -28,13 +28,13 @@ export default function Menu({ onAddToCart, isClosed }) {
   const categories = [
     { id: "hamburguesas", label: "Hamburguesas 🍔", products: hamburguesas },
     { id: "papas", label: "Papas y Acompañamientos 🍟", products: papas },
-    { id: "combos", label: "Combos y Baldes 🍔🥤", products: combos },
+    // { id: "combos", label: "Combos y Baldes 🍔🥤", products: combos },
     { id: "promos", label: "Promos 🔥", products: promos },
     ...(promosMedianodia.length > 0
       ? [{ id: "mediodia", label: "Promo Mediodía 🌞", products: promosMedianodia, mediodiaOnly: true }]
       : []),
     { id: "bebidas", label: "Bebidas 🥤", products: bebidas },
-    { id: "postres", label: "Postres 🍰", products: postres },
+    // { id: "postres", label: "Postres 🍰", products: postres },
   ];
 
   // categoría abierta en MOBILE
@@ -174,7 +174,7 @@ export default function Menu({ onAddToCart, isClosed }) {
                     ? "btn-secondary"
                     : !isAvailable
                       ? "btn-danger"
-                      : "btn-success"
+                      : "btn-mundial"
                     }`}
                   disabled={isClosed || !isAvailable || mediodiaBlocked}
                   onClick={(e) => {

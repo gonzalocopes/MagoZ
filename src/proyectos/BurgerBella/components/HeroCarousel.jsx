@@ -55,7 +55,7 @@ export default function HeroCarousel() {
                 alt="Slide 1"
                 style={{ maxHeight: "520px", objectFit: "cover" }}
               />
-              <div className="carousel-caption d-block">
+              <div className="carousel-caption d-block" style={{ top: "25%", bottom: "auto" }}>
                 <div className="hero-caption-glass">
                   <h2 className="hero-title">{slide1Title}</h2>
                   <p className="hero-subtitle" style={{ whiteSpace: 'pre-line' }}>{slide1Subtitle}</p>

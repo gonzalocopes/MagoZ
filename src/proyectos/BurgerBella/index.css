@@ -82,7 +82,7 @@ button:focus-visible {
   bottom: 0;
   z-index: 1040;
   padding: 0.75rem 1rem;
-  background-color: #FF2B7A;
+  background-color: #43A1D5;
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -154,7 +154,7 @@ button:focus-visible {
 }
 
 .menu-category-pill-active {
-  background-color: #FFF0F6;
+  background-color: #E6F4FB;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 }
 
@@ -240,7 +240,7 @@ button:focus-visible {
 }
 
 .menu-category-pill-active {
-  background-color: #FFF0F6 !important;
+  background-color: #E6F4FB !important;
 }
 
 /* ============================================================
@@ -282,11 +282,11 @@ button:focus-visible {
   box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
 }
 
-/* Activa con gradiente */
+/* Activa con gradiente Mundial */
 .menu-category-pill-active {
-  background: linear-gradient(135deg, #FF2B7A, #D60E5F) !important;
-  box-shadow: 0 12px 32px rgba(255, 43, 122, 0.4) !important;
-  border-color: transparent !important;
+  background: linear-gradient(135deg, #43A1D5, #74ACDF) !important;
+  box-shadow: 0 12px 32px rgba(67, 161, 213, 0.4) !important;
+  border: 2px solid #F6B40E !important;
 }
 
 /* Texto blanco cuando está activa */
@@ -492,4 +492,29 @@ button:focus-visible {
   letter-spacing: 1px;
   text-transform: uppercase;
   line-height: 1;
+}
+
+/* === Botones Mundial === */
+.btn-mundial {
+  background-color: #43A1D5 !important;
+  color: white !important;
+  border-color: #43A1D5 !important;
+}
+.btn-mundial:hover {
+  background-color: #3b8ebc !important;
+  color: white !important;
+  border-color: #3b8ebc !important;
+}
+.btn-outline-mundial {
+  color: #43A1D5 !important;
+  border-color: #43A1D5 !important;
+  background-color: transparent !important;
+}
+.btn-outline-mundial:hover {
+  background-color: #43A1D5 !important;
+  color: white !important;
+}
+.bg-mundial {
+  background-color: #43A1D5 !important;
+  color: white !important;
 }

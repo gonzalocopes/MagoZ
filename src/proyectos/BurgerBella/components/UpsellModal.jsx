@@ -46,8 +46,7 @@ export default function UpsellModal({
           // Excluir Pan y Medallones (la carne no suele quitarse así nomás)
           if (lower.includes("pan de papa")) return false;
           if (lower.includes("medallón")) return false;
-          if (lower.includes("doble medallón")) return false;
-          if (lower.includes("triple medallón")) return false;
+          if (lower.includes("medallon")) return false;
           return true;
         });
 
@@ -128,8 +127,8 @@ export default function UpsellModal({
       <div className="modal-dialog modal-dialog-centered">
         <div className="modal-content">
           {/* HEADER */}
-          <div className="modal-header bg-warning">
-            <h5 className="modal-title text-dark fw-bold">{title}</h5>
+          <div className="modal-header bg-mundial">
+            <h5 className="modal-title text-white fw-bold">{title}</h5>
             <button
               type="button"
               className="btn-close"
@@ -228,7 +227,7 @@ export default function UpsellModal({
                       <button
                         className={
                           "btn btn-sm " +
-                          (isAdded ? "btn-outline-success" : "btn-success")
+                          (isAdded ? "btn-outline-mundial" : "btn-mundial")
                         }
                         disabled={isAdded}
                         onClick={() => {
@@ -251,7 +250,7 @@ export default function UpsellModal({
           <div className="modal-footer">
             <button
               type="button"
-              className="btn btn-warning w-100 fw-bold"
+              className="btn btn-mundial w-100 fw-bold"
               onClick={onClose}
             >
               Confirmar y Cerrar

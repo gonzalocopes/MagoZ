@@ -8,8 +8,8 @@ export const clientConfig = {
   logo: "/images/burgerbella/burger_bella_logo.png",    // Ruta dentro de /public (ej: public/images/logo-pizzeria.png)
 
   colores: {
-    primario: "#FF2B7A",   // Rosa vibrante / magenta de Burger Bella
-    secundario: "#111827", // gris muy oscuro
+    primario: "#43A1D5",   // Celeste AFA (Estilo Mundial)
+    secundario: "#111827", // Gris oscuro
     textoClaro: "#FFFFFF", // Texto claro para contrastar
   },
 
@@ -17,16 +17,16 @@ export const clientConfig = {
     fondo: "/images/burgerbella/burger_bella_banner.png",   // Imagen de fondo de Burger Bella
     slides: [
       {
-        titulo: "BURGER BELLA",
-        subtitulo: "Las hamburguesas más lindas y sabrosas, hechas con amor.",
+        titulo: "BURGER BELLA ⭐⭐⭐",
+        subtitulo: "Las hamburguesas más ricas, con calidad de Campeones del Mundo 🏆.",
+      },
+      {
+        titulo: "MUCHACHOS...",
+        subtitulo: "Pedí la tuya y festejemos cada bocado como en Qatar.",
       },
       {
         titulo: "Horarios",
         subtitulo: `Martes a Sábados: 19:00hs a 00:30hs\nDomingo: 19:00hs a 23:30hs`,
-      },
-      {
-        titulo: "Encontranos",
-        subtitulo: "Av. Hipólito Yrigoyen 14687, Burzaco.",
       },
     ],
   },

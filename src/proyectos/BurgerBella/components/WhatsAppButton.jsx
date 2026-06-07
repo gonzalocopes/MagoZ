@@ -155,7 +155,7 @@ export default function WhatsAppButton({ cart, total, customer, isClosed }) {
     <>
       {/* Botón verde: visible en todas las vistas (no fijo) */}
       <button
-        className="btn btn-success w-100 btn-lg mb-3"
+        className="btn btn-mundial w-100 btn-lg mb-3"
         onClick={handleClickDesktop}
         disabled={isClosed}
       >

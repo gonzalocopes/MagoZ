@@ -39,12 +39,15 @@ export default function Navbar({ cartCount }) {
             />
           )}
           <span
-            className="brand-text"
+            className="brand-text d-flex align-items-center gap-2"
             style={{
               color: clientConfig.colores.textoClaro,
             }}
           >
             {clientConfig.nombre}
+            <span style={{ fontSize: "1.3rem", color: "#F6B40E", textShadow: "0 2px 4px rgba(0,0,0,0.3)" }}>
+              ⭐⭐⭐
+            </span>
           </span>
         </a>
 
