@@ -155,7 +155,7 @@ export const papas = [
     category: "Papas",
     description: "6 unidades de patitas de pollo.",
     price: 4200,
-    img: "/images/papas/nuggets-papas.png",
+    img: "/images/papas/patitas.png",
   },
   {
     id: "patitas-10",
@@ -163,7 +163,7 @@ export const papas = [
     category: "Papas",
     description: "10 unidades de patitas de pollo.",
     price: 6000,
-    img: "/images/papas/nuggets-papas.png",
+    img: "/images/papas/patitas.png",
   },
   {
     id: "patitas-15",
@@ -171,7 +171,7 @@ export const papas = [
     category: "Papas",
     description: "15 unidades de patitas de pollo.",
     price: 7500,
-    img: "/images/papas/nuggets-papas.png",
+    img: "/images/papas/patitas.png",
   }
 ];
 export const combos = [];
@@ -190,7 +190,7 @@ export const bebidas = [
     category: "Bebidas",
     description: "Botella de Coca-Cola sabor original.",
     price: 5000,
-    img: "/images/bebidas/coca-cola.png"
+    img: "/images/bebidas/coca-botella.png"
   },
   {
     id: "manaos-225",
@@ -198,7 +198,7 @@ export const bebidas = [
     category: "Bebidas",
     description: "Botella de Manaos.",
     price: 2000,
-    img: "/images/bebidas/coca-cola.png"
+    img: "/images/bebidas/manaos.png"
   },
   {
     id: "coca-cola-1l",
@@ -206,7 +206,7 @@ export const bebidas = [
     category: "Bebidas",
     description: "Botella de Coca-Cola sabor original 1 litro.",
     price: 3500,
-    img: "/images/bebidas/coca-cola.png"
+    img: "/images/bebidas/coca-botella.png"
   },
   {
     id: "brahma-lata-chica",
@@ -214,7 +214,7 @@ export const bebidas = [
     category: "Bebidas",
     description: "Lata chica de cerveza Brahma.",
     price: 2500,
-    img: "/images/bebidas/coca-cola.png"
+    img: "/images/bebidas/brahma.png"
   },
   {
     id: "brahma-710",
@@ -222,7 +222,7 @@ export const bebidas = [
     category: "Bebidas",
     description: "Lata grande de cerveza Brahma 710ml.",
     price: 3500,
-    img: "/images/bebidas/coca-cola.png"
+    img: "/images/bebidas/brahma.png"
   }
 ];
 export const postres = [];
