@@ -40,7 +40,7 @@ export const hamburguesas = [
     category: "Hamburguesas",
     description: "Medallón de carne, queso cheddar, lechuga, tomate. Incluye papas fritas.",
     price: 8000,
-    img: "/images/burgas/cheese-simple.png",
+    img: "/images/burgas/cheese-lechuga-tomate.png",
   },
   {
     id: "cheese-burger-doble",
@@ -150,27 +150,43 @@ export const hamburguesas = [
 
 export const papas = [
   {
-    id: "patitas-6",
-    name: "Patitas de Pollo x6",
+    id: "papas-cheddar",
+    name: "Bandeja de Papas con Cheddar",
     category: "Papas",
-    description: "6 unidades de patitas de pollo.",
-    price: 4200,
+    description: "Bandeja de papas fritas con salsa cheddar.",
+    price: 3500,
+    img: "/images/papas/papas-cheddar.png",
+  },
+  {
+    id: "papas-cheddar-verdeo-bacon",
+    name: "Papas Chicas con Cheddar, Verdeo y Bacon",
+    category: "Papas",
+    description: "Bandeja chica de papas fritas con cheddar, verdeo y bacon.",
+    price: 4000,
+    img: "/images/papas/papas-cheddar-verdeo.png",
+  },
+  {
+    id: "patitas-6",
+    name: "Nuggets x6",
+    category: "Papas",
+    description: "Bandeja chica de 6 unidades de nuggets.",
+    price: 4800,
     img: "/images/papas/patitas.png",
   },
   {
     id: "patitas-10",
-    name: "Patitas de Pollo x10",
+    name: "Nuggets x10",
     category: "Papas",
-    description: "10 unidades de patitas de pollo.",
-    price: 6000,
+    description: "10 unidades de nuggets.",
+    price: 7000,
     img: "/images/papas/patitas.png",
   },
   {
     id: "patitas-15",
-    name: "Patitas de Pollo x15",
+    name: "Nuggets x15",
     category: "Papas",
-    description: "15 unidades de patitas de pollo.",
-    price: 7500,
+    description: "15 unidades de nuggets.",
+    price: 9000,
     img: "/images/papas/patitas.png",
   }
 ];
@@ -226,5 +242,14 @@ export const bebidas = [
   }
 ];
 export const postres = [];
-export const extras = [];
+export const extras = [
+  { id: "extra-cheddar", name: "Cheddar", price: 2000 },
+  { id: "extra-bacon", name: "Extra Bacon", price: 1800 },
+  { id: "extra-cebolla", name: "Cebolla Caramelizada", price: 1200 },
+  { id: "extra-huevo", name: "Huevo", price: 1000 },
+  { id: "extra-carne", name: "Extra de Carne", price: 2500 },
+  { id: "extra-papas-cheddar", name: "Papas + Cheddar", price: 1500 },
+  { id: "extra-papas-cheddar-bacon", name: "Papas + Cheddar y Bacon (Verdeo)", price: 3000 },
+  { id: "extra-lechuga-tomate", name: "Lechuga y Tomate", price: 1200 }
+];
 export const promosMedianodia = [];

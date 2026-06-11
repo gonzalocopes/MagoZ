@@ -26,7 +26,7 @@ export const clientConfig = {
       },
       {
         titulo: "Horarios",
-        subtitulo: `Martes a Sábados: 19:00hs a 00:30hs\nDomingo: 19:00hs a 23:30hs`,
+        subtitulo: `Jueves a Domingos: 20:00hs a 00:00hs`,
       },
     ],
   },
