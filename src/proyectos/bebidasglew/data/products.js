@@ -71,7 +71,6 @@ export const combos = [
     description: "Trumpeter Malbec + Sprite 2.25L. Para que pegue más rápido 🐐. Incluye vaso 1L con hielo gratis.",
     price: 18500,
     img: "/images/combo_messi.png",
-    inStock: false,
   },
   {
     id: "combo-full-previa",
