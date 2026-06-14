@@ -106,8 +106,10 @@ export default function Menu({ onAddToCart, isClosed, cart, onChangeQty, onRemov
     const cartItem = isSimpleProduct && cart ? cart.find((c) => c.id === item.id) : null;
     const qty = cartItem ? cartItem.qty : 0;
 
+    const isOutOfStock = item.inStock === false;
+
     return (
-      <div key={item.id} className="card mb-3 menu-product-card shadow-sm">
+      <div key={item.id} className={`card mb-3 menu-product-card shadow-sm ${isOutOfStock ? 'opacity-50' : ''}`}>
         <div className="row g-0 align-items-center">
           {/* FOTO */}
           <div className="col-3">
@@ -138,7 +140,11 @@ export default function Menu({ onAddToCart, isClosed, cart, onChangeQty, onRemov
 
               <div className="text-end">
                 {/* SI ES UN PRODUCTO SIMPLE Y YA TIENE CANTIDAD, MOSTRAMOS EL CONTROLADRO */}
-                {isSimpleProduct && qty > 0 ? (
+                {isOutOfStock ? (
+                  <button className="btn btn-secondary btn-sm" disabled>
+                    Sin Stock
+                  </button>
+                ) : isSimpleProduct && qty > 0 ? (
                   <div
                     className="d-flex align-items-center justify-content-end bg-light rounded-pill border"
                     style={{ width: "fit-content" }}
