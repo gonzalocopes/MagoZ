@@ -97,14 +97,14 @@ export default function CheckoutForm({ customer, onChange, shippingCost, setDisc
               value={customer.deliveryZone}
               onChange={handleChange}
             >
-              <option value="Glew">Glew ($2000)</option>
-              <option value="Guernica">Guernica ($2500)</option>
-              <option value="Longchamps">Longchamps ($2500)</option>
+              <option value="Glew">Glew ($2.000)</option>
+              <option value="Guernica">Guernica ($2.500)</option>
+              <option value="Longchamps">Longchamps ($2.500)</option>
             </select>
             <div className="form-text text-success">
               {shippingCost === 0
                 ? "¡Envío GRATIS por superar los $40.000!"
-                : `Costo de envío: $${shippingCost}`}
+                : `Costo de envío: $${shippingCost.toLocaleString("es-AR")}`}
             </div>
           </div>
         )}

@@ -135,7 +135,7 @@ export default function Menu({ onAddToCart, isClosed, cart, onChangeQty, onRemov
                     {item.description}
                   </p>
                 )}
-                <div className="fw-bold">${item.price}</div>
+                <div className="fw-bold">${item.price.toLocaleString("es-AR")}</div>
               </div>
 
               <div className="text-end">
