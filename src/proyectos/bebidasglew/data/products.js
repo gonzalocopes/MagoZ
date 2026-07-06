@@ -171,7 +171,6 @@ export const combos = [
     description: "Pack de 6 latas 473ml.",
     price: 21000,
     img: "/images/heineken.jpeg",
-    inStock: false,
   },
 
 ];
@@ -201,7 +200,7 @@ export const productos = [
   { id: "prod-monster", name: "Monster 473ml", price: 5000, category: "Productos", img: "/images/monster_can.png", description: "Lata 473ml." },
   { id: "prod-corona-710", name: "Cerveza Corona 710ml", price: 6800, category: "Productos", img: "/images/corona_710.png", description: "Botella de vidrio 710ml." },
   { id: "prod-brahma-354", name: "Cerveza Brahma 354ml", price: 1700, category: "Productos", img: "/images/brahma_354.png", description: "Lata 354ml.", inStock: false },
-  { id: "prod-heineken-473", name: "Cerveza Heineken 473ml", price: 4500, category: "Productos", img: "/images/heineken_473.png", description: "Lata 473ml.", inStock: false },
+  { id: "prod-heineken-473", name: "Cerveza Heineken 473ml", price: 4500, category: "Productos", img: "/images/heineken_473.png", description: "Lata 473ml." },
   { id: "prod-vaso", name: "Vaso 1L (con hielo)", price: 1500, category: "Productos", img: "/images/cup_ice.png", description: "Vaso de plástico con hielo." },
 
 
