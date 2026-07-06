@@ -9,7 +9,11 @@ const TrustedBrands = () => {
         { name: "Pizzería El Maestro", logo: "/brands/pizzeria.png" },
         { name: "Papelera Los Álamos", logo: "/brands/papelera.png" },
         { name: "Librería RC", logo: "/brands/libreria.png" },
-        { name: "Bicletería El Jake", logo: "/brands/eljake.png" }
+        { name: "Bicletería El Jake", logo: "/brands/eljake.png" },
+        { name: "Crunchy Burger", logo: "/brands/crunchy-burger.png", keepColor: true },
+        { name: "Bebidas Glew", logo: "/brands/bebidas-glew.png", keepColor: true },
+        { name: "Burger Bella", logo: "/brands/burger-bella.png", keepColor: true },
+        { name: "Saphirus", logo: "/brands/saphirus.png", keepColor: true }
     ];
 
     return (
