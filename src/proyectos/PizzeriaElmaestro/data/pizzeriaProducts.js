@@ -532,7 +532,7 @@ export const promos = [
     id: "promo-muzza-2faina",
     name: "1 Muzza + 2 Porciones Fainá",
     description: "1 pizza muzza + 2 porciones de fainá.",
-    price: 18200, img: "/images/promos_banner.png",
+    price: 17400, img: "/images/promos_banner.png",
   },
 ];
 
