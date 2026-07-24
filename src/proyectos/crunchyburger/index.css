@@ -493,3 +493,14 @@ button:focus-visible {
   text-transform: uppercase;
   line-height: 1;
 }
+
+/* Animations for buttons */
+.transition-all {
+  transition: all 0.2s ease;
+}
+.hover-scale {
+  transition: transform 0.15s ease;
+}
+.hover-scale:hover {
+  transform: scale(1.15);
+}

@@ -9,7 +9,7 @@ export default function UpsellModal({
   lastProduct,
   onUpdateItem, // Función para actualizar el producto (exclusions)
 }) {
-  const [addedIds, setAddedIds] = useState([]);
+  const [extraQuantities, setExtraQuantities] = useState({});
   const [ingredients, setIngredients] = useState([]);
   const [papasIngredients, setPapasIngredients] = useState([]);
 
@@ -62,7 +62,12 @@ export default function UpsellModal({
         }))
       );
 
-      setAddedIds([]); // Reseteamos extras agregados
+      const currentExtras = lastProduct.extras || [];
+      const counts = {};
+      currentExtras.forEach(ex => {
+        counts[ex.id] = (counts[ex.id] || 0) + 1;
+      });
+      setExtraQuantities(counts);
 
       // Inicializamos las opciones de papas (sólo si el producto las tiene)
       const currentPapasExclusiones = lastProduct.papasExclusiones || [];
@@ -101,6 +106,28 @@ export default function UpsellModal({
     if (lastProduct?.uuid && onUpdateItem) {
       onUpdateItem(lastProduct.uuid, { papasExclusiones });
     }
+  };
+
+  const handleUpdateExtraQty = (item, delta) => {
+    setExtraQuantities(prev => {
+      const currentQty = prev[item.id] || 0;
+      const newQty = Math.max(0, currentQty + delta);
+      const updated = { ...prev, [item.id]: newQty };
+
+      const newExtrasArray = [];
+      (upsellItems || []).forEach(uItem => {
+        const count = updated[uItem.id] || 0;
+        for (let i = 0; i < count; i++) {
+          newExtrasArray.push(uItem);
+        }
+      });
+
+      if (lastProduct?.uuid && onUpdateItem) {
+        onUpdateItem(lastProduct.uuid, { extras: newExtrasArray });
+      }
+
+      return updated;
+    });
   };
 
   if (!show) return null;
@@ -212,7 +239,7 @@ export default function UpsellModal({
             ) : (
               <ul className="list-group">
                 {itemsToShow.map((item) => {
-                  const isAdded = addedIds.includes(item.id);
+                  const qty = extraQuantities[item.id] || 0;
 
                   return (
                     <li
@@ -225,21 +252,34 @@ export default function UpsellModal({
                           +${item.price.toLocaleString("es-AR")}
                         </small>
                       </div>
-                      <button
-                        className={
-                          "btn btn-sm " +
-                          (isAdded ? "btn-outline-success" : "btn-success")
-                        }
-                        disabled={isAdded}
-                        onClick={() => {
-                          if (!isAdded) {
-                            onAdd(item);
-                            setAddedIds((prev) => [...prev, item.id]);
-                          }
-                        }}
-                      >
-                        {isAdded ? "Agregado ✓" : "Agregar"}
-                      </button>
+                      {qty === 0 ? (
+                        <button
+                          className="btn btn-sm btn-success rounded-pill px-3 shadow-sm transition-all"
+                          onClick={() => handleUpdateExtraQty(item, 1)}
+                        >
+                          Agregar
+                        </button>
+                      ) : (
+                        <div className="d-flex align-items-center bg-light border rounded-pill shadow-sm" style={{ padding: "0.15rem 0.25rem" }}>
+                          <button
+                            className="btn btn-sm btn-light rounded-circle fw-bold text-danger d-flex align-items-center justify-content-center hover-scale"
+                            style={{ width: "28px", height: "28px", border: "none" }}
+                            onClick={() => handleUpdateExtraQty(item, -1)}
+                          >
+                            -
+                          </button>
+                          <span className="fw-bold px-2 mx-1" style={{ minWidth: "1.5rem", textAlign: "center" }}>
+                            {qty}
+                          </span>
+                          <button
+                            className="btn btn-sm btn-light rounded-circle fw-bold text-success d-flex align-items-center justify-content-center hover-scale"
+                            style={{ width: "28px", height: "28px", border: "none" }}
+                            onClick={() => handleUpdateExtraQty(item, 1)}
+                          >
+                            +
+                          </button>
+                        </div>
+                      )}
                     </li>
                   );
                 })}
