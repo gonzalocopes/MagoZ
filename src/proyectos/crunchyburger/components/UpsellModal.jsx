@@ -172,9 +172,11 @@ export default function UpsellModal({
             </p>
 
             {/* SECCIÓN: Ingredientes de la burger */}
-            {ingredients.length > 0 && (
+            {category !== "Papas" && ingredients.length > 0 && (
               <div className="mb-3">
-                <h6 className="fw-bold mb-2">Ingredientes de la hamburguesa:</h6>
+                <h6 className="fw-bold mb-2">
+                  {isHamburguesa ? "Ingredientes de la hamburguesa:" : "Ingredientes:"}
+                </h6>
                 <div className="card p-2 bg-light border-0">
                   {ingredients.map((ing, idx) => (
                     <div className="form-check" key={idx}>
@@ -233,7 +235,9 @@ export default function UpsellModal({
 
             <hr />
 
-            <h6 className="fw-bold mb-2">¿Querés agregar algo más?</h6>
+            <h6 className="fw-bold mb-2">
+              {category === "Papas" ? "¿Elegí tu Topping?" : "¿Querés agregar algo más?"}
+            </h6>
             {itemsToShow.length === 0 ? (
               <p>No hay extras disponibles.</p>
             ) : (
@@ -246,11 +250,25 @@ export default function UpsellModal({
                       key={item.id}
                       className="list-group-item d-flex justify-content-between align-items-center"
                     >
-                      <div>
-                        <div className="fw-semibold">{item.name}</div>
-                        <small className="text-muted">
-                          +${item.price.toLocaleString("es-AR")}
-                        </small>
+                      <div className="d-flex align-items-center gap-3">
+                        {item.img && (
+                          <img
+                            src={item.img}
+                            alt={item.name}
+                            style={{
+                              width: "50px",
+                              height: "50px",
+                              objectFit: "cover",
+                              borderRadius: "8px",
+                            }}
+                          />
+                        )}
+                        <div>
+                          <div className="fw-semibold" style={{ lineHeight: "1.2" }}>{item.name}</div>
+                          <small className="text-muted">
+                            +${item.price.toLocaleString("es-AR")}
+                          </small>
+                        </div>
                       </div>
                       {qty === 0 ? (
                         <button

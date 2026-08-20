@@ -11,8 +11,8 @@ import Cart from "./components/Cart";
 import CheckoutForm from "./components/CheckoutForm";
 import WhatsAppButton from "./components/WhatsAppButton";
 import UpsellModal from "./components/UpsellModal";
-// 👉 Usamos solo extras para el upsell
-import { extras } from "./data/products";
+// 👉 Usamos extras o papasToppings para el upsell
+import { extras, papasToppings } from "./data/products";
 
 import { clientConfig } from "./config/clientConfig";
 
@@ -33,8 +33,8 @@ function App() {
   const [isClosed, setIsClosed] = useState(false);
   const [lastProduct, setLastProduct] = useState(null);
 
-  // ⬇️ Ahora las sugerencias del modal son los extras
-  const upsellItems = extras;
+  // ⬇️ Sugerencias del modal dinámicas según la categoría
+  const upsellItems = lastProduct?.category === "Papas" ? papasToppings : extras;
 
   // 🔔 Horario
   useEffect(() => {
@@ -103,11 +103,13 @@ function App() {
     const mainCategories = [
       "Hamburguesas",
       "Combos",
+      "Papas",
     ];
 
     const shouldOpenUpsell =
       !fromUpsell &&
-      (mainCategories.includes(product.category) || product.upsell === true);
+      (mainCategories.includes(product.category) || product.upsell === true) &&
+      product.id !== "nuggets-8";
 
     if (shouldOpenUpsell) {
       setLastProduct(newItem); // Guardamos la instancia con UUID
