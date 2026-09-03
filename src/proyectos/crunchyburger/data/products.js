@@ -35,6 +35,14 @@ export const promos = [
     price: 34990,
     img: "/images/burgas/producto-estrella.png", // ID: producto-estrella
   },
+  {
+    id: "combo-cuarto-crunchy",
+    name: "Combo Cuarto Crunchy",
+    category: "Promos",
+    description: "Una pausa completa, rápida y accesible para cortar el día. Incluye papas y bebida.",
+    price: 8990,
+    img: "/images/burgas/combo-cuarto-crunchy.png",
+  },
 
   // Combos del Día
   {
