@@ -478,6 +478,15 @@ export const extras = [
   { id: "extra-cheddar", name: "Cheddar x2", price: 1500, category: "Extras" },
   { id: "dip-cheddar", name: "Dip de Cheddar", price: 3000, category: "Extras" },
   { id: "salsa-cheddar-panceta", name: "Salsa Cheddar + Panceta a las papas", price: 4000, category: "Extras" },
+  { id: "tequenos-x4", name: "Tequeños x4", price: 6000, category: "Extras" },
+  { id: "tequenos-x8", name: "Tequeños x8", price: 10990, category: "Extras" },
+  { id: "aros-cebolla-x4", name: "Aros de Cebolla x4", price: 4000, category: "Extras" },
+  { id: "aros-cebolla-x8", name: "Aros de Cebolla x8", price: 7500, category: "Extras" },
+  { id: "muzzarellitas-x4", name: "Muzzarellitas x4", price: 6000, category: "Extras" },
+  { id: "muzzarellitas-x8", name: "Muzzarellitas x8", price: 10990, category: "Extras" },
+  { id: "nuggets-x4", name: "Nuggets x4", price: 4500, category: "Extras" },
+  { id: "nuggets-x8", name: "Nuggets x8", price: 8500, category: "Extras" },
+  { id: "combo-bebida-papas", name: "Bebida y Papas Fritas", price: 4900, category: "Extras" },
 ];
 
 export const papasToppings = [
