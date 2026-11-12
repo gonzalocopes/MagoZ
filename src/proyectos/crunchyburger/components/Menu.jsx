@@ -1,6 +1,6 @@
 // src/components/Menu.jsx
 import { useState, useRef } from "react";
-import { promos, hamburguesas, papas, combos, bebidas, postres, promosMedianodia } from "../data/products";
+import { promos, hamburguesas, papas, combos, extrasMenu, bebidas, postres, promosMedianodia } from "../data/products";
 
 export default function Menu({ onAddToCart, isClosed }) {
   // Filtrar promos según el día actual
@@ -29,6 +29,7 @@ export default function Menu({ onAddToCart, isClosed }) {
     { id: "hamburguesas", label: "Hamburguesas 🍔", products: hamburguesas },
     { id: "papas", label: "Papas y Acompañamientos 🍟", products: papas },
     { id: "combos", label: "Combos y Baldes 🍔🥤", products: combos },
+    { id: "extras", label: "Extras 🧀", products: extrasMenu },
     { id: "promos", label: "Promos 🔥", products: promos },
     ...(promosMedianodia.length > 0
       ? [{ id: "mediodia", label: "Promo Mediodía 🌞", products: promosMedianodia, mediodiaOnly: true }]
@@ -36,6 +37,9 @@ export default function Menu({ onAddToCart, isClosed }) {
     { id: "bebidas", label: "Bebidas 🥤", products: bebidas },
     { id: "postres", label: "Postres 🍰", products: postres },
   ];
+
+  // Opción seleccionada por producto (ej: x4 vs x8, x6 vs x12)
+  const [selectedOptions, setSelectedOptions] = useState({});
 
   // categoría abierta en MOBILE
   const [openCategory, setOpenCategory] = useState(null);
@@ -133,11 +137,17 @@ export default function Menu({ onAddToCart, isClosed }) {
     // Lógica de disponibilidad horaria mediodía
     const mediodiaBlocked = mediodiaOnly && !isMediodiaTime;
 
+    // Opción seleccionada (ej: x4 / x8 o x6 / x12) si el ítem tiene options
+    const currentOption = item.options
+      ? selectedOptions[item.id] || item.options[0]
+      : null;
+    const currentPrice = currentOption ? currentOption.price : item.price;
+
     return (
       <div key={item.id} className="card mb-3 menu-product-card shadow-sm">
         <div className="row g-0 align-items-center">
           {/* FOTO */}
-          <div className="col-3">
+          <div className="col-3 text-center">
             <img
               src={item.img}
               alt={item.name}
@@ -152,8 +162,8 @@ export default function Menu({ onAddToCart, isClosed }) {
 
           {/* CONTENIDO */}
           <div className="col-9">
-            <div className="card-body py-2 d-flex justify-content-between align-items-start gap-2">
-              <div>
+            <div className="card-body py-2 d-flex justify-content-between align-items-center gap-2">
+              <div className="flex-grow-1 pe-1">
                 {mediodiaOnly && (
                   <span className="badge-mediodia">
                     {isMediodiaTime ? "🌞 Disponible ahora" : "🕐 Disp. 11-18hs"}
@@ -165,30 +175,80 @@ export default function Menu({ onAddToCart, isClosed }) {
                     {item.description}
                   </p>
                 )}
-                <div className="fw-bold">${item.price.toLocaleString("es-AR")}</div>
+
+                {/* Selector de porción/cantidad si tiene options */}
+                {item.options && (
+                  <div className="d-flex align-items-center gap-1 my-1">
+                    <span className="text-muted" style={{ fontSize: "0.78rem" }}>
+                      Porción:
+                    </span>
+                    <div className="btn-group btn-group-sm" role="group">
+                      {item.options.map((opt) => {
+                        const isSelected = currentOption.size === opt.size;
+                        return (
+                          <button
+                            key={opt.size}
+                            type="button"
+                            className={`btn btn-sm py-0 px-2 fw-semibold ${
+                              isSelected
+                                ? "btn-warning text-dark border-warning shadow-sm"
+                                : "btn-outline-secondary"
+                            }`}
+                            style={{
+                              fontSize: "0.75rem",
+                              lineHeight: "1.5",
+                            }}
+                            onClick={() =>
+                              setSelectedOptions((prev) => ({
+                                ...prev,
+                                [item.id]: opt,
+                              }))
+                            }
+                          >
+                            {opt.size}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+
+                <div className="fw-bold text-dark">
+                  ${currentPrice.toLocaleString("es-AR")}
+                </div>
               </div>
 
               <div className="text-end">
                 <button
-                  className={`btn btn-sm ${mediodiaBlocked
-                    ? "btn-secondary"
-                    : !isAvailable
+                  className={`btn btn-sm ${
+                    mediodiaBlocked
+                      ? "btn-secondary"
+                      : !isAvailable
                       ? "btn-danger"
                       : "btn-success"
-                    }`}
+                  }`}
                   disabled={isClosed || !isAvailable || mediodiaBlocked}
                   onClick={(e) => {
                     triggerFlyAnimation(e, item.img);
-                    onAddToCart(item);
+                    const productToAdd = currentOption
+                      ? {
+                          ...item,
+                          id: `${item.id}-${currentOption.size}`,
+                          name: `${item.name} (${currentOption.size})`,
+                          price: currentOption.price,
+                          selectedSize: currentOption.size,
+                        }
+                      : item;
+                    onAddToCart(productToAdd);
                   }}
                 >
                   {isClosed
                     ? "Cerrado"
                     : mediodiaBlocked
-                      ? "11-18hs"
-                      : !isAvailable
-                        ? message
-                        : "Agregar"}
+                    ? "11-18hs"
+                    : !isAvailable
+                    ? message
+                    : "Agregar"}
                 </button>
               </div>
             </div>

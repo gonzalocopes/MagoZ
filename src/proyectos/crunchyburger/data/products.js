@@ -470,6 +470,69 @@ export const postres = [
   },
 ];
 
+export const extrasMenu = [
+  {
+    id: "tequenos",
+    name: "Tequeños",
+    category: "Extras",
+    description: "Palitos rellenos de queso derretido, dorados y crocantes.",
+    price: 6000,
+    img: "/images/extras/tequenos.jpeg",
+    options: [
+      { size: "x4", price: 6000 },
+      { size: "x8", price: 10990 },
+    ],
+  },
+  {
+    id: "aros-cebolla",
+    name: "Aros de Cebolla",
+    category: "Extras",
+    description: "Crujientes aros de cebolla rebozados y dorados.",
+    price: 4000,
+    img: "/images/extras/aros.jpeg",
+    options: [
+      { size: "x4", price: 4000 },
+      { size: "x8", price: 7500 },
+    ],
+  },
+  {
+    id: "rabas",
+    name: "Rabas",
+    category: "Extras",
+    description: "Tiernas y crujientes rabas rebozadas al estilo Crunchy.",
+    price: 4500,
+    img: "/images/extras/rabas.jpeg",
+    options: [
+      { size: "x6", price: 4500 },
+      { size: "x12", price: 8500 },
+    ],
+  },
+  {
+    id: "muzzarellitas",
+    name: "Muzzarellitas",
+    category: "Extras",
+    description: "Bastones de muzzarella crujientes con corazón de queso fundido.",
+    price: 6000,
+    img: "/images/extras/muzzarellitas.jpeg",
+    options: [
+      { size: "x4", price: 6000 },
+      { size: "x8", price: 10990 },
+    ],
+  },
+  {
+    id: "nuggets",
+    name: "Nuggets",
+    category: "Extras",
+    description: "Nuggets de pollo súper crujientes y dorados.",
+    price: 4500,
+    img: "/images/extras/nuggets.jpeg",
+    options: [
+      { size: "x4", price: 4500 },
+      { size: "x8", price: 8500 },
+    ],
+  },
+];
+
 export const extras = [
   { id: "extra-carne", name: "Extra Carne", price: 3000, category: "Extras" },
   { id: "extra-carne-cheddar", name: "Carne + Cheddar x2", price: 4000, category: "Extras" },
@@ -482,6 +545,8 @@ export const extras = [
   { id: "tequenos-x8", name: "Tequeños x8", price: 10990, category: "Extras" },
   { id: "aros-cebolla-x4", name: "Aros de Cebolla x4", price: 4000, category: "Extras" },
   { id: "aros-cebolla-x8", name: "Aros de Cebolla x8", price: 7500, category: "Extras" },
+  { id: "rabas-x6", name: "Rabas x6", price: 4500, category: "Extras" },
+  { id: "rabas-x12", name: "Rabas x12", price: 8500, category: "Extras" },
   { id: "muzzarellitas-x4", name: "Muzzarellitas x4", price: 6000, category: "Extras" },
   { id: "muzzarellitas-x8", name: "Muzzarellitas x8", price: 10990, category: "Extras" },
   { id: "nuggets-x4", name: "Nuggets x4", price: 4500, category: "Extras" },
